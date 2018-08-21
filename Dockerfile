@@ -1,7 +1,7 @@
 FROM node:9.11-alpine as builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm install -s --only=production
+RUN npm install -s
 COPY . .
 RUN npm run build
 
