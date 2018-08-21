@@ -28,6 +28,8 @@
     font-weight: 900
     text-transform: uppercase
     font-size: 270px
+    font-size: 16vw
+    word-spacing: 100vw
     margin: 30px -40px 60px -20px
     background-image: url(../assets/title-background.png)
     background-size: cover
@@ -37,13 +39,23 @@
     line-height: 0.9
     z-index: 100
 
+    &, &:after
+      padding-left: 20px
+      overflow: hidden
+      max-width: 100%
+      max-width: calc(100vw - 40px)
+
+    @media screen and (max-height: 1200px)
+      font-size: 170px
+    @media screen and (min-width: 1600px)
+      font-size: 270px
+
     &:after
       content: 'Urban Girls Movement'
       position: absolute
       top: 0
       left: 0
       height: 100%
-      width: 100%
       color: transparent
       background: linear-gradient(178.81deg, rgba(46, 46, 46, 0.52) 1.64%, rgba(178, 33, 87, 0.46) 48.66%, rgba(182, 29, 86, 0.84) 98.36%)
       background-clip: text
