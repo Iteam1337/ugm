@@ -14,8 +14,8 @@
           </p>
         </div>
         <div class="w-40 wow fadeIn" data-wow-delay="1s" data-wow-duration="4s">
-          <a :class="{ 'reality-zoom': realityShown }" href="#" class="nav-link reality wow fadeInRight" data-wow-delay="1200ms" data-wow-duration="3s">Reality</a>
-          <a href="#" class="nav-link dream wow fadeInRight" data-wow-delay="1800ms" data-wow-duration="3s">Dream</a>
+          <router-link to="/reality" :class="{ 'reality-zoom': realityShown }" class="nav-link reality wow fadeInRight" data-wow-delay="1200ms" data-wow-duration="3s">Reality</router-link>
+          <router-link to="/dream" class="nav-link dream wow fadeInRight" data-wow-delay="1800ms" data-wow-duration="3s">Dream</router-link>
         </div>
       </div>
     </div>
