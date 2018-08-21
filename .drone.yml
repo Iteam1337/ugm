@@ -1,0 +1,14 @@
+pipeline:
+
+  test:
+    image: docker:18.06.0-ce
+    environment:
+      - TZ=Europe/Stockholm
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+    commands:
+      - docker build --pull --rm -t ${DRONE_REPO_NAME,,}:test -f ./Dockerfile.test .
+      - docker run --rm ${DRONE_REPO_NAME,,}:test
+    when:
+      event: [ push, pull_request, tag ]
