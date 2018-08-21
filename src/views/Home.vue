@@ -45,8 +45,6 @@
       max-width: 100%
       max-width: calc(100vw - 40px)
 
-    @media screen and (max-height: 1200px)
-      font-size: 170px
     @media screen and (min-width: 1600px)
       font-size: 270px
 
