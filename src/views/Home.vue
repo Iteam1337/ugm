@@ -14,7 +14,7 @@
           </p>
         </div>
         <div class="w-40 wow fadeIn" data-wow-delay="1s" data-wow-duration="4s">
-          <a href="#" class="nav-link reality wow fadeInRight" data-wow-delay="1200ms" data-wow-duration="3s">Reality</a>
+          <a :class="{ 'reality-zoom': realityShown }" href="#" class="nav-link reality wow fadeInRight" data-wow-delay="1200ms" data-wow-duration="3s">Reality</a>
           <a href="#" class="nav-link dream wow fadeInRight" data-wow-delay="1800ms" data-wow-duration="3s">Dream</a>
         </div>
       </div>
@@ -33,7 +33,7 @@
     background-size: cover
     background-clip: text
     -webkit-background-clip: text
-    color: rgba(black, 0.3)
+    color: rgba(white, 0.3)
     line-height: 0.9
     z-index: 100
 
@@ -59,9 +59,12 @@
     background-size: cover
     background-clip: text
     -webkit-background-clip: text
-    color: rgba(black, 0.3)
+    color: rgba(white, 0.2)
     line-height: 1
     z-index: 100
+
+    &:hover
+      color: rgba(white, 0.5)
 
     &:after
       content: 'Reality'
@@ -78,11 +81,14 @@
     &.reality
       text-decoration-color: rgba(29, 99, 182, 0.6)
       margin-bottom: 0.25em
+
       &:after
         content: 'Reality'
         background-image: linear-gradient(0deg, rgba(29, 99, 182, 0.36) 0%, rgba(29, 99, 182, 0.36) 100%)
+
     &.dream
       text-decoration-color: rgba(182, 29, 86, 0.6)
+
       &:after
         content: 'Dream'
         background-image: linear-gradient(0deg, rgba(182, 29, 86, 0.36) 0%, rgba(182, 29, 86, 0.36) 100%)
