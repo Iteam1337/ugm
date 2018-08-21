@@ -1,9 +1,81 @@
 <template>
   <div id="app">
-    <router-view/>
+    <transition name="fade">
+      <loading v-if="isLoading" v-bind:is-loading="isLoading" v-on:done="onDone" />
+      <router-view v-if="!isLoading" />
+    </transition>
   </div>
 </template>
 
-<style lang="scss">
+<script>
+  import Loading from '@/components/Loading.vue'
 
+  export default {
+    name: 'app',
+    components: {
+      loading: Loading
+    },
+    data() {
+      return {
+        isLoading: true
+      }
+    },
+    methods: {
+      onDone() {
+        this.isLoading = false
+      }
+    }
+  }
+</script>
+
+<style lang="sass">
+  ::selection
+    color: white
+    background: #9F405B
+
+  body
+    background: black
+    color: white
+    font-family: Roboto
+
+  .container
+    width: 80%
+    margin: 0 auto
+
+  a
+    color: white
+    font-weight: 500
+
+  .text-medium
+    font-size: 1.25em
+
+  .fade-enter-active, .fade-leave-active
+    transition: opacity .5s
+  .fade-enter, .fade-leave-to
+    opacity: 0
+
+  .flex
+    display: flex
+
+  $spacing-base: 8px
+  @for $size from -20 through 20
+    @each $type, $short-type in (margin: m, padding: p)
+      @each $direction, $short-direction in (top: t, right: r, bottom: b, left: l)
+        .#{$short-type}-#{$short-direction}-#{$size}
+          #{$type}-#{$direction}: $size * $spacing-base
+
+      .#{$short-type}-#{$size}
+        #{$type}: $size * $spacing-base
+
+      .#{$short-type}-x-#{$size}
+        #{$type}-left: $size * $spacing-base
+        #{$type}-right: $size * $spacing-base
+
+      .#{$short-type}-y-#{$size}
+        #{$type}-top: $size * $spacing-base
+        #{$type}-bottom: $size * $spacing-base
+
+  @each $size in (90, 80, 70, 60, 50, 40, 30, 20, 10)
+    .w-#{$size}
+      width: $size * 1%
 </style>

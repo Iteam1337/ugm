@@ -22,6 +22,16 @@
   </div>
 </template>
 
+<script>
+  export default {
+    data() {
+      return {
+        realityShown: true // ?
+      }
+    }
+  }
+</script>
+
 <style lang="sass">
   .title
     position: relative
