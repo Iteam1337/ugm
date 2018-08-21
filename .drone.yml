@@ -9,6 +9,45 @@ pipeline:
       - /var/run/docker.sock:/var/run/docker.sock:rw
     commands:
       - docker build --pull --rm -t ${DRONE_REPO_NAME,,}:test -f ./Dockerfile.test .
-      - docker run --rm ${DRONE_REPO_NAME,,}:test
+      # - docker run --rm ${DRONE_REPO_NAME,,}:test
+      - echo "no tests exists"
     when:
       event: [ push, pull_request, tag ]
+
+  build_and_publish_develop:
+    image: plugins/docker
+    repo: ${DRONE_REPO_NAME,,}
+    secrets: [ docker_username, docker_password ]
+    force_tag: true
+    tags: latest
+    when:
+      status: success
+      branch: develop
+      event: push
+
+  build_and_publish_tag:
+    image: plugins/docker
+    repo: ${DRONE_REPO_NAME,,}
+    secrets: [ docker_username, docker_password ]
+    force_tag: true
+    tags:
+      - ${DRONE_TAG##v}
+      - latest-tag-release
+    when:
+      status: success
+      event: tag
+
+  redeploy_develop:
+    image: docker:18.06.0-ce
+    environment:
+      - DOCKER_HOST=tcp://192.168.100.184:2375
+      - DOCKER_USERNAME=${docker_username}
+      - DOCKER_PASSWORD=${docker_password}
+    secrets: [ docker_username, docker_password ]
+    commands:
+      - echo $DOCKER_PASSWORD | docker login --username "$DOCKER_USERNAME" --password-stdin
+      - docker service update --image ${DRONE_REPO_NAME,,}:latest ugm-dev_web --with-registry-auth
+    when:
+      status: success
+      event: push
+      branch: develop
