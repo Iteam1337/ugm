@@ -8,18 +8,15 @@ pipeline:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:rw
     commands:
-      - docker build --pull --rm -t ${DRONE_REPO_NAME,,}:test -f ./Dockerfile.test .
-      # - docker run --rm ${DRONE_REPO_NAME,,}:test
-      - echo ${DRONE_REPO_NAME,,}
-      - echo ${DRONE_REMOTE_URL,,}
-      - echo ${DRONE_REPO,,}
+      - docker build --pull --rm -t ${DRONE_REPO,,}:test -f ./Dockerfile.test .
+      # - docker run --rm ${DRONE_REPO,,}:test
       - echo "no tests exists"
     when:
       event: [ push, pull_request, tag ]
 
   build_and_publish_develop:
     image: plugins/docker
-    repo: iteam1337/${DRONE_REPO_NAME,,}
+    repo: ${DRONE_REPO,,}
     secrets: [ docker_username, docker_password ]
     force_tag: true
     tags: latest
@@ -30,7 +27,7 @@ pipeline:
 
   build_and_publish_tag:
     image: plugins/docker
-    repo: iteam1337/${DRONE_REPO_NAME,,}
+    repo: ${DRONE_REPO,,}
     secrets: [ docker_username, docker_password ]
     force_tag: true
     tags:
@@ -49,7 +46,7 @@ pipeline:
     secrets: [ docker_username, docker_password ]
     commands:
       - echo $DOCKER_PASSWORD | docker login --username "$DOCKER_USERNAME" --password-stdin
-      - docker service update --image iteam1337/${DRONE_REPO_NAME,,}:latest ugm-dev_web --with-registry-auth
+      - docker service update --image ${DRONE_REPO,,}:latest ugm-dev_web --with-registry-auth
     when:
       status: success
       event: push
