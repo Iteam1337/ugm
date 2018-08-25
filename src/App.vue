@@ -29,6 +29,9 @@
 </script>
 
 <style lang="sass">
+  @import "~/node_modules/normalize.css/normalize.css"
+
+
   ::selection
     color: white
     background: #9F405B

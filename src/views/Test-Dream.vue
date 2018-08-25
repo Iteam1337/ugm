@@ -63,6 +63,7 @@
     .block
       font-size: 2vw
       text-align: center
+      cursor: pointer
       .fa-border
         background: rgba(0,0,0,.5)
         width: 1em
