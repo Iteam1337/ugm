@@ -37,7 +37,7 @@
           let notifiedNotComputable = false
 
           xhr.open('GET', imageUrl, true)
-          xhr.responseType = 'arraybuffer'
+          xhr.responseType = 'blob'
 
           const sentProgress = new Set()
           function sendOnProgress (progress) {
@@ -69,17 +69,7 @@
               sendOnProgress(100)
             }
 
-            const options = {}
-            const headers = xhr.getAllResponseHeaders()
-            const m = headers.match(/^Content-Type\:\s*(.*?)$/mi)
-
-            if (m && m[1]) {
-              options.type = m[1]
-            }
-
-            const blob = new Blob([this.response], options)
-
-            resolve(window.URL.createObjectURL(blob))
+            resolve(window.URL.createObjectURL(xhr.response))
           }
 
           xhr.send()
@@ -98,10 +88,17 @@
 
         ;(async () => {
           const all = images.length * 100
-
-          const imgs = await Promise.all(images.map(async (image, index) => await this.preloadImage(image, progress => {
-            this.progress = ((progress + (index * 100)) / all) * 100
-          })))
+          const imgs = await Promise.all(images.map(async (src, index) => {
+            const blob = await this.preloadImage(src, progress => {
+              const current = ((progress + (index * 100)) / all) * 100
+              if (current > this.progress) {
+                this.progress = current
+              }
+            })
+            const image = new Image()
+            image.crossOrigin = ''
+            image.src = blob
+          }))
 
           await this.sleep(2000)
 
