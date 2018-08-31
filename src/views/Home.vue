@@ -8,9 +8,8 @@
           <p class="text-medium wow fadeInDown" data-wow-delay="500ms" data-wow-duration="3s">
             Urban Girls Movement is a project where young girls from Botkyrka in Sweden. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veritatis nam iusto reiciendis quia quae natus error provident, at, ex quisquam, temporibus optio aliquid excepturi illum laudantium iure quasi laborum!
           </p>
-
           <p class="text-medium wow fadeInDown" data-wow-delay="1s" data-wow-duration="2s">
-            <a href="#">Read more about the project</a>
+            <router-link :to="{ name: 'about' }">Read more about the project</router-link>
           </p>
         </div>
         <div class="w-40 wow fadeIn" data-wow-delay="1s" data-wow-duration="4s">
@@ -28,11 +27,15 @@
       return {
         realityShown: true // ?
       }
+    },
+    mounted() {
+      window.wow = new WOW()
+      window.wow.init()
     }
   }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
   .title
     position: relative
     font-weight: 900

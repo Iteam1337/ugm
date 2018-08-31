@@ -9,7 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add([ faCamera, faQuoteRight ])
 Vue.component('fa', FontAwesomeIcon)
 
-new WOW().init()
+window.wow = new WOW()
+window.wow.init()
 
 Vue.config.productionTip = false
 
