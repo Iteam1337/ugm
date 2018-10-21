@@ -1,0 +1,14 @@
+[
+  {
+    "name": "baksidan",
+    "position": { "lat": 59.2479177, "lng": 17.8592948 }
+  },
+  {
+    "name": "ingången",
+    "position": { "lat": 59.247965, "lng": 17.860078 }
+  },
+  {
+    "name": "gränden",
+    "position": { "lat": 59.248978, "lng": 17.861043 }
+  }
+]

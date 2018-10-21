@@ -42,11 +42,9 @@
 
 <script>
 export default {
+  props: ['place'],
   methods: {
   },
-	data () {
-		return {}
-	},
 }
 </script>
 
@@ -55,7 +53,6 @@ export default {
     width: 100%
     height: 100%
   .container
-    border: 1px dotted white
     height: 100%
     display: flex
   .left-content

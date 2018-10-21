@@ -22,10 +22,11 @@
 
 <script>
 import mapStyle from '../assets/hotpink.json'
+import places from '../assets/places.json'
 export default {
   methods: {
     clickMarker(marker){
-      // console.log(marker.latLng.lat(), marker.latLng.lng())
+      console.log(this.$router)
       console.log(marker)
     }
   },
