@@ -8,7 +8,16 @@
 </template>
 
 <script>
+  import Vue from 'vue'
   import Loading from '@/components/Loading.vue'
+  import * as VueGoogleMaps from 'vue2-google-maps'
+
+  Vue.use(VueGoogleMaps, {
+    load: {
+      key: 'AIzaSyCKC_OzJnT1jUluk0fsyS9RPl6JzIaOzYs',
+      libraries: ['places'],
+    },
+  })
 
   export default {
     name: 'app',
@@ -31,15 +40,24 @@
 <style lang="sass">
   @import "~/node_modules/normalize.css/normalize.css"
 
+  *
+    box-sizing: border-box
+  html
+    height: 100%
 
   ::selection
     color: white
     background: #9F405B
 
   body
+    height: 100%
     background: black
     color: white
     font-family: Roboto
+    margin: 0
+
+  #app
+    height: 100%
 
   .container
     width: 80%
