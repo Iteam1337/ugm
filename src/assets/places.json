@@ -1,7 +1,13 @@
 [
   {
     "name": "baksidan",
-    "position": { "lat": 59.2479177, "lng": 17.8592948 }
+    "position": { "lat": 59.2479177, "lng": 17.8592948 },
+    "challenges": [
+      "“Jag tycker att det viktigaste var nog det här med att vara en tjej och gå runt i de olika områden, jag tror de flesta inklusive mig själv tycker inte att det är ganska tryggt att gå t.ex. genom en grupp killar med mask och stora jackor man vet aldrig vad de kan göra.”",
+      "“Jag tycker att det viktigaste var nog det här med att vara en tjej och gå runt i de olika områden, jag tror de flesta inklusive mig själv tycker inte att det är ganska tryggt att gå t.ex. genom en grupp killar med mask och stora jackor man vet aldrig vad de kan göra.”",
+      "“Jag tycker att det viktigaste var nog det här med att vara en tjej och gå runt i de olika områden, jag tror de flesta inklusive mig själv tycker inte att det är ganska tryggt att gå t.ex. genom en grupp killar med mask och stora jackor man vet aldrig vad de kan göra.”",
+      "“Jag tycker att det viktigaste var nog det här med att vara en tjej och gå runt i de olika områden, jag tror de flesta inklusive mig själv tycker inte att det är ganska tryggt att gå t.ex. genom en grupp killar med mask och stora jackor man vet aldrig vad de kan göra.”"
+    ]
   },
   {
     "name": "ingången",

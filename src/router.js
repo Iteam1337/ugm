@@ -8,7 +8,7 @@ import About from '@/views/About.vue'
 import Map from '@/views/Map.vue'
 import Place from '@/views/Place.vue'
 import Images from '@/views/Images.vue'
-import Challenges from '@/views/Images.vue'
+import Challenges from '@/views/Challenges.vue'
 
 import places from './assets/places'
 
@@ -49,18 +49,24 @@ export default new Router({
         const place = places.find(p => p.name === route.params.placeId)
         return { place }
       },
-      children: [
-        {
-          path: 'images',
-          name: 'images',
-          component: Images
-        },
-        {
-          path: 'challenges',
-          name: 'challenges',
-          component: Challenges
-        }
-      ]
+    },
+    {
+      path: '/place/:placeId/images',
+      name: 'images',
+      component: Images,
+      props: (route) => {
+        const place = places.find(p => p.name === route.params.placeId)
+        return { place }
+      },
+    },
+    {
+      path: '/place/:placeId/challenges',
+      name: 'challenges',
+      component: Challenges,
+      props: (route) => {
+        const place = places.find(p => p.name === route.params.placeId)
+        return { place }
+      },
     }
   ]
 })

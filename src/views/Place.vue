@@ -5,29 +5,35 @@
         <div class="logo">
           <h1>Urban girls movement</h1>
         </div>
-        <div class="menu-item">
-          <i>{{'<'}}</i>
+        <div class="menu-item" @click="goBack()">
+          <div>
+            <img src="../assets/icons/left-arrow.svg">
+          </div>
           Tillbaka till kartan
         </div>
 
-        <div class="menu-item" style="margin-top: 3rem;">
-          <i>{{'<'}}</i>
+        <div class="menu-item" style="margin-top: 3rem;" @click="navigate('images')">
+          <div>
+            <img src="../assets/icons/camera.svg">
+          </div>
           Bilder
         </div>
-        <div class="menu-item">
-          <i>{{'B'}}</i>
-          Bilder
-        </div>
-        <div class="menu-item">
-          <i>{{'!'}}</i>
+        <div class="menu-item" @click="navigate('challenges')">
+          <div>
+            <img src="../assets/icons/challenge.svg">
+          </div>
           Utmaningar
         </div>
-        <div class="menu-item">
-          <i>{{'?'}}</i>
+        <div class="menu-item" @click="navigate('ideas')">
+          <div>
+            <img src="../assets/icons/idea.svg">
+          </div>
           Lösningsförslag
         </div>
-        <div class="menu-item">
-          <i>{{'L'}}</i>
+        <div class="menu-item" @click="navigate('sounds')">
+          <div>
+            <img>
+          </div>
           Ljud
         </div>
       </div>
@@ -44,6 +50,12 @@
 export default {
   props: ['place'],
   methods: {
+    goBack () {
+      this.$router.push({ name: 'map'})
+    },
+    navigate (name) {
+      this.$router.push({ name })
+    }
   },
 }
 </script>
@@ -75,18 +87,4 @@ export default {
     h1
       margin: 0
       text-transform: uppercase
-
-  .menu-item
-    margin-top: 1rem
-    display: flex
-    align-items: center
-    i
-      margin-right: 1rem
-      width: 30px
-      height: 30px
-      display: flex
-      justify-content: center
-      align-items: center
-      border: 2px solid white
-      border-radius: 50%
 </style>

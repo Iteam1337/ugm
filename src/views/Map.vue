@@ -23,11 +23,11 @@
 <script>
 import mapStyle from '../assets/hotpink.json'
 import places from '../assets/places.json'
+
 export default {
   methods: {
-    clickMarker(marker){
-      console.log(this.$router)
-      console.log(marker)
+    clickMarker(name){
+      this.$router.push({ name: 'place', params: { placeId: name } })
     }
   },
 	data () {
@@ -41,21 +41,8 @@ export default {
       options: {
         styles: mapStyle
       },
-      markers: [
-        {
-          name: 'baksidan',
-          icon: '',
-          position: { lat: 59.2479177, lng: 17.8592948 }
-        },
-        {
-          name: 'ingången',
-          position: { lat: 59.247965, lng: 17.860078 }
-        },
-        {
-          name: 'gränden',
-          position: { lat: 59.248978, lng: 17.861043 }
-        }
-      ]
+      markers: places
+        .map(place => ({ name: place.name, position: place.position}))
 		}
 	},
 }

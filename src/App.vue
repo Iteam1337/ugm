@@ -78,6 +78,24 @@
   .flex
     display: flex
 
+  .menu-item
+    cursor: pointer
+    margin-top: 1rem
+    display: flex
+    align-items: center
+    div
+      margin-right: 1rem
+      width: 50px
+      height: 50px
+      display: flex
+      justify-content: center
+      align-items: center
+      border: 2px solid white
+      border-radius: 50%
+      img
+        width: 50%
+        height: 50%
+
   $spacing-base: 8px
   @for $size from -20 through 20
     @each $type, $short-type in (margin: m, padding: p)
