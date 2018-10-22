@@ -25,7 +25,7 @@
           </div>
           Utmaningar
         </div>
-        <div class="menu-item" @click="navigate('ideas')">
+        <div class="menu-item" @click="navigate('solution')">
           <div>
             <img src="../assets/icons/idea.svg">
           </div>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="right-content">
-        <p v-for="({ beskrivning }, i) in place.texts.slice(0, 5)" :key="'challenge' + i" v-if="beskrivning">
+        <p v-for="({ beskrivning }, i) in place.texts.slice(0, 5)" :key="'description' + i" v-if="beskrivning">
           "{{ beskrivning }}"
         </p>
       </div>

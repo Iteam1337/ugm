@@ -9,6 +9,7 @@ import Map from '@/views/Map.vue'
 import Place from '@/views/Place.vue'
 import Images from '@/views/Images.vue'
 import Challenges from '@/views/Challenges.vue'
+import Solution from '@/views/Solution.vue'
 
 import places from './assets/places'
 
@@ -63,6 +64,15 @@ export default new Router({
       path: '/place/:placeId/challenges',
       name: 'challenges',
       component: Challenges,
+      props: (route) => {
+        const place = places.find(p => p.name === route.params.placeId)
+        return { place }
+      },
+    },
+    {
+      path: '/place/:placeId/solution',
+      name: 'solution',
+      component: Solution,
       props: (route) => {
         const place = places.find(p => p.name === route.params.placeId)
         return { place }
