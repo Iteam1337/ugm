@@ -1,15 +1,21 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import App from '@/App.vue'
+import router from '@/router'
 
-import 'normalize.css/normalize.css'
-import './App.sass'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCamera, faQuoteRight }  from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-new WOW().init()
+library.add([ faCamera, faQuoteRight ])
+Vue.component('fa', FontAwesomeIcon)
+
+window.wow = new WOW()
+window.wow.init()
 
 Vue.config.productionTip = false
 
 new Vue({
   router,
+  el: '#app',
   render: h => h(App)
-}).$mount('#app')
+})
