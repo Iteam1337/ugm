@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '@/views/Home.vue'
+import Home from '@/views/HomeMap.vue'
 import Dream from '@/views/Test-Dream.vue'
 import Reality from '@/views/Test-Reality.vue'
 import About from '@/views/About.vue'
