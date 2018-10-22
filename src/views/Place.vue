@@ -67,7 +67,7 @@ export default {
 
 <style lang="sass" scoped>
   .background
-    background-image: url('/images/place_background.png');
+    background-image: url(../assets/images/place-background.png)
     width: 100%
     height: 100%
     background-size: cover

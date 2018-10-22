@@ -1,8 +1,7 @@
 <template>
   <div class="background">
     <div class="overlay">
-      <div class="header">
-      </div>
+      <div class="header"></div>
       <div class="container">
         <div class="left-content">
           <div class="logo">
@@ -43,7 +42,7 @@ export default {
 
 <style lang="sass" scoped>
   .header
-    background-image: url('/images/header.png')
+    background-image: url(../assets/images/header.png)
     background-size: cover
     background-position: center center
     position: absolute
