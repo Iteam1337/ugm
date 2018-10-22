@@ -10,7 +10,10 @@
         </div>
       </div>
       <div class="right-content">
-        <img v-for="(image, i) in place.images" :key="'image' + i" :src="image">
+        <img
+          v-for="(image, i) in place.images"
+          :key="'image' + i"
+          :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
       </div>
     </div>
   </div>
@@ -20,7 +23,7 @@
 export default {
   props: ['place'],
   methods: {
-    goBack () {
+    goBack() {
       this.$router.push({ name: 'place', params: { placeId: this.place.name } })
     }
   },
