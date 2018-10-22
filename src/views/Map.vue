@@ -1,8 +1,10 @@
 <template>
 	<div class="simple-map demo">
-    <div class="logo">
-      <h1>Urban girls movement</h1>
-    </div>
+    <router-link to="/">
+      <div class="logo">
+        <h1>Urban girls movement</h1>
+      </div>
+    </router-link>
 		<GmapMap
 			ref="map"
 			class="map"
@@ -26,8 +28,9 @@
 </template>
 
 <script>
-import mapStyle from '../assets/hotpink.json'
-import places from '../assets/places.json'
+
+import styles from '../assets/map/styles.json'
+import places from '../assets/map/places.json'
 
 export default {
   methods: {
@@ -45,7 +48,7 @@ export default {
       zoom: 18,
       options: {
         disableDefaultUI : true,
-        styles: mapStyle
+        styles
       },
       markers: places
         .map(place => ({ name: place.name, position: place.position }))

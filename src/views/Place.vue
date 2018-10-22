@@ -3,37 +3,40 @@
   <div class="overlay">
     <div class="container">
       <div class="left-content">
-        <div class="logo">
-          <h1>Urban girls movement</h1>
-        </div>
+        <router-link to="/">
+          <div class="logo">
+            <h1>Urban girls movement</h1>
+          </div>
+        </router-link>
+
         <div class="menu-item" @click="goBack()">
           <div>
-            <img src="../assets/icons/left-arrow.svg">
+            <fa icon="arrow-left" />
           </div>
           Tillbaka till kartan
         </div>
 
         <div class="menu-item" style="margin-top: 3rem;" @click="navigate('images')">
           <div>
-            <img src="../assets/icons/camera.svg">
+            <fa icon="camera" />
           </div>
           Bilder
         </div>
         <div class="menu-item" @click="navigate('challenges')">
           <div>
-            <img src="../assets/icons/challenge.svg">
+            <fa icon="exclamation" />
           </div>
           Utmaningar
         </div>
         <div class="menu-item" @click="navigate('solution')">
           <div>
-            <img src="../assets/icons/idea.svg">
+            <fa icon="lightbulb" />
           </div>
           Lösningsförslag
         </div>
         <div class="menu-item" @click="navigate('sounds')">
           <div>
-            <img>
+            <fa icon="bullhorn" />
           </div>
           Ljud
         </div>
@@ -67,6 +70,8 @@ export default {
     background-image: url('/images/place_background.png');
     width: 100%
     height: 100%
+    background-size: cover
+    position: absolute
   .overlay
     position: absolute
     background-color: rgba(0, 0, 0, 0.5)

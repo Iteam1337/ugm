@@ -1,0 +1,66 @@
+[
+  {
+    "stylers": [
+      {
+        "hue": "#ff61a6"
+      },
+      {
+        "visibility": "on"
+      },
+      {
+        "invert_lightness": true
+      },
+      {
+        "saturation": 40
+      },
+      {
+        "lightness": 10
+      }
+    ]
+  },
+  {
+    "elementType": "labels",
+    "featureType": "poi.attraction",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels",
+    "featureType": "poi.business",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels",
+    "featureType": "poi.medical",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels",
+    "featureType": "poi.place_of_worship",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels",
+    "featureType": "poi.sports_complex",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+]

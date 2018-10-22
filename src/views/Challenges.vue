@@ -4,7 +4,7 @@
       <div class="left-content">
         <div class="menu-item" @click="goBack()">
           <div>
-            <img src="../assets/icons/left-arrow.svg">
+            <fa icon="arrow-left" />
           </div>
           Tillbaka till platsen
         </div>

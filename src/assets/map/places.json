@@ -1,0 +1,217 @@
+[
+  {
+    "name": "Baksidan",
+    "position": { "lat": 59.2478857, "lng": 17.8602615 },
+    "texts": [
+      {
+        "beskrivning": "Skall bli centrum/gågata. Just nu stängd pga bygge för att komma\ntill bostäderna norrut",
+        "förslag": "",
+        "utmaningar": "Ingen att fråga om hjälp vilket leder till otrygghet"
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Mörkt, ödsligt, på natten är det läskigt"
+      }
+    ],
+    "images": [
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png"
+    ]
+  },
+  {
+    "name": "Torget",
+    "position": { "lat": 59.2479258, "lng": 17.8611123 },
+    "texts": [
+      {
+        "förslag": "Uteservering centrerat, för att utnyttja platsen men också för\natt göra det tryggare för fler än de som alltid är där",
+        "beskrivning": "Ljud från trafiken",
+        "utmaningar": "Inte välkomnande, vill ej då stanna"
+      },
+      {
+        "förslag": "Mer belysning vid hörnet",
+        "beskrivning": "",
+        "utmaningar": "Otryggt, mörkt, människor längs väggen, lukt"
+      },
+      {
+        "förslag": "Att få folk från väggarna och få de att vistas centralt",
+        "beskrivning": "",
+        "utmaningar": "Inte tryggt, mörkt, ganska öppet"
+      },
+      {
+        "förslag": "Busstationen ser osäkert, tänk ny teknik, elbussar.",
+        "beskrivning": "",
+        "utmaningar": "Centrumet var dött och dämpat"
+      },
+      {
+        "förslag": "",
+        "beskrivning": "",
+        "utmaningar": "Svårt att be om hjälp"
+      },
+      {
+        "förslag": "",
+        "beskrivning": "",
+        "utmaningar": "Känns olustigt när polisen kommer hit och tar killar"
+      },
+      {
+        "förslag": "",
+        "beskrivning": "",
+        "utmaningar": "Alltid stora killgäng på vissa entréer. Tjejerna väljer andra entreer"
+      },
+      {
+        "förslag": "",
+        "beskrivning": "",
+        "utmaningar": "Liten målgrupp på platsen. Inget som lockar."
+      },
+      {
+        "förslag": "",
+        "beskrivning": "",
+        "utmaningar": "Torget och hörnet var otrygga"
+      },
+      {
+        "förslag": "",
+        "beskrivning": "",
+        "utmaningar": "Skräpigt, otryggt, otydligt med skyltar, avsaknad av mötesplatser"
+      },
+      {
+        "förslag": "",
+        "beskrivning": "",
+        "utmaningar": "Inte tryggt, öppet men ändå stängt"
+      },
+      {
+        "förslag": "",
+        "beskrivning": "",
+        "utmaningar": "Tiden på dygnet har betydelse - otryggare på nätterna"
+      },
+      {
+        "förslag": "",
+        "beskrivning": "",
+        "utmaningar": "Ingen vistas utomhus utan anledning"
+      }
+    ],
+    "images": [
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png"
+    ]
+  },
+  {
+    "name": "Centrum",
+    "position": { "lat": 59.2486592, "lng": 17.8603544 },
+    "texts": [
+      {
+        "beskrivning": "Det känns tryggt. Här finns det alltid någon som ser. Butikerna har öppet till 20:00.",
+        "förslag": "Butikerna borde vara öppna längre.",
+        "utmaningar": "Det är få fönster, trångt, mörkt och smutsigt."
+      },
+      {
+        "beskrivning": "De olika ingångarna är olika trygga.",
+        "förslag": "Önskar läxhjälp för gymnasieelever på biblioteket (finns bara för grundskola och högstadie idag)",
+        "utmaningar": "Finns ingenstans att hänga. Inga bänkar."
+      },
+      {
+        "beskrivning": "De bänkar som har funnits blev centrum för droghandel och har därför tagits bort.",
+        "förslag": "Sittplatser",
+        "utmaningar": "Det är ljust här inne, men mörkt ute. Ser inte inifrån om någon står utanför."
+      },
+      {
+        "beskrivning": "3 entréer",
+        "förslag": "Torghandel utomhus.",
+        "utmaningar": "Biblioteket är otillgänligt. Det är inte synligt."
+      },
+      {
+        "beskrivning": "",
+        "förslag": "Det är grått, smutsigt, finns inga levande blommor! Växtlighet tack!",
+        "utmaningar": "Det känns inte välkomnande att gå in i centrum när ett stort gäng kilar hänger utanför och säljer droger. Vissa med täckt ansikte."
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Man vill inte vara här. Det är bara en plats för ärenden."
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Saknar idag kulturella och sociala aktiviteter i området."
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Att se och bli sedd: Belysning - mer belysning skapar en trygghetskänsla"
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Inga mötesplatser, man bara passerar"
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Trång entre i torgets hörn där vi gick in"
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Labyrintkänsla i trapphuset med dålig överblick, inget trevligt ljus"
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Fanns en del platser där det var mörkt, där man inte visste vad som kom"
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Trångt i trapphuset, få fönster, oväntade personer i trapphus till vårdcentral och bibliotek, instängt"
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Känns som att alla är exkluderade, inte mötesplatser eller platser att hänga på. Många butiker är\nexkluderande - riktar sig endast till vissa specifika grupper"
+      }
+    ],
+    "images": [
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png"
+    ]
+  },
+  {
+    "name": "Hörnan",
+    "position": { "lat": 59.2474163, "lng": 17.8610796 },
+    "texts": [
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Dålig belysning, känsla av otrygghet"
+      },
+      {
+        "beskrivning": "",
+        "förslag": "",
+        "utmaningar": "Kisslukt, dålig överblick. Fin utsikt."
+      }
+    ],
+    "images": [
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png",
+      "/images/place_background.png"
+    ]
+  }
+]
