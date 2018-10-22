@@ -16,25 +16,25 @@
           Tillbaka till kartan
         </div>
 
-        <div class="menu-item" style="margin-top: 3rem;" @click="navigate('images')">
+        <div class="menu-item" style="margin-top: 3rem;" @click="navigate('images')"  v-if="show.images">
           <div>
             <fa icon="camera" />
           </div>
           Bilder
         </div>
-        <div class="menu-item" @click="navigate('challenges')">
+        <div class="menu-item" @click="navigate('challenges')" v-if="show.challenges">
           <div>
             <fa icon="exclamation" />
           </div>
           Utmaningar
         </div>
-        <div class="menu-item" @click="navigate('solution')">
+        <div class="menu-item" @click="navigate('solution')" v-if="show.solutions">
           <div>
             <fa icon="lightbulb" />
           </div>
           Lösningsförslag
         </div>
-        <div class="menu-item" @click="navigate('sounds')">
+        <div class="menu-item" @click="navigate('sounds')" v-if="show.sounds">
           <div>
             <fa icon="bullhorn" />
           </div>
@@ -54,6 +54,20 @@
 <script>
 export default {
   props: ['place'],
+  data() {
+    const { place } = this
+    const challenges = place.texts.some(object => object.utmaningar)
+    const solutions = place.texts.some(object => object.förslag)
+
+    return {
+      show: {
+        challenges,
+        solutions,
+        images: !!(place.images || []).length,
+        sounds: !!(place.sounds || []).length,
+      }
+    }
+  },
   methods: {
     goBack () {
       this.$router.push({ name: 'map'})
