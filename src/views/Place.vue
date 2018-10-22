@@ -1,12 +1,10 @@
 <template>
   <div class="background">
   <div class="overlay">
-    <div class="container">
-      <div class="left-content">
-        <router-link to="/">
-          <div class="logo">
-            <h1>Urban girls movement</h1>
-          </div>
+    <div class="container flex">
+      <div class="w-40 nav">
+        <router-link to="/" class="logo">
+          <h1>Urban girls movement</h1>
         </router-link>
 
         <div class="menu-item" @click="goBack()">
@@ -41,7 +39,8 @@
           Ljud
         </div>
       </div>
-      <div class="right-content">
+
+      <div class="w-60 content">
         <p v-for="({ beskrivning }, i) in place.texts.slice(0, 5)" :key="'description' + i" v-if="beskrivning">
           "{{ beskrivning }}"
         </p>
@@ -80,6 +79,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  .logo
+    &, &:visited
+      text-decoration: none
   .background
     background-image: url(../assets/images/place-background.png)
     background-position: center center
@@ -93,19 +95,22 @@ export default {
     width: 100%
     height: 100%
 
+  .menu-item
+    div
+      min-width: 50px
+      min-height: 50px
   .container
     height: 100%
-    display: flex
-  .left-content
+  .nav
     display: flex
     flex-direction: column
-  .right-content
+  .content
     flex: 1
     display: flex
-    align-items: flex-end
+    align-items: flex-start
     justify-content: space-evenly
     flex-direction: column
     padding: 2rem
     p
-      width: 50%
+      max-width: 400px
 </style>

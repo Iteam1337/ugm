@@ -1,7 +1,7 @@
 <template>
   <div class="background">
-    <div class="container">
-      <div class="left-content">
+    <div class="nav container flex">
+      <div class="w-100 box">
         <div class="menu-item" @click="goBack()">
           <div>
             <fa icon="arrow-left" />
@@ -9,7 +9,9 @@
           Tillbaka till platsen
         </div>
       </div>
-      <div class="right-content">
+    </div>
+    <div class="container flex content">
+      <div class="w-100 box">
         <p v-for="({ förslag }, i) in place.texts" :key="'solution' + i" v-if="förslag">
           "{{ förslag }}"
         </p>
@@ -34,17 +36,19 @@ export default {
     width: 100%
     height: 100%
   .container
-    height: 100%
-    display: flex
-    flex-direction: column
-  .left-content
-    display: flex
-    flex-direction: column
-  .right-content
-    display: flex
-    flex-wrap: wrap
-    padding: 2rem
-    p
-      margin: 2rem
-      width: 40%
+    max-width: 960px
+  .box
+    width: 100%
+  .nav
+    width: 80%
+    height: 10%
+  .content
+    height: 90%
+    .box
+      display: flex
+      flex-wrap: wrap
+      padding: 2rem
+      p
+        margin: 2rem
+        width: 40%
 </style>
