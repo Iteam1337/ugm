@@ -1,5 +1,6 @@
 <template>
   <div class="background">
+  <div class="overlay">
     <div class="container">
       <div class="left-content">
         <div class="logo">
@@ -38,11 +39,12 @@
         </div>
       </div>
       <div class="right-content">
-        <p>
-          “Jag tycker att det viktigaste var nog det här med att vara en tjej och gå runt i de olika områden, jag tror de flesta inklusive mig själv tycker inte att det är ganska tryggt att gå t.ex. genom en grupp killar med mask och stora jackor man vet aldrig vad de kan göra.”
+        <p v-for="({ beskrivning }, i) in place.texts.slice(0, 5)" :key="'challenge' + i" v-if="beskrivning">
+          "{{ beskrivning }}"
         </p>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -62,8 +64,15 @@ export default {
 
 <style lang="sass" scoped>
   .background
+    background-image: url('/images/place_background.png');
     width: 100%
     height: 100%
+  .overlay
+    position: absolute
+    background-color: rgba(0, 0, 0, 0.5)
+    width: 100%
+    height: 100%
+
   .container
     height: 100%
     display: flex
@@ -71,20 +80,12 @@ export default {
     display: flex
     flex-direction: column
   .right-content
-    display: flex
-    justify-content: flex-end
-    padding: 2rem
-    p
-      width: 75%
-  .logo
-    width: 248px
-    height: 224px
-    padding: 2rem 1.5rem
-    background-color: #FF305E
-    font-size: 18px
+    flex: 1
     display: flex
     align-items: flex-end
-    h1
-      margin: 0
-      text-transform: uppercase
+    justify-content: space-evenly
+    flex-direction: column
+    padding: 2rem
+    p
+      width: 50%
 </style>

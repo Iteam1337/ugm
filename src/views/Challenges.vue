@@ -10,8 +10,8 @@
         </div>
       </div>
       <div class="right-content">
-        <p v-for="(challenge, i) in place.challenges" :key="'challenge' + i">
-          {{ challenge }}
+        <p v-for="({ utmaningar }, i) in place.texts" :key="'challenge' + i">
+          "{{ utmaningar }}"
         </p>
       </div>
     </div>

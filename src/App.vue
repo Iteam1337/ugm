@@ -15,7 +15,7 @@
   Vue.use(VueGoogleMaps, {
     load: {
       key: 'AIzaSyCKC_OzJnT1jUluk0fsyS9RPl6JzIaOzYs',
-      libraries: ['places'],
+      libraries: ['places', 'visualization'],
     },
   })
 
@@ -78,11 +78,24 @@
   .flex
     display: flex
 
+  .logo
+    width: 248px
+    height: 224px
+    padding: 2rem 1.5rem
+    background-color: #FF305E
+    font-size: 18px
+    display: flex
+    align-items: flex-end
+    h1
+      margin: 0
+      text-transform: uppercase
+
   .menu-item
     cursor: pointer
-    margin-top: 1rem
+    margin-top: 2rem
     display: flex
     align-items: center
+    text-decoration: underline
     div
       margin-right: 1rem
       width: 50px
