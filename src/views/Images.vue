@@ -39,9 +39,8 @@ export default {
     display: flex
     flex-direction: column
   .top-content
-    display: flex
-    flex-direction: column
-    height: 150px
+    display: block
+    min-height: 100px
   .image-content
     column-count: 2
     column-gap: 2rem
