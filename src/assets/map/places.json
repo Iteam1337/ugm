@@ -15,13 +15,11 @@
       }
     ],
     "images": [
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png"
+      "images/places/baksidan-passagen/IMG_4884.jpeg",
+      "images/places/baksidan-passagen/IMG_4885.jpeg",
+      "images/places/baksidan-passagen/IMG_2209.jpeg",
+      "images/places/baksidan-passagen/P1070603-1.jpeg",
+      "images/places/baksidan-passagen/IMG_2210.jpeg"
     ]
   },
   {
@@ -95,13 +93,13 @@
       }
     ],
     "images": [
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png"
+      "images/places/torget/P1070549-1.jpeg",
+      "images/places/torget/P1070551-1.jpeg",
+      "images/places/torget/P1070584-1.jpeg",
+      "images/places/torget/P1070587-1.jpeg",
+      "images/places/torget/P1070553-1.jpeg",
+      "images/places/torget/P1070536-1.jpeg",
+      "images/places/torget/P1070537-1.jpeg"
     ]
   },
   {
@@ -180,13 +178,12 @@
       }
     ],
     "images": [
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png"
+      "images/places/centrum/IMG_4880.jpeg",
+      "images/places/centrum/IMG_4871.jpeg",
+      "images/places/centrum/P1070593-1.jpeg",
+      "images/places/centrum/P1070594-1.jpeg",
+      "images/places/centrum/IMG_4872.jpeg",
+      "images/places/centrum/IMG_4867.jpeg"
     ]
   },
   {
@@ -205,13 +202,8 @@
       }
     ],
     "images": [
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png",
-      "images/place-background.png"
+      "images/places/hornan/P1070614-1.jpeg",
+      "images/places/hornan/P1070611-1.jpeg"
     ]
   }
 ]
