@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="background" :style="{'background-image': background}">
   <div class="overlay">
     <div class="container flex">
       <div class="w-40 nav">
@@ -55,15 +55,19 @@ export default {
   props: ['place'],
   data() {
     const { place } = this
-    const challenges = place.texts.some(object => object.utmaningar)
-    const solutions = place.texts.some(object => object.förslag)
+    const { background: url, texts, images, sounds } = place
+
+    const challenges = texts.some(object => object.utmaningar)
+    const solutions = texts.some(object => object.förslag)
+    const background = `url(${url.startsWith('/') ? url : require(`@/assets/${url}`)})`
 
     return {
+      background,
       show: {
         challenges,
         solutions,
-        images: !!(place.images || []).length,
-        sounds: !!(place.sounds || []).length,
+        images: !!(images || []).length,
+        sounds: !!(sounds || []).length,
       }
     }
   },
@@ -83,7 +87,6 @@ export default {
     &, &:visited
       text-decoration: none
   .background
-    background-image: url(../assets/images/place-background.png)
     background-position: center center
     width: 100%
     height: 100%
