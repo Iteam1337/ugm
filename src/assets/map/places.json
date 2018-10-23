@@ -1,6 +1,6 @@
 [
   {
-    "name": "Baksidan",
+    "name": "baksidan",
     "position": { "lat": 59.2478857, "lng": 17.8602615 },
     "texts": [
       {
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "name": "Torget",
+    "name": "torget",
     "position": { "lat": 59.2479258, "lng": 17.8611123 },
     "texts": [
       {
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "name": "Centrum",
+    "name": "centrum",
     "position": { "lat": 59.2486592, "lng": 17.8603544 },
     "texts": [
       {
@@ -190,7 +190,7 @@
     ]
   },
   {
-    "name": "Hörnan",
+    "name": "hörnan",
     "position": { "lat": 59.2474163, "lng": 17.8610796 },
     "texts": [
       {

@@ -12,6 +12,11 @@ import places from './assets/map/places'
 
 Vue.use(Router)
 
+function place ({ params: { placeId } }) {
+  return places.find(({ name }) =>
+    name.toLowerCase() === placeId.toLowerCase())
+}
+
 export default new Router({
   routes: [
     {
@@ -29,8 +34,7 @@ export default new Router({
       name: 'place',
       component: Place,
       props: route => {
-        const place = places.find(p => p.name === route.params.placeId)
-        return { place }
+        return { place: place(route) }
       },
     },
     {
@@ -38,8 +42,7 @@ export default new Router({
       name: 'images',
       component: Images,
       props: route => {
-        const place = places.find(p => p.name === route.params.placeId)
-        return { place }
+        return { place: place(route) }
       },
     },
     {
@@ -47,8 +50,7 @@ export default new Router({
       name: 'challenges',
       component: Challenges,
       props: route => {
-        const place = places.find(p => p.name === route.params.placeId)
-        return { place }
+        return { place: place(route) }
       },
     },
     {
@@ -56,8 +58,7 @@ export default new Router({
       name: 'solution',
       component: Solution,
       props: route => {
-        const place = places.find(p => p.name === route.params.placeId)
-        return { place }
+        return { place: place(route) }
       },
     }
   ]
