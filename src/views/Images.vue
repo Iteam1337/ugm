@@ -43,12 +43,8 @@ export default {
     flex-direction: column
     height: 150px
   .image-content
-    break-inside: avoid
-    display: grid
-    grid-gap: 2rem
-    grid-template-columns: repeat(2, minmax(40%, 1fr))
-    align-items: center
-    grid-template-rows: auto
+    column-count: 2
+    column-gap: 2rem
     img
       padding: 2% 2% 2% 0
       width: 100%
