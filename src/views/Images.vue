@@ -1,7 +1,7 @@
 <template>
   <div class="background">
     <div class="container">
-      <div class="left-content">
+      <div class="top-content">
         <div class="menu-item" @click="goBack()">
           <div>
             <fa icon="arrow-left" />
@@ -9,7 +9,7 @@
           Tillbaka till platsen
         </div>
       </div>
-      <div class="right-content">
+      <div class="image-content">
         <img
           v-for="(image, i) in place.images"
           :key="'image' + i"
@@ -38,17 +38,18 @@ export default {
     height: 100%
     display: flex
     flex-direction: column
-  .left-content
+  .top-content
     display: flex
     flex-direction: column
     height: 150px
-  .right-content
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-evenly
-    padding: 0 2rem
+  .image-content
+    break-inside: avoid
+    display: grid
+    grid-gap: 2rem
+    grid-template-columns: repeat(2, minmax(40%, 1fr))
+    align-items: center
+    grid-template-rows: auto
     img
-      margin: 2rem
-      width: 40%
-      height: 40%
+      padding: 2% 2% 2% 0
+      width: 100%
 </style>
