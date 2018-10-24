@@ -22,10 +22,10 @@
 export default {
   props: ['place'],
   methods: {
-    goBack () {
+    goBack() {
       this.$router.push({ name: 'place', params: { placeId: this.place.name } })
     }
-  },
+  }
 }
 </script>
 

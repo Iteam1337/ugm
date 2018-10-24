@@ -26,7 +26,7 @@ export default {
     goBack() {
       this.$router.push({ name: 'place', params: { placeId: this.place.name } })
     }
-  },
+  }
 }
 </script>
 

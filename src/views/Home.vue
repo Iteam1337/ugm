@@ -35,10 +35,10 @@
 <script>
 export default {
   methods: {
-    navigate (name) {
+    navigate(name) {
       this.$router.push({ name })
     }
-  },
+  }
 }
 </script>
 

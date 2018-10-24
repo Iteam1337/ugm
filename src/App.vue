@@ -95,6 +95,7 @@
     opacity: 100 !important
     z-index: 2147483647
     h1
+      user-select: none
       margin: 0
       text-transform: uppercase
 
@@ -104,6 +105,7 @@
     display: flex
     align-items: center
     text-decoration: underline
+    user-select: none
     span
       margin-right: 1rem
       width: 50px
@@ -120,6 +122,7 @@
         height: 50%
   .nav
     display: flex
+
     @include narrow
       flex-direction: column
       margin: 0
