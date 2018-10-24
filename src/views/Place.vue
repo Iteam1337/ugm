@@ -108,6 +108,7 @@ export default {
     background-color: rgba(0, 0, 0, 0.5)
     width: 100%
     min-height: 100%
+    min-height: 100vh
     position: absolute
 
   .menu-item
