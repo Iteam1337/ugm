@@ -59,7 +59,7 @@ export default {
       margin-bottom: 20px
     p
       width: 50%
-      padding: 0 1em
+      padding: 1em
       @include narrow
         width: 100%
       @include wide
