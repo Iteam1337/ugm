@@ -1,17 +1,15 @@
 <template>
   <div class="background">
-    <div class="nav container flex">
-      <div class="w-100 box">
-        <div class="menu-item" @click="goBack()">
-          <div>
+    <div class="container">
+      <ul class="nav">
+        <li class="menu-item" @click="goBack()">
+          <span>
             <fa icon="arrow-left" />
-          </div>
+          </span>
           Tillbaka till platsen
-        </div>
-      </div>
-    </div>
-    <div class="container flex content">
-      <div class="w-100 box">
+        </li>
+      </ul>
+      <div class="content">
         <p v-for="({ utmaningar }, i) in place.texts" :key="'challenge' + i" v-if="utmaningar">
           "{{ utmaningar }}"
         </p>
@@ -32,23 +30,38 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  @import "@/globals.sass"
+
   .background
     width: 100%
     height: 100%
   .container
     max-width: 960px
-  .box
-    width: 100%
   .nav
     width: 80%
     height: 10%
+    height: 10vh
+    @include narrow
+      width: 100%
+      padding: 0
+    .menu-item
+      margin-top: 0
+      @include narrow
+        margin-top: 21px
+
   .content
     height: 90%
-    .box
-      display: flex
-      flex-wrap: wrap
-      padding: 2rem
-      p
-        margin: 2rem
-        width: 40%
+    height: 90vh
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    @include narrow
+      margin-bottom: 20px
+    p
+      width: 50%
+      padding: 0 1em
+      @include narrow
+        width: 100%
+      @include wide
+        width: 33%
 </style>

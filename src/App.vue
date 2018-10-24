@@ -39,6 +39,7 @@
 
 <style lang="sass">
   @import "~/node_modules/normalize.css/normalize.css"
+  @import "@/globals.sass"
 
   *
     box-sizing: border-box
@@ -77,6 +78,11 @@
 
   .flex
     display: flex
+    @include narrow
+      flex-direction: column
+
+  .nav
+    margin: 0
 
   .logo
     width: 248px
@@ -86,6 +92,8 @@
     font-size: 18px
     display: flex
     align-items: flex-end
+    opacity: 100 !important
+    z-index: 2147483647
     h1
       margin: 0
       text-transform: uppercase
@@ -96,7 +104,7 @@
     display: flex
     align-items: center
     text-decoration: underline
-    div
+    span
       margin-right: 1rem
       width: 50px
       height: 50px
@@ -110,6 +118,12 @@
       img
         width: 50%
         height: 50%
+  .nav
+    display: flex
+    @include narrow
+      flex-direction: column
+      margin: 0
+      align-items: flex-start
 
   $spacing-base: 8px
   @for $size from -20 through 20
@@ -132,4 +146,7 @@
   @each $size in (90, 80, 70, 60, 50, 40, 30, 20, 10)
     .w-#{$size}
       width: $size * 1%
+      @include narrow
+        width: 100%
+
 </style>

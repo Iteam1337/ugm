@@ -1,14 +1,14 @@
 <template>
   <div class="background">
     <div class="container">
-      <div class="top-content">
-        <div class="menu-item" @click="goBack()">
-          <div>
+      <ul class="nav">
+        <li class="menu-item" @click="goBack()">
+          <span>
             <fa icon="arrow-left" />
-          </div>
+          </span>
           Tillbaka till platsen
-        </div>
-      </div>
+        </li>
+      </ul>
       <div class="image-content">
         <img
           v-for="(image, i) in place.images"
@@ -31,6 +31,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  @import "@/globals.sass"
+
   .background
     width: 100%
     height: 100%
@@ -38,12 +40,16 @@ export default {
     height: 100%
     display: flex
     flex-direction: column
-  .top-content
+  .nav
     display: block
     min-height: 100px
   .image-content
     column-count: 2
     column-gap: 2rem
+    @include narrow
+      column-count: 1
+    @include wide
+      column-count: 3
     img
       padding: 2% 2% 2% 0
       width: 100%

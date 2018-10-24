@@ -1,52 +1,61 @@
 <template>
   <div class="background" :style="{'background-image': background}">
-  <div class="overlay">
-    <div class="container flex">
-      <div class="w-40 nav">
-        <router-link to="/" class="logo">
-          <h1>Urban girls movement</h1>
-        </router-link>
+    <div class="overlay">
 
-        <div class="menu-item" @click="goBack()">
-          <div>
-            <fa icon="arrow-left" />
-          </div>
-          Tillbaka till kartan
-        </div>
-
-        <div class="menu-item" style="margin-top: 3rem;" @click="navigate('images')"  v-if="show.images">
-          <div>
-            <fa icon="camera" />
-          </div>
-          Bilder
-        </div>
-        <div class="menu-item" @click="navigate('challenges')" v-if="show.challenges">
-          <div>
-            <fa icon="exclamation" />
-          </div>
-          Utmaningar
-        </div>
-        <div class="menu-item" @click="navigate('solution')" v-if="show.solutions">
-          <div>
-            <fa icon="lightbulb" />
-          </div>
-          Lösningsförslag
-        </div>
-        <div class="menu-item" @click="navigate('sounds')" v-if="show.sounds">
-          <div>
-            <fa icon="bullhorn" />
-          </div>
-          Ljud
+      <div class="container flex">
+        <div class="w-100">
+          <router-link to="/" class="logo">
+            <h1>Urban girls movement</h1>
+          </router-link>
         </div>
       </div>
 
-      <div class="w-60 content">
-        <p v-for="({ beskrivning }, i) in place.texts.slice(0, 5)" :key="'description' + i" v-if="beskrivning">
-          "{{ beskrivning }}"
-        </p>
+      <div class="container flex">
+        <ul class="w-40 nav">
+          <li class="menu-item" @click="goBack()">
+            <span>
+              <fa icon="arrow-left" />
+            </span>
+            Tillbaka till kartan
+          </li>
+
+          <li class="menu-item" style="margin-top: 3rem;" @click="navigate('images')"  v-if="show.images">
+            <span>
+              <fa icon="camera" />
+            </span>
+            Bilder
+          </li>
+
+          <li class="menu-item" @click="navigate('challenges')" v-if="show.challenges">
+            <span>
+              <fa icon="exclamation" />
+            </span>
+            Utmaningar
+          </li>
+
+          <li class="menu-item" @click="navigate('solution')" v-if="show.solutions">
+            <span>
+              <fa icon="lightbulb" />
+            </span>
+            Lösningsförslag
+          </li>
+
+          <li class="menu-item" @click="navigate('sounds')" v-if="show.sounds">
+            <span>
+              <fa icon="bullhorn" />
+            </span>
+            Ljud
+          </li>
+        </ul>
+
+        <div class="w-60 content">
+          <p v-for="({ beskrivning }, i) in place.texts.slice(0, 5)" :key="'description' + i" v-if="beskrivning">
+            "{{ beskrivning }}"
+          </p>
+        </div>
+
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -84,29 +93,32 @@ export default {
 
 <style lang="sass" scoped>
   .logo
+    margin-top: 0
     &, &:visited
       text-decoration: none
+
   .background
     background-position: center center
     width: 100%
-    height: 100%
+    min-height: 100vh
     background-size: cover
-    position: absolute
+    // background-attachment: fixed
+
   .overlay
-    position: absolute
     background-color: rgba(0, 0, 0, 0.5)
     width: 100%
-    height: 100%
+    min-height: 100%
+    position: absolute
 
   .menu-item
-    div
+    span
       min-width: 50px
       min-height: 50px
-  .container
-    height: 100%
+
   .nav
     display: flex
     flex-direction: column
+
   .content
     flex: 1
     display: flex
