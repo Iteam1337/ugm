@@ -54,7 +54,8 @@
     height: 100%
     background: black
     color: white
-    font-family: Roboto
+    font-family: "Alegreya Sans"
+    font-weight: 100
     margin: 0
 
   #app
@@ -80,24 +81,11 @@
     display: flex
     @include narrow
       flex-direction: column
+    p
+      padding: 0 20px
 
   .nav
     margin: 0
-
-  .logo
-    width: 248px
-    height: 224px
-    padding: 2rem 1.5rem
-    background-color: #FF305E
-    font-size: 18px
-    display: flex
-    align-items: flex-end
-    opacity: 100 !important
-    z-index: 2147483647
-    h1
-      user-select: none
-      margin: 0
-      text-transform: uppercase
 
   .menu-item
     cursor: pointer
@@ -127,6 +115,18 @@
       flex-direction: column
       margin: 0
       align-items: flex-start
+
+  h1
+    font-family: "Libre Baskerville"
+    font-weight: bold
+  h2
+    font-family: "Alegreya Sans"
+    font-weight: 100
+
+  .logo
+    margin-top: 0
+    &, &:visited
+      text-decoration: none
 
   $spacing-base: 8px
   @for $size from -20 through 20

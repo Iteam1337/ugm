@@ -3,11 +3,7 @@
     <div class="overlay">
 
       <div class="container flex">
-        <div class="w-100">
-          <router-link to="/" class="logo">
-            <h1>Urban girls movement</h1>
-          </router-link>
-        </div>
+
       </div>
 
       <div class="container flex">
@@ -60,8 +56,13 @@
 </template>
 
 <script>
+import Logo from '@/components/Logo.vue'
+
 export default {
   props: ['place'],
+  components: {
+    logo: Logo
+  },
   data() {
     const { place } = this
     const { background: url, texts, images, sounds } = place
@@ -92,11 +93,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .logo
-    margin-top: 0
-    &, &:visited
-      text-decoration: none
-
   .background
     background-position: center center
     width: 100%

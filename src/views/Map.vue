@@ -1,10 +1,6 @@
 <template>
 	<div class="full-page">
-    <router-link to="/">
-      <div class="logo">
-        <h1>Urban girls movement</h1>
-      </div>
-    </router-link>
+    <logo />
 
     <GmapMap
       ref="map"
@@ -27,14 +23,18 @@
 
 <script>
 
-import styles from '../assets/map/styles.json'
-import places from '../assets/map/places.json'
+import styles from '@/assets/map/styles.json'
+import places from '@/assets/map/places.json'
+import Logo from '@/components/Logo.vue'
 
 export default {
   methods: {
     clickMarker(name){
       this.$router.push({ name: 'place', params: { placeId: name } })
     }
+  },
+  components: {
+    logo: Logo
   },
 	data() {
 		return {
