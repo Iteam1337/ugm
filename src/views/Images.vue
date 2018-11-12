@@ -2,12 +2,9 @@
   <div class="background">
     <div class="container">
       <ul class="nav">
-        <li class="menu-item" @click="goBack()">
-          <span>
-            <fa icon="arrow-left" />
-          </span>
-          Tillbaka till platsen
-        </li>
+        <item @click.native="navigate('map')">
+          <fa class="navigate-arrow" icon="long-arrow-alt-left" /> Tillbaka till kartan
+        </item>
       </ul>
       <div class="image-content">
         <img
@@ -20,19 +17,25 @@
 </template>
 
 <script>
+import MenuItem from '@/components/MenuItem.vue'
+
 export default {
   props: ['place'],
+  components: {
+    item: MenuItem,
+  },
   methods: {
-    goBack() {
-      this.$router.push({ name: 'place', params: { placeId: this.place.name } })
-    }
-  }
+    navigate(name) {
+      this.$router.push({ name })
+    },
+  },
 }
 </script>
 
 <style lang="sass" scoped>
   @import "@/globals.sass"
-
+  .navigate-arrow
+    margin-right: 1em
   .background
     width: 100%
     height: 100%

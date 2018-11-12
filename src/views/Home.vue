@@ -13,8 +13,8 @@
           Plan a city for girls,<br />and it will work<br />for everyone.
         </h1>
         <ul class="w-50">
-          <item @click="navigate('map')">
-            Project Backgroud
+          <item @click.native="navigate('map')">
+            Project Backgroud <fa class="navigate-arrow" icon="long-arrow-alt-right" />
           </item>
         </ul>
       </div>
@@ -47,18 +47,21 @@ import MenuItem from '@/components/MenuItem.vue'
 export default {
   components: {
     logo: Logo,
-    item: MenuItem
+    item: MenuItem,
   },
   methods: {
     navigate(name) {
       this.$router.push({ name })
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style lang="sass" scoped>
   @import "@/globals.sass"
+
+  .navigate-arrow
+    margin-left: 1em
 
   .logo
     position: static
