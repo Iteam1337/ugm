@@ -13,9 +13,9 @@
           Plan a city for girls,<br />and it will work<br />for everyone.
         </h1>
         <ul class="w-50">
-          <li class="menu-item" @click="navigate('map')">
-            Explore map
-          </li>
+          <item @click="navigate('map')">
+            Project Backgroud
+          </item>
         </ul>
       </div>
 
@@ -42,10 +42,12 @@
 <script>
 
 import Logo from '@/components/Logo.vue'
+import MenuItem from '@/components/MenuItem.vue'
 
 export default {
   components: {
-    logo: Logo
+    logo: Logo,
+    item: MenuItem
   },
   methods: {
     navigate(name) {

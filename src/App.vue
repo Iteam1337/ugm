@@ -92,8 +92,11 @@
     margin-top: 2rem
     display: flex
     align-items: center
-    text-decoration: underline
+    text-decoration: none
     user-select: none
+    text-transform: uppercase
+    &:after
+      content: ' ---->'
     span
       margin-right: 1rem
       width: 50px

@@ -3,10 +3,10 @@ import App from '@/App.vue'
 import router from '@/router'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCamera, faQuoteRight, faArrowLeft, faExclamation, faLightbulb, faBullhorn }  from '@fortawesome/free-solid-svg-icons'
+import { faCamera, faQuoteRight, faArrowLeft, faExclamation, faLightbulb, faBullhorn, faArrowRight }  from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add([ faCamera, faQuoteRight, faArrowLeft, faLightbulb, faExclamation, faBullhorn ])
+library.add([ faCamera, faQuoteRight, faArrowLeft, faLightbulb, faExclamation, faBullhorn, faArrowRight ])
 Vue.component('fa', FontAwesomeIcon)
 
 window.wow = new WOW()
