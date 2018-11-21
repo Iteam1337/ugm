@@ -33,17 +33,19 @@
       onDone() {
         this.isLoading = false
       }
-    }
+    },
   }
 </script>
 
 <style lang="sass">
   @import "~/node_modules/normalize.css/normalize.css"
+  @import "@/globals.sass"
 
   *
     box-sizing: border-box
   html
     height: 100%
+    scroll-behavior: smooth;
 
   ::selection
     color: white
@@ -51,9 +53,10 @@
 
   body
     height: 100%
-    background: black
+    background: #24002D
     color: white
-    font-family: Roboto
+    font-family: 'Alegreya Sans', sans-serif
+    font-weight: 100
     margin: 0
 
   #app
@@ -77,37 +80,34 @@
 
   .flex
     display: flex
+    @include narrow
+      flex-direction: column
+    p
+      padding: 0 20px
+
+  .nav
+    margin: 0
+
+
+  .nav
+    display: flex
+
+    @include narrow
+      flex-direction: column
+      margin: 0
+      align-items: flex-start
+
+  h1
+    font-family: 'Libre Baskerville'
+    font-weight: bold
+  h2
+    font-family: 'Alegreya Sans', sans-serif
+    font-weight: 100
 
   .logo
-    width: 248px
-    height: 224px
-    padding: 2rem 1.5rem
-    background-color: #FF305E
-    font-size: 18px
-    display: flex
-    align-items: flex-end
-    h1
-      margin: 0
-      text-transform: uppercase
-
-  .menu-item
-    cursor: pointer
-    margin-top: 2rem
-    display: flex
-    align-items: center
-    text-decoration: underline
-    div
-      margin-right: 1rem
-      width: 50px
-      height: 50px
-      display: flex
-      justify-content: center
-      align-items: center
-      border: 2px solid white
-      border-radius: 50%
-      img
-        width: 50%
-        height: 50%
+    margin-top: 0
+    &, &:visited
+      text-decoration: none
 
   $spacing-base: 8px
   @for $size from -20 through 20
@@ -130,4 +130,7 @@
   @each $size in (90, 80, 70, 60, 50, 40, 30, 20, 10)
     .w-#{$size}
       width: $size * 1%
+      @include narrow
+        width: 100%
+
 </style>

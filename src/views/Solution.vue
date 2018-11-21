@@ -1,15 +1,15 @@
 <template>
   <div class="background">
     <div class="container">
-      <div class="left-content">
-        <div class="menu-item" @click="goBack()">
-          <div>
-            <img src="../assets/icons/left-arrow.svg">
-          </div>
+      <ul class="nav">
+        <li class="menu-item" @click="goBack()">
+          <span>
+            <fa icon="arrow-left" />
+          </span>
           Tillbaka till platsen
-        </div>
-      </div>
-      <div class="right-content">
+        </li>
+      </ul>
+      <div class="content">
         <p v-for="({ förslag }, i) in place.texts" :key="'solution' + i" v-if="förslag">
           "{{ förslag }}"
         </p>
@@ -30,21 +30,38 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  @import "@/globals.sass"
+
   .background
     width: 100%
     height: 100%
   .container
-    height: 100%
-    display: flex
-    flex-direction: column
-  .left-content
-    display: flex
-    flex-direction: column
-  .right-content
+    max-width: 960px
+  .nav
+    width: 80%
+    height: 10%
+    height: 10vh
+    @include narrow
+      width: 100%
+      padding: 0
+    .menu-item
+      margin-top: 0
+      @include narrow
+        margin-top: 21px
+
+  .content
+    height: 90%
+    height: 90vh
+    width: 100%
     display: flex
     flex-wrap: wrap
-    padding: 2rem
+    @include narrow
+      margin-bottom: 20px
     p
-      margin: 2rem
-      width: 40%
+      width: 50%
+      padding: 1em
+      @include narrow
+        width: 100%
+      @include wide
+        width: 33%
 </style>

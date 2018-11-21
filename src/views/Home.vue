@@ -1,20 +1,43 @@
 <template>
-  <div>
-    <h1 class="title wow fadeIn" data-wow-duration="5s">Urban Girls Movement</h1>
+  <div class="background">
+    <div class="overlay">
 
-    <div class="container">
-      <div class="flex">
-        <div class="w-60 wow fadeIn p-r-10" data-wow-delay="1s" data-wow-duration="4s">
-          <p class="text-medium wow fadeInDown" data-wow-delay="500ms" data-wow-duration="3s">
-            Urban Girls Movement is a project where young girls from Botkyrka in Sweden. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veritatis nam iusto reiciendis quia quae natus error provident, at, ex quisquam, temporibus optio aliquid excepturi illum laudantium iure quasi laborum!
-          </p>
-          <p class="text-medium wow fadeInDown" data-wow-delay="1s" data-wow-duration="2s">
-            <router-link :to="{ name: 'about' }">Read more about the project</router-link>
-          </p>
+      <div class="header">
+        <div class="color-overlay"></div>
+        <div class="background"></div>
+      </div>
+
+      <div class="container hero w-100">
+        <logo class="logo" />
+        <div class="hero-title">
+          <h1 class="title">
+              Plan a city for girls,<br />and it will work<br />for everyone.
+          </h1>
+          <ul style="padding: 0">
+            <item @click.native="navigate('map')">
+              Project Backgroud <fa class="navigate-arrow" icon="long-arrow-alt-right" />
+            </item>
+            <item @click.native="navigate('map')">
+              Results & Insights <fa class="navigate-arrow" icon="long-arrow-alt-right" />
+            </item>
+          </ul>
         </div>
-        <div class="w-40 wow fadeIn" data-wow-delay="1s" data-wow-duration="4s">
-          <router-link to="/reality" :class="{ 'reality-zoom': realityShown }" class="nav-link reality wow fadeInRight" data-wow-delay="1200ms" data-wow-duration="3s">Reality</router-link>
-          <router-link to="/dream" class="nav-link dream wow fadeInRight" data-wow-delay="1800ms" data-wow-duration="3s">Dream</router-link>
+      </div>
+
+      <div class="container text flex">
+        <div class="w-100 content">
+          <div class="flex">
+            <div class="w-50 content">
+              <p>
+                With the fast pace of urbanization also comes widespread segregation and increasing social gaps. At the same time, world leaders have since 2015 agreed on several global agendas for sustainable development, such as the Paris Agreement, Agenda 2030 and New Urban Agenda. If we are to live up to these ambitious goals depends to a large extent on our societies becoming more inclusive and equal, and fulfilling the socioeconomic needs of the youth of the future. How cities and areas are developed is crucial to people’s quality of life, and can increase the opportunities to education, work and social security for young women and girls in particular.
+              </p>
+            </div>
+            <div class="w-50 content">
+              <p>
+                So, how do we work with global goals and tools such as feminist urban development on a practical, local level? The ambitions are there, but the practical know-how is limited. Urban Girls Movement Botkyrka wants to increase knowledge in this area, with six so called innovation labs where young girls from the Stockholm suburb Botkyrka together with other stakeholders produce innovative solutions to commonly identified problems in the area.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -22,98 +45,119 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        realityShown: true // ?
-      }
+
+import Logo from '@/components/Logo.vue'
+import MenuItem from '@/components/MenuItem.vue'
+
+export default {
+  components: {
+    logo: Logo,
+    item: MenuItem,
+  },
+  methods: {
+    navigate(name) {
+      this.$router.push({ name })
     },
-    mounted() {
-      window.wow = new WOW()
-      window.wow.init()
-    }
-  }
+  },
+}
 </script>
 
 <style lang="sass" scoped>
-  .title
-    position: relative
-    font-weight: 900
-    text-transform: uppercase
-    font-size: 270px
-    font-size: 16vw
-    word-spacing: 100vw
-    margin: 30px -40px 60px -20px
-    background-image: url(../assets/title-background.png)
-    background-size: cover
-    background-clip: text
-    -webkit-background-clip: text
-    color: rgba(white, 0.3)
-    line-height: 0.9
-    z-index: 100
+  @import "@/globals.sass"
 
-    &, &:after
-      padding-left: 20px
-      overflow: hidden
-      max-width: 100%
-      max-width: calc(100vw - 40px)
+  .navigate-arrow
+    margin-left: 1em
 
-    @media screen and (min-width: 1600px)
-      font-size: 270px
+  .logo
+    position: static
 
-    &:after
-      content: 'Urban Girls Movement'
-      position: absolute
-      top: 0
-      left: 0
-      height: 100%
-      color: transparent
-      background: linear-gradient(178.81deg, rgba(46, 46, 46, 0.52) 1.64%, rgba(178, 33, 87, 0.46) 48.66%, rgba(182, 29, 86, 0.84) 98.36%)
-      background-clip: text
-      -webkit-background-clip: text
+  .background
+    overflow-x: hidden
 
-  .nav-link
+  .hero-title
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    @include narrow
+      align-items: flex-start
+
+  .overlay
+    background-color: rgba(0, 0, 0, 0.3)
+    width: 100%
+    height: 100%
+    min-height: 100vh
+    min-width: 100vw
+    overflow-x: hidden
+
+  .flex
+    @include narrow
+      flex-direction: column-reverse
+
+  .header
     display: block
-    position: relative
-    font-weight: 900
-    text-transform: uppercase
-    font-size: 112px
-    background-image: url(../assets/nav-link-background.png)
-    background-size: cover
-    background-clip: text
-    -webkit-background-clip: text
-    color: rgba(white, 0.2)
-    line-height: 1
-    z-index: 100
+    min-width: 100%
+    min-width: 100vw
+    min-height: 809px
+    position: absolute
+    z-index: -1
+    overflow: hidden
+    @include narrow
+      min-height: 450px
 
-    &:hover
-      color: rgba(white, 0.5)
-
-    &:after
-      content: 'Reality'
-      position: absolute
-      top: 0
-      left: 0
+    .color-overlay
+      background: linear-gradient(rgba(56, 13, 126, 0.5), rgba(182, 29, 86, 0.5))
       height: 100%
       width: 100%
-      color: transparent
-      background: linear-gradient(0deg, rgba(29, 99, 182, 0.36) 0%, rgba(29, 99, 182, 0.36) 100%)
-      background-clip: text
-      -webkit-background-clip: text
+      display: block
+      z-index: 100
+      position: absolute
+      top: 0
+      left: 0
+    .background
+      min-height: 809px
+      width: 100%
+      position: absolute
+      background-image: url(../assets/images/header.png)
+      background-size: cover
+      background-position: center center
+      overflow: hidden
+      z-index: 0
+      @include narrow
+        min-height: 450px
 
-    &.reality
-      text-decoration-color: rgba(29, 99, 182, 0.6)
-      margin-bottom: 0.25em
-
-      &:after
-        content: 'Reality'
-        background-image: linear-gradient(0deg, rgba(29, 99, 182, 0.36) 0%, rgba(29, 99, 182, 0.36) 100%)
-
-    &.dream
-      text-decoration-color: rgba(182, 29, 86, 0.6)
-
-      &:after
-        content: 'Dream'
-        background-image: linear-gradient(0deg, rgba(182, 29, 86, 0.36) 0%, rgba(182, 29, 86, 0.36) 100%)
+  .title
+    font-size: 50px
+    font-size: calc((2vw + 2vh + 1vmin))
+    @include narrow
+      font-size: 30px
+    @include wide
+      font-size: 60px
+  .content
+    padding: 2rem 1rem
+    line-height: 1.4
+    &.text
+      padding: 2rem 0
+  .hero
+    min-height: 880px
+    display: flex
+    flex-direction: column
+    @include narrow
+      min-height: 475px
+  .menu-item
+    vertical-align: top
+    text-align: left
+    margin-left: 5rem
+    display: block
+    margin-top: 1rem
+    width: 100%
+    @include narrow
+      margin-left: 0
+  p, .menu-item
+    font-size: calc((2vw + 2vh + 1vmin) / 3)
+    @include narrow
+      font-size: 18px
+    @include wide
+      font-size: 28px
 </style>
-

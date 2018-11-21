@@ -1,0 +1,11 @@
+$screen-min-width: 640px
+$screen-max-width: 1600px
+
+@mixin narrow ($width: $screen-min-width)
+  @media screen and (max-width: $screen-min-width)
+    @content
+
+@mixin wide ($width: $screen-max-width)
+  @media screen and (min-width: $screen-max-width)
+    @content
+

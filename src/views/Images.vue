@@ -1,33 +1,41 @@
 <template>
   <div class="background">
     <div class="container">
-      <div class="left-content">
-        <div class="menu-item" @click="goBack()">
-          <div>
-            <img src="../assets/icons/left-arrow.svg">
-          </div>
-          Tillbaka till platsen
-        </div>
-      </div>
-      <div class="right-content">
-        <img v-for="(image, i) in place.images" :key="'image' + i" :src="image">
+      <ul class="nav">
+        <item @click.native="navigate('map')">
+          <fa class="navigate-arrow" icon="long-arrow-alt-left" /> Tillbaka till kartan
+        </item>
+      </ul>
+      <div class="image-content">
+        <img
+          v-for="(image, i) in place.images"
+          :key="'image' + i"
+          :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import MenuItem from '@/components/MenuItem.vue'
+
 export default {
   props: ['place'],
+  components: {
+    item: MenuItem,
+  },
   methods: {
-    goBack () {
-      this.$router.push({ name: 'place', params: { placeId: this.place.name } })
-    }
+    navigate(name) {
+      this.$router.push({ name })
+    },
   },
 }
 </script>
 
 <style lang="sass" scoped>
+  @import "@/globals.sass"
+  .navigate-arrow
+    margin-right: 1em
   .background
     width: 100%
     height: 100%
@@ -35,17 +43,17 @@ export default {
     height: 100%
     display: flex
     flex-direction: column
-  .left-content
-    display: flex
-    flex-direction: column
-    height: 150px
-  .right-content
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-evenly
-    padding: 0 2rem
+  .nav
+    display: block
+    min-height: 100px
+  .image-content
+    column-count: 2
+    column-gap: 2rem
+    @include narrow
+      column-count: 1
+    @include wide
+      column-count: 3
     img
-      margin: 2rem
-      width: 40%
-      height: 40%
+      padding: 2% 2% 2% 0
+      width: 100%
 </style>
