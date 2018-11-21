@@ -9,14 +9,19 @@
 
       <div class="container hero w-100">
         <logo class="logo" />
-        <h1 class="title">
-          Plan a city for girls,<br />and it will work<br />for everyone.
-        </h1>
-        <ul class="w-50">
-          <item @click.native="navigate('map')">
-            Project Backgroud <fa class="navigate-arrow" icon="long-arrow-alt-right" />
-          </item>
-        </ul>
+        <div class="hero-title">
+          <h1 class="title">
+              Plan a city for girls,<br />and it will work<br />for everyone.
+          </h1>
+          <ul style="padding: 0">
+            <item @click.native="navigate('map')">
+              Project Backgroud <fa class="navigate-arrow" icon="long-arrow-alt-right" />
+            </item>
+            <item @click.native="navigate('map')">
+              Results & Insights <fa class="navigate-arrow" icon="long-arrow-alt-right" />
+            </item>
+          </ul>
+        </div>
       </div>
 
       <div class="container text flex">
@@ -69,6 +74,15 @@ export default {
   .background
     overflow-x: hidden
 
+  .hero-title
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    @include narrow
+      align-items: flex-start
+
   .overlay
     background-color: rgba(0, 0, 0, 0.3)
     width: 100%
@@ -85,11 +99,12 @@ export default {
     display: block
     min-width: 100%
     min-width: 100vw
-    min-height: 620px
+    min-height: 809px
     position: absolute
     z-index: -1
     overflow: hidden
-
+    @include narrow
+      min-height: 450px
 
     .color-overlay
       background: linear-gradient(rgba(56, 13, 126, 0.5), rgba(182, 29, 86, 0.5))
@@ -101,7 +116,7 @@ export default {
       top: 0
       left: 0
     .background
-      height: 620px
+      min-height: 809px
       width: 100%
       position: absolute
       background-image: url(../assets/images/header.png)
@@ -109,20 +124,27 @@ export default {
       background-position: center center
       overflow: hidden
       z-index: 0
+      @include narrow
+        min-height: 450px
 
   .title
     font-size: 50px
-    margin-top: 150px
     font-size: calc((2vw + 2vh + 1vmin))
     @include narrow
       font-size: 30px
     @include wide
       font-size: 60px
   .content
+    padding: 2rem 1rem
+    line-height: 1.4
     &.text
       padding: 2rem 0
   .hero
-    min-height: 660px
+    min-height: 880px
+    display: flex
+    flex-direction: column
+    @include narrow
+      min-height: 475px
   .menu-item
     vertical-align: top
     text-align: left

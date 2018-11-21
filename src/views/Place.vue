@@ -1,55 +1,85 @@
 <template>
-  <div class="background" :style="{'background-image': background}">
-    <div class="overlay">
-
-      <div class="container flex">
-
+  <div class="page-content">
+    <div class="header">
+      <logo class="logo" />
+      <div class="header-links">
+        <a @click="navigate('map')" style="text-decoration: underline">
+          Results & Insights
+        </a>
+        <a @click="navigate('map')">
+          Project Backgroud
+        </a>
       </div>
-
-      <div class="container flex">
-        <ul class="w-40 nav">
-          <li class="menu-item" @click="goBack()">
-            <span>
-              <fa icon="arrow-left" />
-            </span>
-            Tillbaka till kartan
-          </li>
-
-          <li class="menu-item" style="margin-top: 3rem;" @click="navigate('images')"  v-if="show.images">
-            <span>
-              <fa icon="camera" />
-            </span>
-            Bilder
-          </li>
-
-          <li class="menu-item" @click="navigate('challenges')" v-if="show.challenges">
-            <span>
-              <fa icon="exclamation" />
-            </span>
+    </div>
+    <div class="side-menu">
+      <a @click="navigate('map')" class="back">
+        <fa class="navigate-arrow" icon="long-arrow-alt-left" /> Tillbaka till kartan
+      </a>
+      <div class="side-menu-items">
+        <div>
+          <i :class="{ selected: page === 1 }" />
+          <span :class="{ 'text-selected': page === 1 }" @click="scrollTo(1)">
             Utmaningar
-          </li>
-
-          <li class="menu-item" @click="navigate('solution')" v-if="show.solutions">
-            <span>
-              <fa icon="lightbulb" />
-            </span>
-            Lösningsförslag
-          </li>
-
-          <li class="menu-item" @click="navigate('sounds')" v-if="show.sounds">
-            <span>
-              <fa icon="bullhorn" />
-            </span>
-            Ljud
-          </li>
-        </ul>
-
-        <div class="w-60 content">
-          <p v-for="({ beskrivning }, i) in place.texts.slice(0, 5)" :key="'description' + i" v-if="beskrivning">
-            "{{ beskrivning }}"
-          </p>
+          </span>
         </div>
+        <div>
+          <i :class="{ selected: page === 2 }" />
+          <span :class="{ 'text-selected': page === 2 }" @click="scrollTo(2)">
+            Bilder
+          </span>
+        </div>
+        <div>
+          <i :class="{ selected: page === 3 }" />
+          <span :class="{ 'text-selected': page === 3 }" @click="scrollTo(3)">
+            Lösningsförslag
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="pages">
+      <div class="page">
+        <div class="background">
+          <div class="color-overlay"></div>
+          <div class="background-image" :style="{ backgroundImage: background }">
 
+          </div>
+        </div>
+        <div class="page-content">
+          <h1 class="quoute">
+            "{{ show.challenges[0] }}"
+          </h1>
+        </div>
+      </div>
+      <div class="page" id="page1">
+        <div class="page-content">
+          <h1>Utmaningar</h1>
+          <div class="quotes">
+            <span v-for="(challenge, i) in show.challenges" :key="'challenge' + i">
+              "{{ challenge }}"
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page2">
+        <div class="page-content">
+          <h1>Bilder</h1>
+          <div class="image-content">
+            <img
+              v-for="(image, i) in place.images"
+              :key="'image' + i"
+              :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page3">
+        <div class="page-content">
+          <h1>Lösningsförslag</h1>
+          <div class="quotes">
+            <span v-for="(solution, i) in show.solutions" :key="'solution' + i">
+              "{{ solution }}"
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -65,13 +95,14 @@ export default {
   },
   data() {
     const { place } = this
+    console.log(place)
     const { background: url, texts, images, sounds } = place
 
-    const challenges = texts.some(object => object.utmaningar)
-    const solutions = texts.some(object => object.förslag)
+    const challenges = texts.map(object => object.utmaningar).filter(s => s)
+    const solutions = texts.map(object => object.förslag).filter(s => s)
     const background = `url(${url.startsWith('/') ? url : require(`@/assets/${url}`)})`
-
     return {
+      page: 0,
       background,
       show: {
         challenges,
@@ -82,47 +113,181 @@ export default {
     }
   },
   methods: {
+    scrollTo (page) {
+      var element = document.getElementById('page' + page);
+      element.scrollIntoView();
+    },
     goBack () {
       this.$router.push({ name: 'map'})
     },
     navigate (name) {
       this.$router.push({ name })
+    },
+    handleScroll(event) {
+      var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+      this.page = Math.floor(scrollTop / window.innerHeight)
     }
   },
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 }
 </script>
 
 <style lang="sass" scoped>
+  @import "@/globals.sass"
+
+  a
+    cursor: pointer
+
   .background
-    background-position: center center
-    width: 100%
-    min-height: 100vh
-    background-size: cover
-    // background-attachment: fixed
-
-  .overlay
-    background-color: rgba(0, 0, 0, 0.5)
-    width: 100%
-    min-height: 100%
-    min-height: 100vh
+    left: 0
+    top: 0
     position: absolute
+    display: block
+    min-width: 100vw
+    min-height: 100vh
+    z-index: -1
+    overflow: hidden
+    @include narrow
+      min-height: 400px
+    .color-overlay
+      background: rgba(182, 29, 86, 0.5)
+      height: 100%
+      width: 100%
+      display: block
+      z-index: 100
+      position: absolute
+      top: 0
+      left: 0
+    .background-image
+      height: 100%
+      width: 100%
+      position: absolute
+      background-size: cover
+      background-position: center center
+      overflow: hidden
+      z-index: 0
 
-  .menu-item
-    span
-      min-width: 50px
-      min-height: 50px
-
-  .nav
+  .page-content
+    padding: 5%
+  .header
+    width: 90%;
+    height: 150px
+    position: absolute
     display: flex
-    flex-direction: column
+    justify-content: space-between
+  .header-links
+    width: 500px
+    display: flex
+    font-size: 20px
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    justify-content: space-around
+    align-items: center
+    @include narrow
+      display: none
 
   .content
-    flex: 1
+    padding: 5%
     display: flex
-    align-items: flex-start
-    justify-content: space-evenly
+    flex-direction: row
+  .side-menu
+    @include narrow
+      position: absolute
+      padding: 0
+      margin-top: 0
+      width: 100%
+      .back
+        position: absolute
+        right: 40px
+    margin-top: 150px
+    padding-top: 5%
+    position: fixed
+    width: 33%
+    text-transform: uppercase
+    letter-spacing: 1.5px
+    flex: 1
+    .side-menu-items
+      @include narrow
+        display: none
+      display: none
+      padding-top: 20%
+      display: flex
+      flex-direction: column
+      div
+        position: relative
+        margin-left: 10px
+        height: 80px
+        border-left: 1px solid white
+        display: flex
+        &:nth-child(3)
+          border-left: none
+        i
+          background: #24002D
+          position: absolute
+          left: -10px
+          top: -4px
+          width: 20px
+          height: 20px
+          border: 1px solid white
+          border-radius: 50%
+        .selected
+          background: #fff
+        span
+          cursor: pointer
+          margin-top: -8px
+          font-size: 20px
+          font-weight: 300
+          margin-left: 25px
+        .text-selected
+          text-decoration: underline
+      
+
+  .pages
+    display: flex
     flex-direction: column
-    padding: 2rem
-    p
-      max-width: 400px
+  .page
+    width: 100%
+    min-height: 100vh
+    padding-left: 33%
+    @include narrow
+      padding-left: 0
+      min-height: 400px
+      padding-top: 100px
+      &:nth-child(2)
+        padding-top: 0
+    &:nth-child(1)
+      padding-top: 150px
+    .page-content
+      width: 100%
+      height: 100%
+
+  .quoute
+    margin-top: 20%
+    font-size: calc(2vw + 2vh + 1vmin)
+    align-self: center
+    font-family: 'Libre Baskerville', serif
+    @include narrow
+      font-size: 25px
+  .quotes
+    display: flex
+    flex-wrap: wrap
+    span
+      padding: 1rem
+      width: 50%
+      height: 100px
+  .image-content
+    column-count: 3
+    column-gap: 2rem
+    @include narrow
+      column-count: 1
+    @include wide
+      column-count: 3
+    img
+      padding: 2% 2% 2% 0
+      width: 100%
 </style>

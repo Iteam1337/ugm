@@ -13,6 +13,7 @@
     text-decoration: none
     user-select: none
     text-transform: uppercase
+    letter-spacing: 1.5px
     span
       margin-right: 1rem
       width: 50px

@@ -45,6 +45,7 @@
     box-sizing: border-box
   html
     height: 100%
+    scroll-behavior: smooth;
 
   ::selection
     color: white
@@ -52,9 +53,9 @@
 
   body
     height: 100%
-    background: black
+    background: #24002D
     color: white
-    font-family: "Alegreya Sans"
+    font-family: 'Alegreya Sans', sans-serif
     font-weight: 100
     margin: 0
 
@@ -97,10 +98,10 @@
       align-items: flex-start
 
   h1
-    font-family: "Libre Baskerville"
+    font-family: 'Libre Baskerville'
     font-weight: bold
   h2
-    font-family: "Alegreya Sans"
+    font-family: 'Alegreya Sans', sans-serif
     font-weight: 100
 
   .logo

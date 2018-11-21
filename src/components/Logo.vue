@@ -8,6 +8,7 @@
   .logo
     width: 248px
     padding: 2rem 1.5rem
+    letter-spacing: 1.5px
     font-size: 14px
     display: flex
     align-items: flex-end
