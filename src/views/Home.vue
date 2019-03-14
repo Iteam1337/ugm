@@ -14,9 +14,9 @@
               Plan a city for girls,<br />and it will work<br />for everyone.
           </h1>
           <ul style="padding: 0">
-            <item @click.native="navigate('map')">
+            <!-- <item @click.native="navigate('map')">
               Project Backgroud <fa class="navigate-arrow" icon="long-arrow-alt-right" />
-            </item>
+            </item> -->
             <item @click.native="navigate('map')">
               Results & Insights <fa class="navigate-arrow" icon="long-arrow-alt-right" />
             </item>

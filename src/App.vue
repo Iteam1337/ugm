@@ -45,7 +45,10 @@
     box-sizing: border-box
   html
     height: 100%
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
+    max-width: 100%
+    max-width: 100vw
+    overflow-x: hidden
 
   ::selection
     color: white

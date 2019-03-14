@@ -116,7 +116,6 @@
   @import "./node_modules/vue-progressbar-component/src/scss/progressbar"
 
   .fs-loader
-    background: black
     position: absolute
     margin: auto
     top: 0
@@ -124,5 +123,5 @@
     bottom: 0
     left: 0
     width: 100px
-    height: 100px
+    height: 20px
 </style>
