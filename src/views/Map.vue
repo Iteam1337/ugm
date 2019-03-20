@@ -109,6 +109,17 @@ export default {
   z-index: 10
   left: 10%
   top: 0
+  &:after
+    display: block
+    width: 100%
+    width: 80vw
+    content: ""
+    height: 1px
+    background: white
+    left: 0
+    position: absolute
+    bottom: 0
+    pointer-events: none
 
 .map-marker
   width: 10px
