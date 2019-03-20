@@ -14,9 +14,6 @@
               Plan a city for girls,<br />and it will work<br />for everyone.
           </h1>
           <ul style="padding: 0">
-            <!-- <item @click.native="navigate('map')">
-              Project Backgroud <fa class="navigate-arrow" icon="long-arrow-alt-right" />
-            </item> -->
             <item @click.native="navigate('map')">
               Results & Insights <fa class="navigate-arrow" icon="long-arrow-alt-right" />
             </item>
@@ -35,6 +32,11 @@
             <div class="w-50 content">
               <p>
                 So, how do we work with global goals and tools such as feminist urban development on a practical, local level? The ambitions are there, but the practical know-how is limited. Urban Girls Movement Botkyrka wants to increase knowledge in this area, with six so called innovation labs where young girls from the Stockholm suburb Botkyrka together with other stakeholders produce innovative solutions to commonly identified problems in the area.
+              </p>
+              <p>
+                <a href="https://www.globalutmaning.se/urbangirlsmovement/innovationslabb-botkyrka/">
+                  Project Backgroud <fa class="navigate-arrow" icon="long-arrow-alt-right" />
+                </a>
               </p>
             </div>
           </div>

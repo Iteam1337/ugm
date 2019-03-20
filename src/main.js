@@ -23,8 +23,9 @@ library.add([
   faExclamation,
   faBullhorn,
   faLongArrowAltLeft,
-  faLongArrowAltRight
+  faLongArrowAltRight,
 ])
+
 Vue.component('fa', FontAwesomeIcon)
 
 window.wow = new WOW()
@@ -35,5 +36,5 @@ Vue.config.productionTip = false
 new Vue({
   router,
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
 })

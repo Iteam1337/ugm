@@ -22,12 +22,12 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/map',
       name: 'map',
-      component: Map
+      component: Map,
     },
     {
       path: '/place/:placeId',

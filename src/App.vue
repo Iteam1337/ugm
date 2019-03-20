@@ -22,7 +22,7 @@
   export default {
     name: 'app',
     components: {
-      loading: Loading
+      loading: Loading,
     },
     data() {
       return {
@@ -32,7 +32,7 @@
     methods: {
       onDone() {
         this.isLoading = false
-      }
+      },
     },
   }
 </script>

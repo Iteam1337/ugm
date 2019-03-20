@@ -10,10 +10,12 @@
       :options="options">
       <GmapMarker
         v-for="(m, index) in markers"
-        style="position: relative; margin-top: 1rem;"
         :key="index"
         :position="m.position"
-        :icon="m.icon"
+        :icon="{
+          url: marker,
+          anchor: { x: 30, y: 30 }
+        }"
         :clickable="true"
         :draggable="false"
         @click="clickMarker(m.name)"/>
@@ -26,18 +28,26 @@
 import styles from '@/assets/map/styles.json'
 import places from '@/assets/map/places.json'
 import Logo from '@/components/Logo.vue'
+import marker from '@/assets/images/marker.svg'
 
 export default {
   methods: {
-    clickMarker(name){
-      this.$router.push({ name: 'place', params: { placeId: name } })
-    }
+
+    clickMarker(placeId) {
+      this.$router.push({
+        name: 'place',
+        params: {
+          placeId
+        }
+      })
+    },
   },
   components: {
-    logo: Logo
+    logo: Logo,
   },
 	data() {
 		return {
+      marker,
 			center: {
 				lat: 59.2484413,
         lng: 17.8602922,
@@ -45,11 +55,14 @@ export default {
 			userPosition: null,
       zoom: 18,
       options: {
-        disableDefaultUI : true,
-        styles
+        disableDefaultUI: true,
+        styles,
       },
       markers: places
-        .map(place => ({ name: place.name, position: place.position }))
+        .map(place => ({
+          name: place.name,
+          position: place.position,
+        })),
 		}
   },
   mounted() {
@@ -62,10 +75,10 @@ export default {
 
         const heatmap = new google.maps.visualization.HeatmapLayer({
           data: latlon,
-          map: this.$refs.map.$mapObject
+          map: this.$refs.map.$mapObject,
         })
 
-        heatmap.set('radius', 100);
+        heatmap.set('radius', 100)
         heatmap.set('gradient', [
           'rgba(255, 255, 255, 0)',
           'rgba(87, 95, 207, 0.4)',
@@ -76,7 +89,7 @@ export default {
           '#5AAE6D',
           '#C16253',
           '#DB4E4C',
-          '#F53B46'
+          '#F53B46',
         ])
         heatmap.set('opacity', 0.6)
       })
@@ -104,7 +117,6 @@ export default {
 
 .map
   flex: 100% 1 1
-
 </style>
 <style lang="sass">
 .map > div
