@@ -13,8 +13,8 @@
         :key="index"
         :position="m.position"
         :icon="{
-          url: marker,
-          anchor: { x: 30, y: 30 }
+          url: require(`@/assets/images/markers/${m.name}.svg`),
+          anchor: { x: 120/2, y: 120/2 },
         }"
         :clickable="true"
         :draggable="false"
@@ -28,7 +28,6 @@
 import styles from '@/assets/map/styles.json'
 import places from '@/assets/map/places.json'
 import Logo from '@/components/Logo.vue'
-import marker from '@/assets/images/marker.svg'
 
 export default {
   methods: {

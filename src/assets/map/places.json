@@ -2,7 +2,7 @@
   {
     "name": "back-facade-of-commercial-centre",
     "title": "Back facade of commercial centre",
-    "position": { "lat": 59.24786, "lng": 17.86014 },
+    "position": { "lat": 59.247853, "lng": 17.860106 },
     "texts": [
       {
         "beskrivning": "Skall bli centrum/gågata. Just nu stängd pga bygge för att komma\ntill bostäderna norrut",
@@ -20,7 +20,7 @@
   {
     "name": "fittja-square",
     "title": "Fittja Square",
-    "position": { "lat": 59.24839, "lng": 17.86112 },
+    "position": { "lat": 59.248095, "lng": 17.860875 },
     "texts": [
       {
         "förslag": "Uteservering centrerat, för att utnyttja platsen men också för\natt göra det tryggare för fler än de som alltid är där",
@@ -93,7 +93,7 @@
   {
     "name": "fittja-commercial-centre",
     "id": "Fittja Commercial Centre",
-    "position": { "lat": 59.24863, "lng": 17.86071 },
+    "position": { "lat": 59.248035, "lng": 17.860530 },
     "texts": [
       {
         "beskrivning": "Det känns tryggt. Här finns det alltid någon som ser. Butikerna har öppet till 20:00.",
@@ -171,7 +171,7 @@
   {
     "name": "fittja-station",
     "title": "Fittja Station",
-    "position": { "lat": 59.24759, "lng": 17.86115 },
+    "position": { "lat": 59.247601, "lng": 17.861175 },
     "texts": [
       {
         "beskrivning": "",

@@ -2,19 +2,8 @@
   <div class="page-content">
     <div class="header">
       <logo class="logo" />
-      <div class="header-links">
-        <a @click="navigate('map')" style="text-decoration: underline">
-          Results & Insights
-        </a>
-        <a @click="navigate('map')">
-          Project Backgroud
-        </a>
-      </div>
     </div>
     <div class="side-menu">
-      <a @click="navigate('map')" class="back">
-        <fa class="navigate-arrow" icon="long-arrow-alt-left" /> Tillbaka till kartan
-      </a>
       <div class="side-menu-items">
         <div>
           <i :class="{ selected: page === 1 }" />
