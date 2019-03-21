@@ -65,7 +65,7 @@
           <h1>Bilder</h1>
           <div class="image-content">
             <img
-              v-for="(image, i) in place.images"
+              v-for="(image, i) in images"
               :key="'image' + i"
               :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
           </div>
@@ -89,18 +89,25 @@
 import Logo from '@/components/Logo.vue'
 
 export default {
-  props: ['place'],
+  props: [
+    'place',
+    'images'
+  ],
   components: {
     logo: Logo
   },
   data() {
-    const { place } = this
-    console.log(place)
-    const { background: url, texts, images, sounds } = place
+    const { place, images } = this
+
+    const { background: url, texts, sounds, name } = place
 
     const challenges = texts.map(object => object.utmaningar).filter(s => s)
     const solutions = texts.map(object => object.förslag).filter(s => s)
-    const background = `url(${url.startsWith('/') ? url : require(`@/assets/${url}`)})`
+    const background = `url(${
+      url.startsWith('/')
+        ? url :
+        require(`@/assets/images/places/${name}/${url}`)
+    })`
     return {
       page: 0,
       background,
@@ -114,8 +121,7 @@ export default {
   },
   methods: {
     scrollTo (page) {
-      var element = document.getElementById('page' + page);
-      element.scrollIntoView();
+      document.getElementById(`page${page}`).scrollIntoView()
     },
     goBack () {
       this.$router.push({ name: 'map'})
@@ -124,15 +130,18 @@ export default {
       this.$router.push({ name })
     },
     handleScroll(event) {
-      var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+      const scrollTop = window.pageYOffset !== undefined
+        ? window.pageYOffset
+        : (document.documentElement || document.body.parentNode || document.body).scrollTop
+
       this.page = Math.floor(scrollTop / window.innerHeight)
     }
   },
   created () {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
   },
   destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -175,7 +184,7 @@ export default {
   .page-content
     padding: 5%
   .header
-    width: 90%;
+    width: 90%
     height: 150px
     position: absolute
     display: flex
@@ -245,7 +254,7 @@ export default {
           margin-left: 25px
         .text-selected
           text-decoration: underline
-      
+
 
   .pages
     display: flex

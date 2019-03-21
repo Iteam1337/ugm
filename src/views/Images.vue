@@ -20,7 +20,10 @@
 import MenuItem from '@/components/MenuItem.vue'
 
 export default {
-  props: ['place'],
+  props: [
+    'place',
+    'images'
+  ],
   components: {
     item: MenuItem,
   },

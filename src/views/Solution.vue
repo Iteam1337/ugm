@@ -20,7 +20,10 @@
 
 <script>
 export default {
-  props: ['place'],
+  props: [
+    'place',
+    'images'
+  ],
   methods: {
     goBack () {
       this.$router.push({ name: 'place', params: { placeId: this.place.name } })

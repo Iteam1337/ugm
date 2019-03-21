@@ -15,14 +15,7 @@
         "utmaningar": "Mörkt, ödsligt, på natten är det läskigt"
       }
     ],
-    "background": "images/places/back-facade-of-commercial-centre/IMG_4885.jpeg",
-    "images": [
-      "images/places/back-facade-of-commercial-centre/IMG_4884.jpeg",
-      "images/places/back-facade-of-commercial-centre/IMG_4885.jpeg",
-      "images/places/back-facade-of-commercial-centre/IMG_2209.jpeg",
-      "images/places/back-facade-of-commercial-centre/P1070603-1.jpeg",
-      "images/places/back-facade-of-commercial-centre/IMG_2210.jpeg"
-    ]
+    "background": "IMG_4885.jpeg"
   },
   {
     "name": "fittja-square",
@@ -95,16 +88,7 @@
         "utmaningar": "Ingen vistas utomhus utan anledning"
       }
     ],
-    "background": "images/places/fittja-square/P1070587-1.jpeg",
-    "images": [
-      "images/places/fittja-square/P1070549-1.jpeg",
-      "images/places/fittja-square/P1070551-1.jpeg",
-      "images/places/fittja-square/P1070584-1.jpeg",
-      "images/places/fittja-square/P1070587-1.jpeg",
-      "images/places/fittja-square/P1070553-1.jpeg",
-      "images/places/fittja-square/P1070536-1.jpeg",
-      "images/places/fittja-square/P1070537-1.jpeg"
-    ]
+    "background": "P1070587-1.jpeg"
   },
   {
     "name": "fittja-commercial-centre",
@@ -182,18 +166,10 @@
         "utmaningar": "Känns som att alla är exkluderade, inte mötesplatser eller platser att hänga på. Många butiker är\nexkluderande - riktar sig endast till vissa specifika grupper"
       }
     ],
-    "background": "images/places/fittja-commercial-centre/P1070593-1.jpeg",
-    "images": [
-      "images/places/fittja-commercial-centre/IMG_4880.jpeg",
-      "images/places/fittja-commercial-centre/IMG_4871.jpeg",
-      "images/places/fittja-commercial-centre/P1070593-1.jpeg",
-      "images/places/fittja-commercial-centre/P1070594-1.jpeg",
-      "images/places/fittja-commercial-centre/IMG_4872.jpeg",
-      "images/places/fittja-commercial-centre/IMG_4867.jpeg"
-    ]
+    "background": "P1070593-1.jpeg"
   },
   {
-    "slug": "fittja-station",
+    "name": "fittja-station",
     "title": "Fittja Station",
     "position": { "lat": 59.24759, "lng": 17.86115 },
     "texts": [
@@ -208,10 +184,6 @@
         "utmaningar": "Kisslukt, dålig överblick. Fin utsikt."
       }
     ],
-    "background": "images/places/fittja-station/P1070614-1.jpeg",
-    "images": [
-      "images/places/fittja-station/P1070614-1.jpeg",
-      "images/places/fittja-station/P1070611-1.jpeg"
-    ]
+    "background": "P1070614-1.jpeg"
   }
 ]

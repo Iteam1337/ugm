@@ -12,9 +12,18 @@ import places from './assets/map/places'
 
 Vue.use(Router)
 
-function place ({ params: { placeId } }) {
-  return places.find(({ name }) =>
+function placeProps ({ params: { placeId }}) {
+  const place = places.find(({ name }) =>
     name.toLowerCase() === placeId.toLowerCase())
+
+  const images = place && place.name
+    ? require(`@/assets/images/places/${place.name}`)
+    : {}
+
+  return {
+    images: images && images.default,
+    place
+  }
 }
 
 export default new Router({
@@ -33,33 +42,25 @@ export default new Router({
       path: '/place/:placeId',
       name: 'place',
       component: Place,
-      props: route => {
-        return { place: place(route) }
-      },
+      props: route => placeProps(route),
     },
     {
       path: '/place/:placeId/images',
       name: 'images',
       component: Images,
-      props: route => {
-        return { place: place(route) }
-      },
+      props: route => placeProps(route),
     },
     {
       path: '/place/:placeId/challenges',
       name: 'challenges',
       component: Challenges,
-      props: route => {
-        return { place: place(route) }
-      },
+      props: route => placeProps(route),
     },
     {
       path: '/place/:placeId/solution',
       name: 'solution',
       component: Solution,
-      props: route => {
-        return { place: place(route) }
-      },
+      props: route => placeProps(route),
     }
   ]
 })
