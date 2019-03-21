@@ -10,6 +10,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "@fortawesome/vue-fontawesome": "^0.1.1",
+    "directory-tree": "2.2.1",
     "normalize.css": "^8.0.0",
     "vue": "^2.5.17",
     "vue-progressbar-component": "^1.1.0",

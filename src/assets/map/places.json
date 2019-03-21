@@ -1,7 +1,8 @@
 [
   {
-    "name": "baksidan",
-    "position": { "lat": 59.2478857, "lng": 17.8602615 },
+    "name": "back-facade-of-commercial-centre",
+    "title": "Back facade of commercial centre",
+    "position": { "lat": 59.24786, "lng": 17.86014 },
     "texts": [
       {
         "beskrivning": "Skall bli centrum/gågata. Just nu stängd pga bygge för att komma\ntill bostäderna norrut",
@@ -14,18 +15,19 @@
         "utmaningar": "Mörkt, ödsligt, på natten är det läskigt"
       }
     ],
-    "background": "images/places/baksidan-passagen/IMG_4885.jpeg",
+    "background": "images/places/back-facade-of-commercial-centre/IMG_4885.jpeg",
     "images": [
-      "images/places/baksidan-passagen/IMG_4884.jpeg",
-      "images/places/baksidan-passagen/IMG_4885.jpeg",
-      "images/places/baksidan-passagen/IMG_2209.jpeg",
-      "images/places/baksidan-passagen/P1070603-1.jpeg",
-      "images/places/baksidan-passagen/IMG_2210.jpeg"
+      "images/places/back-facade-of-commercial-centre/IMG_4884.jpeg",
+      "images/places/back-facade-of-commercial-centre/IMG_4885.jpeg",
+      "images/places/back-facade-of-commercial-centre/IMG_2209.jpeg",
+      "images/places/back-facade-of-commercial-centre/P1070603-1.jpeg",
+      "images/places/back-facade-of-commercial-centre/IMG_2210.jpeg"
     ]
   },
   {
-    "name": "torget",
-    "position": { "lat": 59.2479258, "lng": 17.8611123 },
+    "name": "fittja-square",
+    "title": "Fittja Square",
+    "position": { "lat": 59.24839, "lng": 17.86112 },
     "texts": [
       {
         "förslag": "Uteservering centrerat, för att utnyttja platsen men också för\natt göra det tryggare för fler än de som alltid är där",
@@ -93,20 +95,21 @@
         "utmaningar": "Ingen vistas utomhus utan anledning"
       }
     ],
-    "background": "images/places/torget/P1070587-1.jpeg",
+    "background": "images/places/fittja-square/P1070587-1.jpeg",
     "images": [
-      "images/places/torget/P1070549-1.jpeg",
-      "images/places/torget/P1070551-1.jpeg",
-      "images/places/torget/P1070584-1.jpeg",
-      "images/places/torget/P1070587-1.jpeg",
-      "images/places/torget/P1070553-1.jpeg",
-      "images/places/torget/P1070536-1.jpeg",
-      "images/places/torget/P1070537-1.jpeg"
+      "images/places/fittja-square/P1070549-1.jpeg",
+      "images/places/fittja-square/P1070551-1.jpeg",
+      "images/places/fittja-square/P1070584-1.jpeg",
+      "images/places/fittja-square/P1070587-1.jpeg",
+      "images/places/fittja-square/P1070553-1.jpeg",
+      "images/places/fittja-square/P1070536-1.jpeg",
+      "images/places/fittja-square/P1070537-1.jpeg"
     ]
   },
   {
-    "name": "centrum",
-    "position": { "lat": 59.2486592, "lng": 17.8603544 },
+    "name": "fittja-commercial-centre",
+    "id": "Fittja Commercial Centre",
+    "position": { "lat": 59.24863, "lng": 17.86071 },
     "texts": [
       {
         "beskrivning": "Det känns tryggt. Här finns det alltid någon som ser. Butikerna har öppet till 20:00.",
@@ -179,19 +182,20 @@
         "utmaningar": "Känns som att alla är exkluderade, inte mötesplatser eller platser att hänga på. Många butiker är\nexkluderande - riktar sig endast till vissa specifika grupper"
       }
     ],
-    "background": "images/places/centrum/P1070593-1.jpeg",
+    "background": "images/places/fittja-commercial-centre/P1070593-1.jpeg",
     "images": [
-      "images/places/centrum/IMG_4880.jpeg",
-      "images/places/centrum/IMG_4871.jpeg",
-      "images/places/centrum/P1070593-1.jpeg",
-      "images/places/centrum/P1070594-1.jpeg",
-      "images/places/centrum/IMG_4872.jpeg",
-      "images/places/centrum/IMG_4867.jpeg"
+      "images/places/fittja-commercial-centre/IMG_4880.jpeg",
+      "images/places/fittja-commercial-centre/IMG_4871.jpeg",
+      "images/places/fittja-commercial-centre/P1070593-1.jpeg",
+      "images/places/fittja-commercial-centre/P1070594-1.jpeg",
+      "images/places/fittja-commercial-centre/IMG_4872.jpeg",
+      "images/places/fittja-commercial-centre/IMG_4867.jpeg"
     ]
   },
   {
-    "name": "hörnan",
-    "position": { "lat": 59.2474163, "lng": 17.8610796 },
+    "slug": "fittja-station",
+    "title": "Fittja Station",
+    "position": { "lat": 59.24759, "lng": 17.86115 },
     "texts": [
       {
         "beskrivning": "",
@@ -204,10 +208,10 @@
         "utmaningar": "Kisslukt, dålig överblick. Fin utsikt."
       }
     ],
-    "background": "images/places/hornan/P1070614-1.jpeg",
+    "background": "images/places/fittja-station/P1070614-1.jpeg",
     "images": [
-      "images/places/hornan/P1070614-1.jpeg",
-      "images/places/hornan/P1070611-1.jpeg"
+      "images/places/fittja-station/P1070614-1.jpeg",
+      "images/places/fittja-station/P1070611-1.jpeg"
     ]
   }
 ]
