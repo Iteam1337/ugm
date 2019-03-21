@@ -46,7 +46,6 @@ export default {
   },
 	data() {
 		return {
-      marker,
 			center: {
 				lat: 59.2484413,
         lng: 17.8602922,
