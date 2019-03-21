@@ -73,16 +73,19 @@
 </template>
 
 <script>
-import Logo from "@/components/Logo.vue";
+import Logo from '@/components/Logo.vue'
 
 export default {
-  props: ["place", "images"],
+  props: [
+    'place',
+    'images'
+  ],
   components: {
     logo: Logo
   },
   data() {
     const {
-      place: { background: url = "", challenges, solutions, name = "" } = {},
+      place: { background: url = '', challenges, solutions, name = '' } = {},
       images
     } = this;
 
@@ -90,8 +93,8 @@ export default {
       name && name.trim() ? `places/${name}/${url}` : "places-background.png";
 
     const background = `url(${
-      url.startsWith("/") ? url : require(`@/assets/images/${imageURL}`)
-    })`;
+      url.startsWith('/') ? url : require(`@/assets/images/${imageURL}`)
+    })`
 
     function show(array = []) {
       return array && !!array.length;
@@ -105,14 +108,14 @@ export default {
         solutions: show(solutions),
         images: show(images)
       }
-    };
+    }
   },
   methods: {
     goBack() {
-      this.$router.push({ name: "map" });
+      this.$router.push({ name: 'map' })
     },
     navigate(name, options) {
-      console.log({ name, options });
+      console.log({ name, options })
       // this.$router.push({ name })
     }
   }
@@ -120,6 +123,33 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  @import "@/globals.sass"
+
+  a
+    cursor: pointer
+
+  .content
+    padding: 5%
+    display: flex
+    flex-direction: row
+
+  .header,
+    display: flex
+    margin: 0 130px
+    padding: 0
+    align-items: center
+    justify-content: center
+
+    .logo,
+    .link
+      width: auto
+    .link
+      margin-left: auto
+    .logo
+      padding-left: 0
+</style>
+
+<style lang="sass">
   @import "@/globals.sass"
 
   .styling
@@ -155,24 +185,6 @@ export default {
     z-index: 10
     position: relative
 
-  a
-    cursor: pointer
-
-  .header,
-    display: flex
-    margin: 0 130px
-    padding: 0
-    align-items: center
-    justify-content: center
-
-    .logo,
-    .link
-      width: auto
-    .link
-      margin-left: auto
-    .logo
-      padding-left: 0
-
   .hero-title
     display: flex
     align-items: flex-end
@@ -194,11 +206,6 @@ export default {
       position: absolute
       left: 0
       z-index: -1
-
-  .content
-    padding: 5%
-    display: flex
-    flex-direction: row
 
   .images
     li
