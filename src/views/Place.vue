@@ -5,19 +5,19 @@
     </div>
     <div class="side-menu">
       <div class="side-menu-items">
-        <div>
+        <div v-if="show.challenges">
           <i :class="{ selected: page === 1 }" />
           <span :class="{ 'text-selected': page === 1 }" @click="scrollTo(1)">
             Utmaningar
           </span>
         </div>
-        <div>
+        <div v-if="show.images">
           <i :class="{ selected: page === 2 }" />
           <span :class="{ 'text-selected': page === 2 }" @click="scrollTo(2)">
             Bilder
           </span>
         </div>
-        <div>
+        <div v-if="show.solutions">
           <i :class="{ selected: page === 3 }" />
           <span :class="{ 'text-selected': page === 3 }" @click="scrollTo(3)">
             Lösningsförslag
@@ -30,27 +30,26 @@
         <div class="background">
           <div class="color-overlay"></div>
           <div class="background-image" :style="{ backgroundImage: background }">
-
           </div>
         </div>
-        <div class="page-content">
+        <div class="page-content" v-if="show.challenges">
           <h1 class="quoute">
-            "{{ show.challenges[0] }}"
+            "{{ place.challenges[0] }}"
           </h1>
         </div>
       </div>
       <div class="page" id="page1">
-        <div class="page-content">
+        <div class="page-content" v-if="show.challenges">
           <h1>Utmaningar</h1>
           <div class="quotes">
-            <span v-for="(challenge, i) in show.challenges" :key="'challenge' + i">
+            <span v-for="(challenge, i) in place.challenges" :key="'challenge' + i">
               "{{ challenge }}"
             </span>
           </div>
         </div>
       </div>
       <div class="page" id="page2">
-        <div class="page-content">
+        <div class="page-content" v-if="show.images">
           <h1>Bilder</h1>
           <div class="image-content">
             <img
@@ -61,10 +60,10 @@
         </div>
       </div>
       <div class="page" id="page3">
-        <div class="page-content">
+        <div class="page-content" v-if="show.solutions">
           <h1>Lösningsförslag</h1>
           <div class="quotes">
-            <span v-for="(solution, i) in show.solutions" :key="'solution' + i">
+            <span v-for="(solution, i) in place.solutions" :key="'solution' + i">
               "{{ solution }}"
             </span>
           </div>
@@ -80,31 +79,42 @@ import Logo from '@/components/Logo.vue'
 export default {
   props: [
     'place',
-    'images'
+    'images',
   ],
   components: {
-    logo: Logo
+    logo: Logo,
   },
   data() {
-    const { place, images } = this
+    const { place = {}, images } = this
 
-    const { background: url, texts, sounds, name } = place
+    const {
+      background: url = '',
+      challenges,
+      solutions,
+      name = '',
+    } = place
 
-    const challenges = texts.map(object => object.utmaningar).filter(s => s)
-    const solutions = texts.map(object => object.förslag).filter(s => s)
+    const imageURL = name && name.trim()
+      ? `places/${name}/${url}`
+      : 'places-background.png'
+
     const background = `url(${
       url.startsWith('/')
         ? url :
-        require(`@/assets/images/places/${name}/${url}`)
+        require(`@/assets/images/${imageURL}`)
     })`
+
+    function show (array = []) {
+      return array && !!array.length
+    }
+
     return {
       page: 0,
       background,
       show: {
-        challenges,
-        solutions,
-        images: !!(images || []).length,
-        sounds: !!(sounds || []).length,
+        challenges: show(challenges),
+        solutions: show(solutions),
+        images: show(images),
       }
     }
   },
@@ -131,7 +141,7 @@ export default {
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
-  }
+  },
 }
 </script>
 
@@ -243,7 +253,6 @@ export default {
           margin-left: 25px
         .text-selected
           text-decoration: underline
-
 
   .pages
     display: flex

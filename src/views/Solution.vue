@@ -1,17 +1,9 @@
 <template>
   <div class="background">
     <div class="container">
-      <ul class="nav">
-        <li class="menu-item" @click="goBack()">
-          <span>
-            <fa icon="arrow-left" />
-          </span>
-          Tillbaka till platsen
-        </li>
-      </ul>
-      <div class="content">
-        <p v-for="({ förslag }, i) in place.texts" :key="'solution' + i" v-if="förslag">
-          "{{ förslag }}"
+      <div class="content" v-if="solution && solution.text">
+        <p>
+          {{ text }}
         </p>
       </div>
     </div>
@@ -22,7 +14,8 @@
 export default {
   props: [
     'place',
-    'images'
+    'images',
+    'solution',
   ],
   methods: {
     goBack () {

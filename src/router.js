@@ -4,15 +4,13 @@ import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import Map from '@/views/Map.vue'
 import Place from '@/views/Place.vue'
-import Images from '@/views/Images.vue'
-import Challenges from '@/views/Challenges.vue'
 import Solution from '@/views/Solution.vue'
 
 import places from './assets/map/places'
 
 Vue.use(Router)
 
-function placeProps ({ params: { placeId }}) {
+function placeProps ({ params: { placeId, solutionId = null }}) {
   const place = places.find(({ name }) =>
     name.toLowerCase() === placeId.toLowerCase())
 
@@ -20,9 +18,14 @@ function placeProps ({ params: { placeId }}) {
     ? require(`@/assets/images/places/${place.name}`)
     : {}
 
+  const solution = solutionId ? (place.solutions || []).find(({ name }) => {
+    name.toLowerCase() === solutionId.toLowerCase()
+  }) : {}
+
   return {
     images: images && images.default,
-    place
+    place,
+    solution,
   }
 }
 
@@ -45,19 +48,7 @@ export default new Router({
       props: route => placeProps(route),
     },
     {
-      path: '/place/:placeId/images',
-      name: 'images',
-      component: Images,
-      props: route => placeProps(route),
-    },
-    {
-      path: '/place/:placeId/challenges',
-      name: 'challenges',
-      component: Challenges,
-      props: route => placeProps(route),
-    },
-    {
-      path: '/place/:placeId/solution',
+      path: '/place/:placeId/:solutionId',
       name: 'solution',
       component: Solution,
       props: route => placeProps(route),

@@ -31,7 +31,6 @@ import Logo from '@/components/Logo.vue'
 
 export default {
   methods: {
-
     clickMarker(placeId) {
       this.$router.push({
         name: 'place',
