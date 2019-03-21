@@ -100,7 +100,7 @@
             image.src = blob
           }))
 
-          await this.sleep(2000)
+          await this.sleep(500)
 
           this.preLoaded = true
           this.$emit('done', true)

@@ -1,10 +1,25 @@
 <template>
   <div class="background">
     <div class="container">
-      <div class="content" v-if="solution && solution.text">
-        <p>
-          {{ text }}
-        </p>
+      <div class="content" v-if="solution && solution.title">
+        <div class="container flex">
+          <div class="w-100">
+            <div class="flex">
+              <div class="w-100">
+                <h1><strong>{{place.title}}:</strong> {{ solution.title }}</h1>
+              </div>
+              <div class="w-100">
+                <em>{{ solution.gist }}</em>
+              </div>
+              <div class="w-100">
+                <p>{{ solution.description }}</p>
+              </div>
+              <div class="w-100">
+                <p>{{ solution.impact }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -33,24 +48,13 @@ export default {
     height: 100%
   .container
     max-width: 960px
-  .nav
-    width: 80%
-    height: 10%
-    height: 10vh
-    @include narrow
-      width: 100%
-      padding: 0
-    .menu-item
-      margin-top: 0
-      @include narrow
-        margin-top: 21px
 
   .content
     height: 90%
     height: 90vh
     width: 100%
     display: flex
-    flex-wrap: wrap
+    flex-wrap: column
     @include narrow
       margin-bottom: 20px
     p

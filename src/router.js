@@ -14,13 +14,20 @@ function placeProps ({ params: { placeId, solutionId = null }}) {
   const place = places.find(({ name }) =>
     name.toLowerCase() === placeId.toLowerCase())
 
+  if (!place) {
+    return {
+      images: [],
+      place: {},
+      solution: {},
+    }
+  }
+
   const images = place && place.name
     ? require(`@/assets/images/places/${place.name}`)
     : {}
 
-  const solution = solutionId ? (place.solutions || []).find(({ name }) => {
-    name.toLowerCase() === solutionId.toLowerCase()
-  }) : {}
+  const solution = solutionId ? (place.solutions || []).find(({ name }) =>
+    name.toLowerCase() === solutionId.toLowerCase()) : {}
 
   return {
     images: images && images.default,
