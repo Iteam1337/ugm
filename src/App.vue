@@ -108,15 +108,14 @@
       margin: 0
       align-items: flex-start
 
-  h1
+  h1, h2
     font-family: 'Libre Baskerville'
-    font-weight: bold
-  h2
-    font-family: 'Alegreya Sans', sans-serif
-    font-weight: 100
-
+    font-weight: normal
+    
   .logo
     margin-top: 0
+    font-family: 'Alegreya Sans', sans-serif
+    font-weight: 100
     &, &:visited
       text-decoration: none
 
@@ -138,7 +137,7 @@
         #{$type}-top: $size * $spacing-base
         #{$type}-bottom: $size * $spacing-base
 
-  @each $size in (90, 80, 70, 60, 50, 40, 30, 20, 10)
+  @each $size in (100, 90, 80, 70, 60, 50, 40, 30, 20, 10)
     .w-#{$size}
       width: $size * 1%
       @include narrow
