@@ -62,6 +62,23 @@
     font-weight: 100
     margin: 0
 
+  main
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    header,
+    nav
+      width: 80%
+      padding: 0
+
+    nav,
+    article
+      padding: 2em
+
+
   #app
     height: 100%
 
@@ -119,6 +136,24 @@
     margin-top: 0
     &, &:visited
       text-decoration: none
+
+  .top-box
+    border: 1px solid white
+    border-bottom-style: none
+
+  .bottom-box
+    border: 1px solid white
+    border-top-style: none
+    &:before
+      width: 100%
+      background: #24002d
+      display: block
+      height: 100vh
+      content: ''
+      position: absolute
+      left: 0
+      z-index: -1
+
 
   $spacing-base: 8px
   @for $size from -20 through 20

@@ -194,23 +194,6 @@ export default {
     align-items: flex-end
     justify-content: flex-end
 
-  .top-box
-    border: 1px solid white
-    border-bottom-style: none
-
-  .bottom-box
-    border: 1px solid white
-    border-top-style: none
-    &:before
-      width: 100%
-      background: #24002d
-      display: block
-      height: 100vh
-      content: ''
-      position: absolute
-      left: 0
-      z-index: -1
-
   .images
     li
       list-style: none
