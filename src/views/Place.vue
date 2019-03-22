@@ -13,7 +13,9 @@
           <logo/>
         </div>
         <div class="link">
-          <a href="#">LEAVE COMMENTS</a>
+          <a href="#link-to-typeform" class="button">
+            LEAVE COMMENTS
+          </a>
         </div>
       </div>
 

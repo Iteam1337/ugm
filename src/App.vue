@@ -56,7 +56,7 @@
 
   body
     height: 100%
-    background: #24002D
+    background: #24002d
     color: white
     font-family: 'Alegreya Sans', sans-serif
     font-weight: 100
@@ -72,6 +72,17 @@
   a
     color: white
     font-weight: 500
+
+  .button
+    min-width: 250px
+    background: #24002d
+    border: 1px solid white
+    box-sizing: border-box
+    padding: 1.5em 2em
+    margin: 0
+    text-transform: uppercase
+    &, &:hover, &:visited
+      text-decoration: none
 
   .text-medium
     font-size: 1.25em
@@ -90,9 +101,6 @@
 
   .nav
     margin: 0
-
-
-  .nav
     display: flex
 
     @include narrow
