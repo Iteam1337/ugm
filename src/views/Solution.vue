@@ -12,7 +12,7 @@
       </div>
 
       <div class="boxed-content">
-        <div class="container hero w-100 top-box">
+        <div class="container hero w-80 top-box">
           <div class="content" v-if="solution && solution.title">
             <div class="container text flex">
               <div class="w-100">
@@ -26,8 +26,8 @@
             </div>
           </div>
         </div>
-        <div class="container text flex bottom-box">
-          <div class="w-100 content">
+        <div class="container w-80 text flex bottom-box">
+          <div class="w-80 content">
             <div class="flex">
               <div class="w-50">
                 <em>{{ solution.gist }}</em>
@@ -68,24 +68,28 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "@/globals.sass"
-.content
-  padding: 5%
-  display: flex
-  flex-direction: row
+  @import "@/globals.sass"
+  .content
+    padding: 5%
+    display: flex
+    flex-direction: row
 
-.header,
-  display: flex
-  margin: 0 130px
-  padding: 0
-  align-items: center
-  justify-content: center
+  .header
+    display: flex
+    margin: 0 auto
+    width: 80%
+    padding: 0
+    align-items: center
+    justify-content: space-between
+    @include narrow
+      width: 100%
+      padding: 0 1rem 0 1rem
 
-  .logo,
-  .link
-    width: auto
-  .link
-    margin-left: auto
-  .logo
-    padding-left: 0
+    .logo,
+    .link
+      width: auto
+    .link
+      margin-left: auto
+    .logo
+      padding-left: 0
 </style>

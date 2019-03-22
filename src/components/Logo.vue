@@ -1,6 +1,6 @@
 <template>
   <router-link to="/" class="logo">
-    <h2>Urban girls <br/> movement <br/> Botkyrka</h2>
+    <span>Urban girls <br/> movement <br/> Botkyrka</span>
   </router-link>
 </template>
 
@@ -14,7 +14,8 @@
     align-items: flex-end
     opacity: 100 !important
     z-index: 2147483647
-    h2
+    span
+      font-size: 1.5em
       user-select: none
       margin: 0
       text-transform: uppercase
