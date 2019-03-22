@@ -25,9 +25,7 @@
       <a href="#link+to+3d+model" class="button">
         VIEW 3D MODEL
       </a>
-      <a href="#link+to+typeform" class="button">
-        LEAVE COMMENTS
-      </a>
+      <typeform />
     </footer>
 	</div>
 </template>
@@ -37,6 +35,7 @@
 import styles from '@/assets/map/styles.json'
 import places from '@/assets/map/places.json'
 import Logo from '@/components/Logo.vue'
+import Typeform from '@/components/Typeform.vue'
 
 export default {
   methods: {
@@ -51,6 +50,7 @@ export default {
   },
   components: {
     logo: Logo,
+    typeform: Typeform
   },
 	data() {
 		return {

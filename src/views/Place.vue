@@ -10,12 +10,10 @@
     <div class="main">
       <div class="header">
         <div class="logo">
-          <logo/>
+          <logo />
         </div>
         <div class="link">
-          <a href="#link-to-typeform" class="button">
-            LEAVE COMMENTS
-          </a>
+          <typeform />
         </div>
       </div>
 
@@ -78,6 +76,7 @@
 
 <script>
 import Logo from '@/components/Logo.vue'
+import Typeform from '@/components/Typeform.vue'
 
 export default {
   props: [
@@ -85,7 +84,8 @@ export default {
     'images'
   ],
   components: {
-    logo: Logo
+    logo: Logo,
+    typeform: Typeform
   },
   data() {
     const {
