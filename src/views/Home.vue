@@ -15,7 +15,7 @@
           </h1>
           <ul style="padding: 0">
             <item @click.native="navigate('map')">
-              Results & Insights <fa class="navigate-arrow" icon="long-arrow-alt-right" />
+              Results &amp; Insights <arrow />
             </item>
           </ul>
         </div>
@@ -35,7 +35,7 @@
               </p>
               <p>
                 <a href="https://www.globalutmaning.se/urbangirlsmovement/innovationslabb-botkyrka/">
-                  Project Backgroud <fa class="navigate-arrow" icon="long-arrow-alt-right" />
+                  Project Backgroud <arrow />
                 </a>
               </p>
             </div>
@@ -50,11 +50,13 @@
 
 import Logo from '@/components/Logo.vue'
 import MenuItem from '@/components/MenuItem.vue'
+import Arrow from '@/components/Arrow.vue'
 
 export default {
   components: {
     logo: Logo,
     item: MenuItem,
+    arrow: Arrow,
   },
   methods: {
     navigate(name) {
