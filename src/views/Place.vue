@@ -2,7 +2,9 @@
   <div class="page-content">
     <div class="styling">
       <div class="color-overlay"/>
-      <div class="background"/>
+      <div class="background" :style="{
+        backgroundImage: background
+      }"/>
     </div>
 
     <div class="main">
