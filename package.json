@@ -20,11 +20,11 @@
     "vue2-google-maps": "0.10.6"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.1",
-    "@vue/cli-service": "^3.5.1",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.6.10"
+    "@vue/cli-plugin-babel": "3.5.1",
+    "@vue/cli-service": "3.5.1",
+    "node-sass": "4.10.0",
+    "sass-loader": "7.0.1",
+    "vue-template-compiler": "2.6.10"
   },
   "postcss": {
     "plugins": {
