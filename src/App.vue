@@ -48,7 +48,10 @@
     scroll-behavior: smooth
     max-width: 100%
     max-width: 100vw
+    min-width: 320px
     overflow-x: hidden
+    @include narrow
+      overflow-x: auto
 
   ::selection
     color: white
@@ -78,6 +81,11 @@
     article
       padding: 2em
 
+    @include narrow
+      header, nav, article
+        width: 100%
+        padding: 0 10px
+
 
   #app
     height: 100%
@@ -104,10 +112,13 @@
   .text-medium
     font-size: 1.25em
 
-  .fade-enter-active, .fade-leave-active
-    transition: opacity .5s
-  .fade-enter, .fade-leave-to
-    opacity: 0
+  .fade
+    &-enter,
+    &-leave,
+      &, &-to
+        opacity: 0
+      &-active
+        transition: opacity .5s
 
   .flex
     display: flex
@@ -116,19 +127,10 @@
     p
       padding: 0 20px
 
-  .nav
-    margin: 0
-    display: flex
-
-    @include narrow
-      flex-direction: column
-      margin: 0
-      align-items: flex-start
-
   h1
     font-family: 'Libre Baskerville'
     font-weight: bold
-  h2
+  h2, h3, h4, h5, h6
     font-family: 'Alegreya Sans', sans-serif
     font-weight: 100
 
@@ -136,6 +138,12 @@
     margin-top: 0
     &, &:visited
       text-decoration: none
+
+  .top,
+  .bottom
+    &-box
+      padding: 0
+      margin: 0
 
   .top-box
     border: 1px solid white
@@ -147,13 +155,15 @@
     &:before
       width: 100%
       background: #24002d
+      background: red
       display: block
-      height: 100vh
+      min-height: 50vh
       content: ''
       position: absolute
       left: 0
       z-index: -1
-
+      margin: 0
+      padding: 0
 
   $spacing-base: 8px
   @for $size from -20 through 20
@@ -178,5 +188,52 @@
       width: $size * 1%
       @include narrow
         width: 100%
+
+
+  .styling
+    display: flex
+    min-width: 100%
+    min-width: 100vw
+    min-height: 809px
+    position: absolute
+    z-index: -1
+    overflow: hidden
+    .color-overlay
+      background: linear-gradient(rgba(56, 13, 126, 0.5), rgba(182, 29, 86, 0.5))
+      height: 100%
+      width: 100%
+      display: block
+      z-index: 1
+      position: absolute
+      top: 0
+      left: 0
+    .background
+      min-height: 809px
+      width: 100%
+      display: flex
+      background-image: url(assets/images/header.png)
+      background-size: cover
+      background-position: center right
+      overflow: hidden
+      z-index: 0
+      @include narrow
+        min-height:
+
+  .main
+    z-index: 10
+    position: relative
+
+  .hero-title
+    display: flex
+    align-items: flex-end
+    justify-content: flex-end
+
+  .images
+    li
+      list-style: none
+    img
+      display: flex
+      max-width: 100%
+      max-height: auto
 
 </style>

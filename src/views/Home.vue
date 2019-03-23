@@ -10,21 +10,21 @@
         <logo />
       </header>
 
-      <article class="container hero w-100 top-box">
-        <div class="hero-title">
+      <article class="container hero top-box">
+        <div class="hero-title w-100">
           <h1 class="title">
-              Plan a city for girls,<br />and it will work<br />for everyone.
+            Plan a city for girls,<br />and it will work<br />for everyone.
           </h1>
         </div>
 
-        <div class="link">
-          <router-link to="/map">
+        <div class="hero-link w-50">
+          <router-link to="/map" class="link" >
             Results &amp; Insights <arrow />
           </router-link>
         </div>
       </article>
 
-      <article class="container text flex bottom-box">
+      <article class="container bottom-box">
         <div class="w-100 content">
           <div class="flex">
             <div class="w-50 content">
@@ -37,7 +37,7 @@
                 So, how do we work with global goals and tools such as feminist urban development on a practical, local level? The ambitions are there, but the practical know-how is limited. Urban Girls Movement Botkyrka wants to increase knowledge in this area, with six so called innovation labs where young girls from the Stockholm suburb Botkyrka together with other stakeholders produce innovative solutions to commonly identified problems in the area.
               </p>
               <p>
-                <a href="https://www.globalutmaning.se/urbangirlsmovement/innovationslabb-botkyrka/">
+                <a class="link" href="https://www.globalutmaning.se/urbangirlsmovement/innovationslabb-botkyrka/">
                   Project Backgroud <arrow />
                 </a>
               </p>
@@ -80,27 +80,38 @@ export default {
     width: auto
     padding-left: 0
 
-  .navigate-arrow
-    margin-left: 1em
-
-  .logo
-    position: static
-
   .background
     overflow-x: hidden
 
-  .hero-title
-    flex: 0
+  .hero
     display: flex
     flex-direction: column
-    justify-content: center
-    align-items: center
-    @include narrow
-      align-items: flex-start
+    &-title
+      align-items: center
+      flex: 0
+      justify-content: center
+      padding: 10rem 0 0
+
+    &-link
+      align-items: flex-end
+      flex: 0
+      justify-content: flex-end
+      padding: 0 0 10rem
+
+    &-link,
+    &-title
+      display: flex
+
+      @include narrow
+        align-items: flex-start
 
   .flex
     @include narrow
-      flex-direction: column-reverse
+      flex-direction: column
+
+  .top-box,
+  .bottom-box
+    padding: 0
 
   .title
     font-size: 50px
@@ -111,35 +122,35 @@ export default {
       font-size: 60px
 
   .content
-    padding: 2rem 1rem
+    padding: 0
     line-height: 1.4
+    @include narrow
+      padding: 0
     &.text
       padding: 2rem 0
 
-  .hero
-    min-height: 880px
-    display: flex
-    flex-direction: column
+  article
+    > .content
+      padding: 5rem 2rem 1rem
+      font-size: calc((2vw + 2vh + 1vmin) / 3)
+      @include narrow
+        font-size: 18px
+      @include wide
+        font-size: 28px
+  p
+    padding: .5em
+
     @include narrow
-      min-height: 475px
+      padding: 0
+  a
+    font-size: 120%
+    svg
+      margin: 0 0 0 .5em
+    &, &:visited, &:hover
+      text-decoration: none
 
-  .styling
-    min-height: 800px
-
-  .menu-item
-    vertical-align: top
-    text-align: left
-    margin-left: 5rem
-    display: block
-    margin-top: 1rem
-    width: 100%
-    @include narrow
-      margin-left: 0
-
-  p, .menu-item
-    font-size: calc((2vw + 2vh + 1vmin) / 3)
     @include narrow
       font-size: 18px
-    @include wide
-      font-size: 28px
+      svg
+        margin-left: .2rem
 </style>
