@@ -71,6 +71,17 @@
     flex-direction: column
     justify-content: center
     align-items: center
+    overflow-x: hidden
+    header
+      display: flex
+      align-items: center
+      > a
+        display: flex
+        width: auto
+      .left
+        padding-left: 0
+      .right
+        margin-left: auto
 
     header,
     nav
@@ -99,13 +110,15 @@
     font-weight: 500
 
   .button
-    min-width: 250px
+    min-width: 200px
     background: #24002d
     border: 1px solid white
     box-sizing: border-box
     padding: 1.5em 2em
     margin: 0
     text-transform: uppercase
+    display: inline-block
+    text-align: center
     &, &:hover, &:visited
       text-decoration: none
 
@@ -136,6 +149,8 @@
 
   .logo
     margin-top: 0
+    font-family: 'Alegreya Sans', sans-serif
+    font-weight: 100
     &, &:visited
       text-decoration: none
 
@@ -155,7 +170,6 @@
     &:before
       width: 100%
       background: #24002d
-      background: red
       display: block
       min-height: 50vh
       content: ''
@@ -183,41 +197,11 @@
         #{$type}-top: $size * $spacing-base
         #{$type}-bottom: $size * $spacing-base
 
-  @each $size in (90, 80, 70, 60, 50, 40, 30, 20, 10)
+  @each $size in (100, 90, 80, 70, 60, 50, 40, 30, 20, 10)
     .w-#{$size}
       width: $size * 1%
       @include narrow
         width: 100%
-
-
-  .styling
-    display: flex
-    min-width: 100%
-    min-width: 100vw
-    min-height: 809px
-    position: absolute
-    z-index: -1
-    overflow: hidden
-    .color-overlay
-      background: linear-gradient(rgba(56, 13, 126, 0.5), rgba(182, 29, 86, 0.5))
-      height: 100%
-      width: 100%
-      display: block
-      z-index: 1
-      position: absolute
-      top: 0
-      left: 0
-    .background
-      min-height: 809px
-      width: 100%
-      display: flex
-      background-image: url(assets/images/header.png)
-      background-size: cover
-      background-position: center right
-      overflow: hidden
-      z-index: 0
-      @include narrow
-        min-height:
 
   .main
     z-index: 10

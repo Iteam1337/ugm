@@ -1,48 +1,40 @@
 <template>
-  <div class="page-content">
+  <main>
+    <header>
+      <logo class="left" />
+      <typeform class="right" />
+    </header>
 
-    <div class="main">
-      <div class="header">
-        <div class="logo">
-          <logo />
+    <article class="container hero top-box">
+      <div class="content" v-if="solution && solution.title">
+        <div class="container text flex">
+          <div class="w-100">
+            <div class="w-100">
+              <h1><strong>{{place.title}}:</strong> {{ solution.title }}</h1>
+            </div>
+            <div class="w-100">
+              <iframe width="640" height="480" src="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d/embed?camera=0" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true" />
+            </div>
         </div>
-        <div class="link">
-          <typeform />
         </div>
       </div>
+    </article>
 
-      <div class="boxed-content">
-        <div class="container hero w-100 top-box">
-          <div class="content" v-if="solution && solution.title">
-            <div class="container text flex">
-              <div class="w-100">
-                <div class="w-100">
-                  <h1><strong>{{place.title}}:</strong> {{ solution.title }}</h1>
-                </div>
-                <div class="w-100">
-                  <iframe width="640" height="480" src="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d/embed?camera=0" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true" />
-                </div>
-            </div>
-            </div>
+    <article class="container text flex bottom-box">
+      <div class="content">
+        <div class="flex">
+          <div class="w-50">
+            <em>{{ solution.gist }}</em>
+            <p>{{ solution.description }}</p>
           </div>
-        </div>
-        <div class="container text flex bottom-box">
-          <div class="w-100 content">
-            <div class="flex">
-              <div class="w-50">
-                <em>{{ solution.gist }}</em>
-                <p>{{ solution.description }}</p>
-              </div>
-              <div class="w-50">
-                <h2>Impact on the space</h2>
-                <p>{{ solution.impact }}</p>
-              </div>
-            </div>
+          <div class="w-50">
+            <h2>Impact on the space</h2>
+            <p>{{ solution.impact }}</p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
+  </main>
 </template>
 
 <script>
@@ -57,7 +49,7 @@ export default {
   ],
   components: {
     logo: Logo,
-    typeform: Typeform
+    typeform: Typeform,
   },
   methods: {
     goBack () {
@@ -68,24 +60,28 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "@/globals.sass"
-.content
-  padding: 5%
-  display: flex
-  flex-direction: row
+  @import "@/globals.sass"
+  .content
+    padding: 5%
+    display: flex
+    flex-direction: row
 
-.header,
-  display: flex
-  margin: 0 130px
-  padding: 0
-  align-items: center
-  justify-content: center
+  .header
+    display: flex
+    margin: 0 auto
+    width: 80%
+    padding: 0
+    align-items: center
+    justify-content: space-between
+    @include narrow
+      width: 100%
+      padding: 0 1rem 0 1rem
 
-  .logo,
-  .link
-    width: auto
-  .link
-    margin-left: auto
-  .logo
-    padding-left: 0
+    .logo,
+    .link
+      width: auto
+    .link
+      margin-left: auto
+    .logo
+      padding-left: 0
 </style>
