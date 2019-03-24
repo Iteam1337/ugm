@@ -19,7 +19,10 @@
           <div class="solutions-preview-wrap w-100">
             <h2>Solutions</h2>
             <ul class="flex solutions-preview-list">
-              <li v-for="(solution, i) in place.solutions" :key="'solution' + i">
+              <li
+                v-for="(solution, i) in place.solutions"
+                :key="'solution' + i"
+              >
                 <router-link :to="{
                   name: 'solution',
                   params: {
@@ -27,7 +30,9 @@
                     solutionId: solution.name
                   },
                 }" class="link">
-                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg==" />
+                  <div class="background" :style="{
+                  backgroundImage: `url('https://media.sketchfab.com/urls/0f0a3c2db9614e09ab157f8310e9b92d/dist/thumbnails/e6b308b8cfa040658ef8cd96c0a1bd36/d612dbd969fc46fda7ba431b333d0936.jpeg')`
+                }"/>
                   {{solution.title}} <arrow />
                 </router-link>
               </li>
@@ -55,7 +60,9 @@
           <div class="w-50 images">
             <ul>
               <li v-for="(image, i) in images" :key="'image' + i">
-                <img :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
+                <a :href="image.startsWith('/') ? image : require(`@/assets/${image}`)" target="_blank">
+                  <img :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
+                </a>
               </li>
             </ul>
           </div>
@@ -145,7 +152,7 @@ export default {
     list-style: none
     padding: 0
     flex-flow: row wrap
-    justify-content: space-between
+    justify-content: flex-start
 
     @include narrow
       flex-flow: column
@@ -168,6 +175,16 @@ export default {
         align-self: center
         justify-content: flex-start
 
+    .background
+      position: absolute
+      left: 0
+      top: 0
+      z-index: -1
+      width: 100%
+      height: 145px
+      background-size: cover
+      background-position: center right
+
     .link
       display: inline-block
       min-width: 100%
@@ -180,6 +197,7 @@ export default {
       left: 0
       bottom: 0
       line-height: $height * 1.5
+      z-index: 0
       svg
         margin-left: .5rem
         flex-shrink: 0
