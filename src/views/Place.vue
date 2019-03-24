@@ -19,19 +19,17 @@
           <div class="solutions-preview-wrap w-100">
             <h2>Solutions</h2>
             <ul class="flex solutions-preview-list">
-              <li v-for="(solution, i) in place.solutions" :key="'solution' + i" class="flex">
-                <div>
-                  <router-link :to="{
-                    name: 'solution',
-                    params: {
-                      placeId: place.name,
-                      solutionId: solution.name
-                    },
-                  }">
-                    {{solution.title}}
-                  </router-link>
-                  <arrow />
-                </div>
+              <li v-for="(solution, i) in place.solutions" :key="'solution' + i">
+                <router-link :to="{
+                  name: 'solution',
+                  params: {
+                    placeId: place.name,
+                    solutionId: solution.name
+                  },
+                }" class="link">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg==" />
+                  {{solution.title}} <arrow />
+                </router-link>
               </li>
             </ul>
           </div>
@@ -143,36 +141,48 @@ export default {
       margin-bottom: 1rem
 
   .solutions-preview-list
+    $height: 200px
     list-style: none
     padding: 0
     flex-flow: row wrap
-    justify-content: flex-start
+    justify-content: space-between
+
     @include narrow
       flex-flow: column
       justify-content: center
 
     li
       margin: 1rem
-      width: 400px
-      height: 200px
+      min-width: 300px
+      height: $height
       flex: auto
       border: 1px solid white
-      align-items: flex-end
-      background: white
+      align-items: flex-start
+      background: #24002D
+      padding: 0
+      position: relative
+      flex-grow: 0
       @include narrow
         width: 100%
+        max-width: 100%
         align-self: center
-        justify-content: flex-end
-      div
-        width: 100%
-        height: 50px
-        background: #24002d
-        align-items: center
-        padding: 1rem
-        letter-spacing: 1.25px
-        svg
-          margin-left: 1rem
-          flex-shrink: 0
+        justify-content: flex-start
+
+    .link
+      display: inline-block
+      min-width: 100%
+      height: 100%
+      width: 100%
+      padding: 20px 20px
+      text-align: left
+      margin: 0
+      position: absolute
+      left: 0
+      bottom: 0
+      line-height: $height * 1.5
+      svg
+        margin-left: .5rem
+        flex-shrink: 0
 
   .hero-title
     display: flex
@@ -182,16 +192,16 @@ export default {
       flex-shrink: 0
 
   .images
-    display: flex
-    flex-flow: row wrap
+    column-count: 2
+    column-gap: 2rem
+    @include narrow
+      column-count: 1
+    img
+      padding: 2% 2% 2% 0
+      width: 100%
     ul
-      @include narrow
-        padding-left: 0
+      padding: 0
+      margin: 0
     li
       list-style: none
-    img
-      display: flex
-      margin-bottom: 2rem
-      max-width: 100%
-      max-height: auto
 </style>

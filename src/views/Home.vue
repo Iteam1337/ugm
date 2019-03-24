@@ -33,7 +33,7 @@
             </p>
             <p>
               <a class="link" href="https://www.globalutmaning.se/urbangirlsmovement/innovationslabb-botkyrka/">
-                Project Backgroud <arrow />
+                Project Background <arrow />
               </a>
             </p>
           </div>
@@ -70,14 +70,6 @@ export default {
 
 <style lang="sass" scoped>
   @import "@/globals.sass"
-
-  .dash
-    position: absolute
-    display: flex
-    left: 0
-    right: 0
-    margin: 0 auto
-    padding: 0
 
   .hero
     display: flex
@@ -141,6 +133,8 @@ export default {
       margin: 0 auto
       z-index: -1
       padding: 0
+      @include narrow
+        background: transparent
 
   .content
     padding: 0

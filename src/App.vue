@@ -132,6 +132,10 @@
     text-align: center
     &, &:hover, &:visited
       text-decoration: none
+    @include narrow
+      min-width: 100px
+      font-size: 90%
+      padding: 1em 1.5em
 
   .text-medium
     font-size: 1.25em
