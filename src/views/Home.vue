@@ -48,6 +48,7 @@
 import Logo from '@/components/Logo.vue'
 import MenuItem from '@/components/MenuItem.vue'
 import Arrow from '@/components/Arrow.vue'
+import Dash from '@/components/svg/Dash.vue'
 
 import Styling from '@/components/Styling.vue'
 
@@ -57,6 +58,7 @@ export default {
     item: MenuItem,
     arrow: Arrow,
     styling: Styling,
+    dash: Dash,
   },
   methods: {
     navigate(name) {
@@ -69,9 +71,24 @@ export default {
 <style lang="sass" scoped>
   @import "@/globals.sass"
 
+  .dash
+    position: absolute
+    display: flex
+    left: 0
+    right: 0
+    margin: 0 auto
+    padding: 0
+
   .hero
     display: flex
     flex-direction: column
+
+    font-size: 50px
+    font-size: calc((2vw + 2vh + 1vmin) / 2)
+    @include narrow
+      font-size: 30px
+    @include wide
+      font-size: 52px
     &-title
       display: flex
       align-items: flex-end
@@ -79,15 +96,18 @@ export default {
       align-items: center
       flex-shrink: 0
       justify-content: center
-      padding: 10rem 0 0
+      padding: 10rem 4rem 0
       @include narrow
         padding-top: 1rem
 
     &-link
       align-items: flex-end
-      flex: 0
+      flex-shrink: 0
       justify-content: flex-end
-      padding: 0 0 10rem
+      padding: 0 4rem 10rem 0
+      margin-left: auto
+    a
+      font-size: 80%
 
     &-link,
     &-title
@@ -106,13 +126,21 @@ export default {
   .bottom-box
     padding: 0
 
-  .title
-    font-size: 50px
-    font-size: calc((2vw + 2vh + 1vmin))
-    @include narrow
-      font-size: 30px
-    @include wide
-      font-size: 60px
+  .bottom-box
+    position: relative
+    &:before
+      width: 1px
+      background: white
+      display: block
+      height: 120px
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      top: -60px
+      margin: 0 auto
+      z-index: -1
+      padding: 0
 
   .content
     padding: 0
@@ -124,14 +152,14 @@ export default {
 
   article
     > .content
-      padding: 5rem 2rem 1rem
+      padding: 5rem 2rem 3rem
       font-size: calc((2vw + 2vh + 1vmin) / 3)
       @include narrow
         font-size: 18px
       @include wide
         font-size: 28px
   p
-    padding: .5em
+    padding: 0 2rem
 
     @include narrow
       padding: 0

@@ -75,6 +75,7 @@ export default {
     background-position: center right
     overflow: hidden
     z-index: 0
+    opacity: 90
     @include narrow
       min-height: 0
 </style>

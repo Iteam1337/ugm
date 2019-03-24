@@ -117,6 +117,8 @@
   a
     color: white
     font-weight: 500
+    text-transform: uppercase
+    font-variant: small-caps
 
   .button
     min-width: 200px
@@ -178,17 +180,6 @@
     border: 1px solid white
     border-top-style: none
     margin-bottom: 3em
-    &:before
-      width: 100%
-      background: #24002d
-      display: block
-      min-height: 50vh
-      content: ''
-      position: absolute
-      left: 0
-      z-index: -1
-      margin: 0
-      padding: 0
 
   $spacing-base: 8px
   @for $size from -20 through 20

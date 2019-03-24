@@ -8,13 +8,19 @@
   .logo
     padding: 2rem 0
     letter-spacing: 1.5px
-    font-size: 14px
     display: flex
     align-items: flex-end
     opacity: 100 !important
     z-index: 2147483647
+
+    font-family: 'Alegreya Sans'
+    font-style: normal
+    font-weight: 300
+    font-size: 28px
+    line-height: 27px
+    font-variant: small-caps
+
     span
-      font-size: 1.5em
       user-select: none
       margin: 0
       text-transform: uppercase
