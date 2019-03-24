@@ -1,35 +1,35 @@
 <template>
-  <main>
+  <main v-if="solution && solution.title">
     <header>
       <logo class="left" />
       <typeform class="right" />
     </header>
 
     <article class="container hero top-box">
-      <div class="content" v-if="solution && solution.title">
-        <div class="container text flex">
-          <div class="w-100">
-            <div class="w-100">
-              <h1><strong>{{place.title}}:</strong> {{ solution.title }}</h1>
-            </div>
-            <div class="w-100">
-              <iframe width="640" height="480" src="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d/embed?camera=0" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true" />
-            </div>
-        </div>
-        </div>
+      <div class="hero-title">
+        <h1><strong>{{place.title}}:</strong> {{ solution.title }}</h1>
       </div>
+      <iframe
+        src="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d/embed?camera=0" frameborder="0"
+        allow="autoplay; fullscreen; vr"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+        class="iframe"
+      />
     </article>
 
     <article class="container text flex bottom-box">
       <div class="content">
         <div class="flex">
-          <div class="w-50">
-            <em>{{ solution.gist }}</em>
+          <div class="w-40 info">
+            <h2>{{ solution.gist }}</h2>
             <p>{{ solution.description }}</p>
           </div>
-          <div class="w-50">
-            <h2>Impact on the space</h2>
-            <p>{{ solution.impact }}</p>
+          <div class="w-60 impact">
+            <p>
+              <strong>Impact on the space</strong><br />
+              {{ solution.impact }}
+            </p>
           </div>
         </div>
       </div>
@@ -61,27 +61,32 @@ export default {
 
 <style lang="sass" scoped>
   @import "@/globals.sass"
-  .content
-    padding: 5%
+  .hero
     display: flex
-    flex-direction: row
-
-  .header
-    display: flex
-    margin: 0 auto
-    width: 80%
-    padding: 0
-    align-items: center
-    justify-content: space-between
-    @include narrow
-      width: 100%
-      padding: 0 1rem 0 1rem
-
-    .logo,
-    .link
-      width: auto
-    .link
+    flex-direction: column
+    .hero-title
       margin-left: auto
-    .logo
-      padding-left: 0
+      font-size: 48px
+      font-size: calc((2vw + 2vh + 1vmin) / 1.35)
+      @include narrow
+        font-size: 22px
+      @include wide
+        font-size: 40px
+    .iframe
+      height: 479px
+
+  article
+    padding: 2em 4em
+
+  .impact,
+  .info
+    font-size: 22px
+    font-size: calc((1.8vw + 2.2vh + 1vmin) / 3)
+    @include narrow
+      font-size: 18px
+    @include wide
+      font-size: 22px
+    &,
+    p
+      padding: 0
 </style>

@@ -94,7 +94,7 @@ export default {
       align-items: flex-end
       justify-content: flex-end
       align-items: center
-      flex-shrink: 0
+      flex-shrink:
       justify-content: center
       padding: 10rem 4rem 0
       @include narrow
