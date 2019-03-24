@@ -1,5 +1,8 @@
 <template>
-  <div class="styling">
+  <div class="styling" :style="{
+    height: `${offset}px`,
+    opacity
+  }">
     <div class="color-overlay"/>
     <div class="background" :style="{
       backgroundImage: `url(${background})`
@@ -16,6 +19,31 @@ export default {
       default: require('@/assets/images/header.png')
     }
   },
+  data() {
+    return {
+      offset: 0,
+      opacity: 0,
+    }
+  },
+  mounted() {
+    this.opacity = 0
+    setTimeout(() => {
+      this.opacity = 100
+      this.handleResize()
+    }, 600)
+  },
+  methods: {
+    handleResize() {
+      const { offsetHeight, offsetTop } = this.$el.parentNode
+      this.offset = offsetHeight + offsetTop
+    }
+  },
+  beforeMount () {
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.handleResize)
+  }
 }
 </script>
 
@@ -24,26 +52,25 @@ export default {
 
 .styling
   display: flex
-  min-width: 100%
-  min-width: 100vw
-  position: absolute
+  height: auto
   z-index: -1
   overflow: hidden
-  left: 0
-  top: 0
-  .color-overlay
-    background: linear-gradient(rgba(56, 13, 126, 0.5), rgba(182, 29, 86, 0.5))
-    height: 100%
-    width: 100%
-    display: block
-    z-index: 1
+  transition: opacity .8s
+
+  &,
+  .color-overlay,
+  .background
     position: absolute
     top: 0
     left: 0
+    right: 0
+    bottom: 0
+
+  .color-overlay
+    background: linear-gradient(rgba(56, 13, 126, 0.5), rgba(182, 29, 86, 0.5))
+    z-index: 1
+
   .background
-    min-height: 809px
-    width: 100%
-    display: flex
     background-size: cover
     background-position: center right
     overflow: hidden

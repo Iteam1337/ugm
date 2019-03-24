@@ -6,7 +6,6 @@
 
     <article class="container hero top-box">
       <styling />
-
       <div class="hero-title">
         <h1 class="title">
           Plan a city for girls,<br />and it will work<br />for everyone.
@@ -70,22 +69,19 @@ export default {
 <style lang="sass" scoped>
   @import "@/globals.sass"
 
-  main
-    max-width: 1440px
-    margin: 0 auto
-
-  .logo
-    width: auto
-    padding-left: 0
-
   .hero
     display: flex
     flex-direction: column
     &-title
+      display: flex
+      align-items: flex-end
+      justify-content: flex-end
       align-items: center
-      flex: 0
+      flex-shrink: 0
       justify-content: center
       padding: 10rem 0 0
+      @include narrow
+        padding-top: 1rem
 
     &-link
       align-items: flex-end
@@ -99,6 +95,8 @@ export default {
 
       @include narrow
         align-items: flex-start
+        padding-left: 2rem
+        padding-right: 2rem
 
   .flex
     @include narrow

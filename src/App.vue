@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <transition name="fade">
-      <loading v-if="isLoading" v-bind:is-loading="isLoading" v-on:done="onDone" />
+      <loading
+        v-if="isLoading"
+        v-bind:is-loading="isLoading"
+        v-on:done="onDone"
+      />
       <router-view v-if="!isLoading" />
     </transition>
   </div>
@@ -72,6 +76,10 @@
     justify-content: center
     align-items: center
     overflow-x: hidden
+    min-width: 320px
+    max-width: 1440px
+    margin: 0 auto
+
     header
       display: flex
       align-items: center
@@ -93,10 +101,11 @@
       padding: 2em
 
     @include narrow
-      header, nav, article
+      padding: 0
+      article
         width: 100%
-        padding: 0 10px
-
+      header, nav, article
+        padding: 0
 
   #app
     height: 100%
@@ -163,10 +172,12 @@
   .top-box
     border: 1px solid white
     border-bottom-style: none
+    overflow: hidden
 
   .bottom-box
     border: 1px solid white
     border-top-style: none
+    margin-bottom: 3em
     &:before
       width: 100%
       background: #24002d
@@ -202,22 +213,5 @@
       width: $size * 1%
       @include narrow
         width: 100%
-
-  .main
-    z-index: 10
-    position: relative
-
-  .hero-title
-    display: flex
-    align-items: flex-end
-    justify-content: flex-end
-
-  .images
-    li
-      list-style: none
-    img
-      display: flex
-      max-width: 100%
-      max-height: auto
 
 </style>

@@ -116,9 +116,8 @@ export default {
       this.$router.push({ name: 'map' })
     },
     navigate(name, options) {
-      console.log({ name, options })
-      // this.$router.push({ name })
-    }
+      this.$router.push({ name })
+    },
   }
 }
 </script>
@@ -174,10 +173,6 @@ export default {
         svg
           margin-left: 1rem
           flex-shrink: 0
-
-  .main
-    z-index: 10
-    position: relative
 
   .hero-title
     display: flex
