@@ -51,3 +51,24 @@ pipeline:
       status: success
       event: push
       branch: develop
+
+  build_master:
+    image: plugins/node
+    repo: ${DRONE_REPO,,}
+    commands:
+      - npm ci
+      - npm run build
+    when:
+      branch: master
+
+  publish_master:
+    image: plugins/s3
+    settings:
+      bucket: ${aws_bucket}
+      access_key: ${aws_access_key}
+      secret_key: ${aws_secret_key}
+      source: dist/**/*
+      target: /
+    when:
+      status: success
+      branch: develop
