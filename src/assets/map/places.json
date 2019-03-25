@@ -49,7 +49,7 @@
         "sketchfab": ""
       }
     ],
-    "background": "P1070593-1.jpeg"
+    "background": "main.jpeg"
   },
   {
     "name": "station",
@@ -96,7 +96,7 @@
         "sketchfab": ""
       }
     ],
-    "background": "P1070614-1.jpeg"
+    "background": "main.jpeg"
   },
   {
     "name": "back-side",
@@ -141,7 +141,7 @@
         "sketchfab": ""
       }
     ],
-    "background": "IMG_4885.jpeg"
+    "background": "main.jpeg"
   },
   {
     "name": "square",
@@ -187,6 +187,6 @@
         "sketchfab": ""
       }
     ],
-    "background": "P1070587-1.jpeg"
+    "background": "main.jpeg"
   }
 ]
