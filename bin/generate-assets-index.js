@@ -60,7 +60,7 @@ children.forEach(({ path: dirPath }) => {
     tree(
       dirPath,
       {
-        extensions: /\.(png|svg|jp(e)g)$/i
+        extensions: /\.(png|svg|jp(e)?g)$/i
       }
     )
   ))

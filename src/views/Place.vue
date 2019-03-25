@@ -45,7 +45,7 @@
     <article class="container text flex bottom-box">
       <div class="content">
         <div class="flex">
-          <div class="w-50 challenges">
+          <div class="w-40 challenges">
             <h1>Challenges</h1>
             <ul>
               <li
@@ -57,7 +57,7 @@
             </ul>
           </div>
 
-          <div class="w-50 images">
+          <div class="w-60 images">
             <ul>
               <li v-for="(image, i) in images" :key="'image' + i">
                 <a :href="image.startsWith('/') ? image : require(`@/assets/${image}`)" target="_blank">
@@ -139,13 +139,17 @@ export default {
     text-decoration: none
 
   .content
-    padding: 5% 5% 0 5%
+    padding: 2em 2em 0 2em
     display: flex
     flex-direction: row
 
   .challenges
+    padding-right: 2em
     li
       margin-bottom: 1rem
+
+  .bottom-box
+    padding-bottom: 2em
 
   .solutions-preview-list
     $height: 200px
