@@ -71,4 +71,4 @@ pipeline:
       target: /
     when:
       status: success
-      branch: develop
+      branch: master
