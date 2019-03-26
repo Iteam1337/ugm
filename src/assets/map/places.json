@@ -2,6 +2,7 @@
   {
     "name": "mall",
     "title": "Mall",
+    "background": "main.jpeg",
     "position": { "lat": 59.248035, "lng": 17.860530 },
     "challenges": [
       "Bleak and stripped down",
@@ -14,7 +15,6 @@
       "Staircase leading up to the library/health clinic feels unsafe",
       "Toilets adjacent to the library had been closed due to vandalism and inappropriate use"
     ],
-    "sketchfab": "",
     "solutions": [
       {
         "name": "cozy-movie-corner",
@@ -22,7 +22,10 @@
         "gist": "A corner inside the shopping centre with bean bags where people can watch movies.",
         "description": "Requires a smartboard with a projector, a number of bean bags and some free snacks.",
         "impact": "Greater sense of community, opportunity for friendship and contacts.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "aquacell-ceiling-aquarium",
@@ -30,7 +33,10 @@
         "gist": "An aquarium in the ceiling.",
         "description": "A cool aquarium in the ceiling with colourful lights.",
         "impact": "Make the space stand out and makes it more interesting, which may attract more people to visit.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "fittja-live",
@@ -38,7 +44,10 @@
         "gist": "A radio station that streams local storytelling live from Fittja Centrum.",
         "description": "Like Humans of New York (Fittja) in radio format. Interviews with locals and visitors. Guest DJs who play sets, and musicians from the area.",
         "impact": "Creates a sense of community and belonging. Makes Fittja more known to outsiders, changes its reputation.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "the-co-painted-ceiling",
@@ -46,14 +55,17 @@
         "gist": "The walls and ceilings of the centre can be painted by visitors on the spot.",
         "description": "”A live exhibition”: local residents paint walls and ceilings together as an event. The ceiling tiles can be taken down to become canvases that people can paint on.",
         "impact": "Community and belonging. Makes Centrum more colourful. Ownership of the space contributes to a perception of safety.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       }
-    ],
-    "background": "main.jpeg"
+    ]
   },
   {
     "name": "station",
     "title": "Station",
+    "background": "main.jpeg",
     "position": { "lat": 59.247601, "lng": 17.861175 },
     "challenges": [
       "Best part of Fittja is that it is so well connected through buses and the underground",
@@ -61,7 +73,6 @@
       "Lacks activities that do not involve consumption",
       "Damaged or broken lightning, noisy, unpleasant space to stay in"
     ],
-    "sketchfab": "",
     "solutions": [
       {
         "name": "play-win-ticket-pwt",
@@ -69,7 +80,10 @@
         "gist": "Ticket-hall becomes an arcade. Winning a game gives you a free underground ticket.",
         "description": "An arcade where people can play games and winning gives one a free single ride on the underground.",
         "impact": "Makes the place more fun and creates a good atmosphere. People would be less likely to dodge fares.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "updated-suburban-signs",
@@ -77,7 +91,10 @@
         "gist": "Cooler street signs",
         "description": "Street signs that represent the suburbs/suburban culture in a more comical way, making the place more personal and unique.",
         "impact": "Makes the place more unique.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "the-alternative-ticket-machine",
@@ -85,7 +102,10 @@
         "gist": "Alternative ways of purchasing underground and bus tickets.",
         "description": "Underground and bus tickets are exchanged for socially beneficial tasks such as recycling, picking up cigarette butts, doing squats, doing night walks for public safety, etc.",
         "impact": "Creates activity, makes public transportation accessible, make the space safer.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "alternative-multi-function-noise",
@@ -93,20 +113,22 @@
         "gist": "Noise barrier that can also be used 50/50 as a vertical plant and graffiti wall.",
         "description": "(empty)",
         "impact": "Changes the soundscape of the space, minimises noise pollution. Provides decoration and greenery.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       }
-    ],
-    "background": "main.jpeg"
+    ]
   },
   {
     "name": "back-side",
     "title": "Back side",
+    "background": "main.jpeg",
     "position": { "lat": 59.247853, "lng": 17.860106 },
     "challenges": [
       "Dark and abandoned by some, who reported it was scary at night",
       "Whilst others considered it a more spacious, better lit, and calmer area compared to the front entrance"
     ],
-    "sketchfab": "",
     "solutions": [
       {
         "name": "more-light",
@@ -114,7 +136,10 @@
         "gist": "More colourful lights underneath stairs, street lights, by entrances, for special occasions, etc.",
         "description": "Lighting up Fittja to a safer and more welcoming space for all. Lighting attracts people and colour makes you happy.",
         "impact": "A different atmosphere. A modernised space. A safer place.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "food-truck",
@@ -122,7 +147,10 @@
         "gist": "Food truck with street food and a light show.",
         "description": "Street food from every continent. With a light show.",
         "impact": "Attracts more people, welcomes everyone, lights up dark spaces.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "pink-street",
@@ -130,7 +158,10 @@
         "gist": "Pink Street shows you the way, but is also a destination in itself.",
         "description": "Pink Street encourages walking. Along the street are welcoming and innovative spaces for public use (e.g. arts stage, seating space, graffiti walls...).",
         "impact": "Leads people away from Centrum, creates a lively space for more people, extends public mobility patterns.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "hub-for-reuse-and-remake",
@@ -138,21 +169,23 @@
         "gist": "Turning the empty premises by the corner to a meeting and exchange space for all.",
         "description": "The hub is linked to the public library. Items and clothing can be turned in. There is also a remake-workshop and a bike rental to complement the bus and underground.",
         "impact": "Brings activity, light, and a circular economy model to unused premises. Meeting space that fosters local engagement.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       }
-    ],
-    "background": "main.jpeg"
+    ]
   },
   {
     "name": "square",
     "title": "Square",
+    "background": "main.jpeg",
     "position": { "lat": 59.248095, "lng": 17.860875 },
     "challenges": [
       "Group of guys and young men are standing right outside, some dealing drugs",
       "Girls often choose a different entrance",
       "Poor street lighting by the entrance"
     ],
-    "sketchfab": "",
     "solutions": [
       {
         "name": "radio-145",
@@ -160,7 +193,10 @@
         "gist": "Sounds of Fittja.",
         "description": "A transparent glassbox that works as a Radiobooth.",
         "impact": "More life, movement, and sounds. Provides a space and platform for new people. Community Feeling!",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "greenspace",
@@ -168,7 +204,10 @@
         "gist": "(empty)",
         "description": "Three small greenhouses placed on the square, that work as phone charging stations powered by solar cells.",
         "impact": "Cozier, safer, environmentally friendly and sustainable.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "quickfix-for-the-square",
@@ -176,7 +215,10 @@
         "gist": "Temporary lights and decorations on facades, rooftops, and on the ground.",
         "description": "Colourful fairy lights and hanging plants. Light installations projected onto facades and the ground.",
         "impact": "Cozier, more unique, safer, more fun, more welcoming.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       },
       {
         "name": "modular-meeting-point",
@@ -184,9 +226,11 @@
         "gist": "Modular blocks that create temporary spaces for meeting points.",
         "description": "Free! Non-commercial purposes. Modular blocks or boxes that allow people to build their own spaces for homework, yoga, arts, hangouts and conversations.",
         "impact": "More movement, more meeting points allowing people to spend more time on the square.",
-        "sketchfab": ""
+        "sketchfab": {
+          "thumb": "",
+          "params": ""
+        }
       }
-    ],
-    "background": "main.jpeg"
+    ]
   }
 ]
