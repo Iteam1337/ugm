@@ -1,5 +1,5 @@
 <template>
-  <a href="https://globalut.typeform.com/to/cz2raF" class="button">
+  <a href="https://globalut.typeform.com/to/cz2raF" target="_blank" class="button">
     LEAVE COMMENTS
   </a>
 </template>
