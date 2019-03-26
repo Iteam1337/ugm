@@ -37,6 +37,7 @@ function placeProps ({ params: { placeId, solutionId = null }}) {
 }
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
