@@ -22,7 +22,10 @@
     </GmapMap>
 
     <footer>
-      <a href="#link+to+3d+model" class="button">
+      <a
+        href="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d"
+        target="_blank"
+        class="button">
         VIEW 3D MODEL
       </a>
       <typeform />
