@@ -14,12 +14,22 @@
         :position="m.position"
         :icon="{
           url: require(`@/assets/images/markers/${m.name}.svg`),
-          anchor: { x: 120/2, y: 120/2 },
+          anchor: { x: 60, y: 60 }, // half of svg-size
         }"
         :clickable="true"
         :draggable="false"
         @click="clickMarker(m.name)"/>
     </GmapMap>
+
+    <footer>
+      <a
+        href="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d"
+        target="_blank"
+        class="button">
+        VIEW 3D MODEL
+      </a>
+      <typeform />
+    </footer>
 	</div>
 </template>
 
@@ -28,6 +38,7 @@
 import styles from '@/assets/map/styles.json'
 import places from '@/assets/map/places.json'
 import Logo from '@/components/Logo.vue'
+import Typeform from '@/components/Typeform.vue'
 
 export default {
   methods: {
@@ -42,12 +53,13 @@ export default {
   },
   components: {
     logo: Logo,
+    typeform: Typeform
   },
 	data() {
 		return {
 			center: {
-				lat: 59.2484413,
-        lng: 17.8602922,
+				lat: 59.247710,
+        lng: 17.860612,
       },
 			userPosition: null,
       zoom: 18,
@@ -96,6 +108,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import "@/globals.sass"
 .full-page
   display: flex
   height: 100%
@@ -117,6 +130,21 @@ export default {
     position: absolute
     bottom: 0
     pointer-events: none
+
+footer
+  position: absolute
+  z-index: 10
+  left: 10%
+  bottom: 7em
+  a
+    margin: 0 2em
+
+  @include narrow
+    display: flex
+    flex-direction: column
+    bottom: 2em
+    a
+      margin: .5em 0
 
 .map-marker
   width: 10px

@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <transition name="fade">
-      <loading v-if="isLoading" v-bind:is-loading="isLoading" v-on:done="onDone" />
+      <loading
+        v-if="isLoading"
+        v-bind:is-loading="isLoading"
+        v-on:done="onDone"
+      />
       <router-view v-if="!isLoading" />
     </transition>
   </div>
@@ -48,7 +52,10 @@
     scroll-behavior: smooth
     max-width: 100%
     max-width: 100vw
+    min-width: 320px
     overflow-x: hidden
+    @include narrow
+      overflow-x: auto
 
   ::selection
     color: white
@@ -56,11 +63,49 @@
 
   body
     height: 100%
-    background: #24002D
+    background: #24002d
     color: white
     font-family: 'Alegreya Sans', sans-serif
     font-weight: 100
     margin: 0
+
+  main
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    overflow-x: hidden
+    min-width: 320px
+    max-width: 1440px
+    margin: 0 auto
+
+    header
+      display: flex
+      align-items: center
+      > a
+        display: flex
+        width: auto
+      .left
+        padding-left: 0
+      .right
+        margin-left: auto
+
+    header,
+    nav
+      width: 80%
+      padding: 0
+
+    nav,
+    article
+      padding: 2em
+
+    @include narrow
+      padding: 0
+      article
+        width: 100%
+      header, nav, article
+        padding: 0
 
   #app
     height: 100%
@@ -72,14 +117,36 @@
   a
     color: white
     font-weight: 500
+    text-transform: uppercase
+    font-variant: small-caps
+
+  .button
+    min-width: 200px
+    background: #24002d
+    border: 1px solid white
+    box-sizing: border-box
+    padding: 1.5em 2em
+    margin: 0
+    text-transform: uppercase
+    display: inline-block
+    text-align: center
+    &, &:hover, &:visited
+      text-decoration: none
+    @include narrow
+      min-width: 100px
+      font-size: 90%
+      padding: 1em 1.5em
 
   .text-medium
     font-size: 1.25em
 
-  .fade-enter-active, .fade-leave-active
-    transition: opacity .5s
-  .fade-enter, .fade-leave-to
-    opacity: 0
+  .fade
+    &-enter,
+    &-leave,
+      &, &-to
+        opacity: 0
+      &-active
+        transition: opacity .5s
 
   .flex
     display: flex
@@ -88,29 +155,35 @@
     p
       padding: 0 20px
 
-  .nav
-    margin: 0
-
-
-  .nav
-    display: flex
-
-    @include narrow
-      flex-direction: column
-      margin: 0
-      align-items: flex-start
-
   h1
     font-family: 'Libre Baskerville'
     font-weight: bold
-  h2
+  h2, h3, h4, h5, h6
     font-family: 'Alegreya Sans', sans-serif
     font-weight: 100
 
   .logo
     margin-top: 0
+    font-family: 'Alegreya Sans', sans-serif
+    font-weight: 100
     &, &:visited
       text-decoration: none
+
+  .top,
+  .bottom
+    &-box
+      padding: 0
+      margin: 0
+
+  .top-box
+    border: 1px solid white
+    border-bottom-style: none
+    overflow: hidden
+
+  .bottom-box
+    border: 1px solid white
+    border-top-style: none
+    margin-bottom: 3em
 
   $spacing-base: 8px
   @for $size from -20 through 20
@@ -130,7 +203,7 @@
         #{$type}-top: $size * $spacing-base
         #{$type}-bottom: $size * $spacing-base
 
-  @each $size in (90, 80, 70, 60, 50, 40, 30, 20, 10)
+  @each $size in (100, 90, 80, 70, 60, 50, 40, 30, 20, 10)
     .w-#{$size}
       width: $size * 1%
       @include narrow

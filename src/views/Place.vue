@@ -1,79 +1,82 @@
 <template>
-  <div class="page-content">
-    <div class="styling">
-      <div class="color-overlay"/>
-      <div class="background"/>
-    </div>
+  <main>
+    <header>
+      <logo class="left" />
+      <typeform class="right" />
+    </header>
 
-    <div class="main">
-      <div class="header">
-        <div class="logo">
-          <logo/>
-        </div>
-        <div class="link">
-          <a href="#">LEAVE COMMENTS</a>
+    <article class="container hero top-box">
+      <styling :background="background" />
+
+      <div class="hero-title">
+        <div class="content">
+          <h1 class="title">{{ place.title }}</h1>
         </div>
       </div>
 
-      <div class="boxed-content">
-        <div class="container hero w-100 top-box">
-          <div class="hero-title">
-            <div class="w-100 content">
-              <h1 class="title">{{ place.title }}</h1>
-            </div>
-          </div>
-          <div class="w-100 content">
-            <div class="flex">
-              <div class="w-100">
-                <h2>Solutions</h2>
-                <ul>
-                  <li v-for="(solution, i) in place.solutions" :key="'solution' + i">
-                    <router-link :to="{
-                      name: 'solution',
-                      params: {
-                        placeId: place.name,
-                        solutionId: solution.name
-                      },
-                    }">
-                      {{solution.title}}
-                    </router-link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container text flex bottom-box">
-          <div class="w-100 content">
-            <div class="flex">
-              <div class="w-50 challenges">
-                <h2>Challenges</h2>
-                <ul>
-                  <li
-                    v-for="(challenge, i) in place.challenges"
-                    :key="'challenge' + i"
-                  >"{{ challenge }}"</li>
-                </ul>
-              </div>
-
-              <div class="w-50 images">
-                <ul>
-                  <li v-for="(image, i) in images" :key="'image' + i">
-                    <img :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
-                  </li>
-                </ul>
-              </div>
-            </div>
+      <div class="content">
+        <div class="w-100 flex">
+          <div class="solutions-preview-wrap w-100">
+            <h2>Solutions</h2>
+            <ul class="flex solutions-preview-list">
+              <li
+                v-for="(solution, i) in place.solutions"
+                :key="'solution' + i"
+              >
+                <router-link :to="{
+                  name: 'solution',
+                  params: {
+                    placeId: place.name,
+                    solutionId: solution.name
+                  },
+                }" class="link">
+                  <div class="background" :style="{
+                  backgroundImage: `url('https://media.sketchfab.com/urls/0f0a3c2db9614e09ab157f8310e9b92d/dist/thumbnails/e6b308b8cfa040658ef8cd96c0a1bd36/d612dbd969fc46fda7ba431b333d0936.jpeg')`
+                }"/>
+                  {{solution.title}} <arrow />
+                </router-link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
+
+    <article class="container text flex bottom-box">
+      <div class="content">
+        <div class="flex">
+          <div class="w-40 challenges">
+            <h1>Challenges</h1>
+            <ul>
+              <li
+                v-for="(challenge, i) in place.challenges"
+                :key="'challenge' + i"
+              >
+                "{{ challenge }}"
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-60 images">
+            <ul>
+              <li v-for="(image, i) in images" :key="'image' + i">
+                <a :href="image.startsWith('/') ? image : require(`@/assets/${image}`)" target="_blank">
+                  <img :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
 </template>
 
 <script>
 import Logo from '@/components/Logo.vue'
+import Typeform from '@/components/Typeform.vue'
+import Arrow from '@/components/Arrow.vue'
+import Styling from '@/components/Styling.vue'
 
 export default {
   props: [
@@ -81,7 +84,10 @@ export default {
     'images'
   ],
   components: {
-    logo: Logo
+    logo: Logo,
+    typeform: Typeform,
+    arrow: Arrow,
+    styling: Styling,
   },
   data() {
     const {
@@ -92,9 +98,9 @@ export default {
     const imageURL =
       name && name.trim() ? `places/${name}/${url}` : "places-background.png";
 
-    const background = `url(${
+    const background = `${
       url.startsWith('/') ? url : require(`@/assets/images/${imageURL}`)
-    })`
+    }`
 
     function show(array = []) {
       return array && !!array.length;
@@ -115,103 +121,109 @@ export default {
       this.$router.push({ name: 'map' })
     },
     navigate(name, options) {
-      console.log({ name, options })
-      // this.$router.push({ name })
-    }
+      this.$router.push({ name })
+    },
   }
-};
+}
 </script>
 
 <style lang="sass" scoped>
   @import "@/globals.sass"
 
+  h1, h2
+    padding-left: 1rem
+    @include narrow
+      padding-left: 0
   a
     cursor: pointer
+    text-decoration: none
 
   .content
-    padding: 5%
+    padding: 2em 2em 0 2em
     display: flex
     flex-direction: row
 
-  .header,
-    display: flex
-    margin: 0 130px
+  .challenges
+    padding-right: 2em
+    li
+      margin-bottom: 1rem
+
+  .bottom-box
+    padding-bottom: 2em
+
+  .solutions-preview-list
+    $height: 200px
+    list-style: none
     padding: 0
-    align-items: center
-    justify-content: center
+    flex-flow: row wrap
+    justify-content: flex-start
 
-    .logo,
+    @include narrow
+      flex-flow: column
+      justify-content: center
+
+    li
+      margin: 1rem
+      min-width: 300px
+      height: $height
+      flex: auto
+      border: 1px solid white
+      align-items: flex-start
+      background: #24002D
+      padding: 0
+      position: relative
+      flex-grow: 0
+      @include narrow
+        width: 100%
+        max-width: 100%
+        align-self: center
+        justify-content: flex-start
+
+    .background
+      position: absolute
+      left: 0
+      top: 0
+      z-index: -1
+      width: 100%
+      height: 145px
+      background-size: cover
+      background-position: center right
+
     .link
-      width: auto
-    .link
-      margin-left: auto
-    .logo
-      padding-left: 0
-</style>
-
-<style lang="sass">
-  @import "@/globals.sass"
-
-  .styling
-    display: block
-    min-width: 100%
-    min-width: 100vw
-    min-height: 809px
-    position: absolute
-    z-index: -1
-    overflow: hidden
-    .color-overlay
-      background: linear-gradient(rgba(56, 13, 126, 0.5), rgba(182, 29, 86, 0.5))
+      display: inline-block
+      min-width: 100%
       height: 100%
       width: 100%
-      display: block
-      z-index: 1
+      padding: 20px 20px
+      text-align: left
+      margin: 0
       position: absolute
-      top: 0
       left: 0
-    .background
-      min-height: 809px
-      width: 100%
-      position: absolute
-      background-image: url(../assets/images/header.png)
-      background-size: cover
-      background-position: center center
-      overflow: hidden
+      bottom: 0
+      line-height: $height * 1.5
       z-index: 0
-      @include narrow
-        min-height: 450px
-
-  .main
-    z-index: 10
-    position: relative
+      svg
+        margin-left: .5rem
+        flex-shrink: 0
 
   .hero-title
     display: flex
     align-items: flex-end
     justify-content: flex-end
-
-  .top-box
-    border: 1px solid white
-    border-bottom-style: none
-
-  .bottom-box
-    border: 1px solid white
-    border-top-style: none
-    &:before
-      width: 100%
-      background: #24002d
-      display: block
-      height: 100vh
-      content: ''
-      position: absolute
-      left: 0
-      z-index: -1
+    .title
+      flex-shrink: 0
 
   .images
+    column-count: 2
+    column-gap: 2rem
+    @include narrow
+      column-count: 1
+    img
+      padding: 2% 2% 2% 0
+      width: 100%
+    ul
+      padding: 0
+      margin: 0
     li
       list-style: none
-    img
-      display: flex
-      max-width: 100%
-      max-height: auto
 </style>
