@@ -32,7 +32,7 @@
               So, how do we work with global goals and tools such as feminist urban development on a practical, local level? The ambitions are there, but the practical know-how is limited. Urban Girls Movement Botkyrka wants to increase knowledge in this area, with six so called innovation labs where young girls from the Stockholm suburb Botkyrka together with other stakeholders produce innovative solutions to commonly identified problems in the area.
             </p>
             <p>
-              <a class="link" href="https://www.globalutmaning.se/urbangirlsmovement/innovationslabb-botkyrka/">
+              <a class="link" target="_blank" href="https://www.globalutmaning.se/urbangirlsmovement/innovationslabb-botkyrka/">
                 Project Background <arrow />
               </a>
             </p>
