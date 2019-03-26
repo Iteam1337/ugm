@@ -1,19 +1,5 @@
 pipeline:
 
-  test:
-    image: docker:18.06.0-ce
-    environment:
-      - TZ=Europe/Stockholm
-      - DOCKER_HOST=unix:///var/run/docker.sock
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:rw
-    commands:
-      - docker build --pull --rm -t ${DRONE_REPO,,}:test -f ./Dockerfile.test .
-      # - docker run --rm ${DRONE_REPO,,}:test
-      - echo "no tests exists"
-    when:
-      event: [ push, pull_request, tag ]
-
   build_and_publish_develop:
     image: plugins/docker
     repo: ${DRONE_REPO,,}
@@ -21,21 +7,8 @@ pipeline:
     force_tag: true
     tags: latest
     when:
-      status: success
       branch: develop
       event: push
-
-  build_and_publish_tag:
-    image: plugins/docker
-    repo: ${DRONE_REPO,,}
-    secrets: [ docker_username, docker_password ]
-    force_tag: true
-    tags:
-      - ${DRONE_TAG##v}
-      - latest-tag-release
-    when:
-      status: success
-      event: tag
 
   redeploy_develop:
     image: docker:18.06.0-ce
@@ -51,3 +24,39 @@ pipeline:
       status: success
       event: push
       branch: develop
+
+  build_master:
+    image: node:10.15
+    commands:
+      - rm -rf /cache/*
+      - npm ci
+      - npm run build
+      - cp -r dist/* /cache/
+    volumes:
+      - cache:/cache
+    when:
+      branch: master
+      event: push
+
+  publish_master:
+    image: plugins/s3
+    environment:
+      - PLUGIN_SOURCE=/cache/**/*
+      - PLUGIN_TARGET=/
+      - PLUGIN_STRIP_PREFIX=/cache
+      - PLUGIN_REGION=eu-north-1
+      - PLUGIN_ACL=public-read
+      - PLUGIN_BUCKET=www.urbangirlsmovement.org
+      - PLUGIN_ACCESS_KEY=${aws_access_key}
+      - PLUGIN_SECRET_KEY=${aws_secret_key}
+    secrets: [ aws_access_key, aws_secret_key ]
+    volumes:
+      - cache:/cache
+    when:
+      status: success
+      event: push
+      branch: master
+
+volumes:
+  - name: cache
+    temp: {}
