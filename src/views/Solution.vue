@@ -54,6 +54,9 @@ export default {
 
 <style lang="sass" scoped>
   @import "@/globals.sass"
+  .container
+    @include narrow
+      padding: 0 1.5em
   .hero
     display: flex
     flex-direction: column
