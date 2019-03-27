@@ -21,15 +21,8 @@
     <article class="container text flex bottom-box">
       <div class="content">
         <div class="flex">
-          <div class="w-40 info">
-            <h2>{{ solution.gist }}</h2>
-            <p>{{ solution.description }}</p>
-          </div>
-          <div class="w-60 impact">
-            <p>
-              <strong>Impact on the space</strong><br />
-              {{ solution.impact }}
-            </p>
+          <div class="w-60 info">
+            <p>{{ solution.text }}</p>
           </div>
         </div>
       </div>

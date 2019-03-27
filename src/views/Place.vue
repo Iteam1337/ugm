@@ -33,7 +33,7 @@
                   <div class="background" :style="{
                   backgroundImage: `url('https://media.sketchfab.com/urls/0f0a3c2db9614e09ab157f8310e9b92d/dist/thumbnails/e6b308b8cfa040658ef8cd96c0a1bd36/d612dbd969fc46fda7ba431b333d0936.jpeg')`
                 }"/>
-                  {{solution.title}} <arrow />
+                  <span class="solution"><span class="text">{{solution.title}}</span><arrow /> </span>
                 </router-link>
               </li>
             </ul>
@@ -200,11 +200,29 @@ export default {
       position: absolute
       left: 0
       bottom: 0
-      line-height: $height * 1.5
       z-index: 0
-      svg
-        margin-left: .5rem
-        flex-shrink: 0
+
+  .solution
+    max-width: 300px
+    max-width: calc(100% - 40px)
+    overflow: hidden
+    height: 20px
+    line-heigth: 1em
+    margin-bottom: 15px
+    display: block
+    position: absolute
+    bottom: 0
+    .text
+      display: inline-block
+      max-width: 200px
+      max-width: calc(100% - 60px)
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
+    svg
+      margin-bottom: 6px
+      margin-left: .5rem
+      flex-shrink: 0
 
   .hero-title
     display: flex
