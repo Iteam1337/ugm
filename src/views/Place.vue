@@ -215,7 +215,7 @@ export default {
     .text
       display: inline-block
       max-width: 200px
-      max-width: calc(100% - 60px)
+      max-width: calc(100% - 40px - .5rem)
       text-overflow: ellipsis
       overflow: hidden
       white-space: nowrap
