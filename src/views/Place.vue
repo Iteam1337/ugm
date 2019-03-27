@@ -31,7 +31,10 @@
                   },
                 }" class="link">
                   <div class="background" :style="{
-                  backgroundImage: `url('https://media.sketchfab.com/urls/0f0a3c2db9614e09ab157f8310e9b92d/dist/thumbnails/e6b308b8cfa040658ef8cd96c0a1bd36/d612dbd969fc46fda7ba431b333d0936.jpeg')`
+                  backgroundImage:
+                    solution.sketchfab && solution.sketchfab.thumb
+                      ? `url(${require(`@/assets/images/sketchfab-thumbnails/${solution.sketchfab.thumb}`)})`
+                      : null
                 }"/>
                   <span class="solution"><span class="text">{{solution.title}}</span><arrow /> </span>
                 </router-link>
