@@ -21,7 +21,7 @@
     <article class="container text flex bottom-box">
       <div class="content">
         <div class="flex">
-          <div class="w-60 info">
+          <div class="w-70 info">
             <p>{{ solution.text }}</p>
           </div>
         </div>
@@ -54,9 +54,7 @@ export default {
 
 <style lang="sass" scoped>
   @import "@/globals.sass"
-  .container
-    @include narrow
-      padding: 0 1.5em
+
   .hero
     display: flex
     flex-direction: column
@@ -72,12 +70,29 @@ export default {
       height: 479px
 
   article
-    padding: 2em 4em
+    padding: 1em 4em
+    @include narrow
+      padding: 0 2em
+  .content
+    padding: 0
+    margin: 0
+    @include narrow
+      padding: 0 0 1em
 
-  .impact,
+  h1
+    text-align: right
+    @include narrow
+      text-align: left
+
+  .bottom-box
+    padding-bottom: 2em
+    @include narrow
+      padding-top: 1em
+      padding-bottom: 0
+
   .info
     font-size: 22px
-    font-size: calc((1.8vw + 2.2vh + 1vmin) / 3)
+    font-size: calc((1.6vw + 2.2vh + 1vmin) / 2.8)
     @include narrow
       font-size: 18px
     @include wide

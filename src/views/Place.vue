@@ -141,13 +141,12 @@ export default {
     cursor: pointer
     text-decoration: none
 
-  .content
-    padding: 2em 2em 0 2em
-    display: flex
-    flex-direction: row
-
   .challenges
     padding-right: 2em
+    @include narrow
+      padding-right: 0
+      ul
+        padding-left: 1em
     li
       margin-bottom: 1rem
 
@@ -178,7 +177,7 @@ export default {
       flex-grow: 0
       @include narrow
         width: 100%
-        max-width: 100%
+        min-width: 100%
         align-self: center
         justify-content: flex-start
 
@@ -222,6 +221,7 @@ export default {
       text-overflow: ellipsis
       overflow: hidden
       white-space: nowrap
+
     svg
       margin-bottom: 6px
       margin-left: .5rem

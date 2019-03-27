@@ -114,6 +114,16 @@
     width: 80%
     margin: 0 auto
 
+  .content
+    padding: 2em 2em 0 2em
+    display: flex
+    flex-direction: row
+
+  .container,
+  .content
+    @include narrow
+      padding: 0 1.5em
+
   a
     color: white
     font-weight: 500
