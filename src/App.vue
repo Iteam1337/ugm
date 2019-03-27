@@ -116,8 +116,7 @@
 
   .content
     padding: 2em 2em 0 2em
-    display: flex
-    flex-direction: row
+
 
   .container,
   .content
