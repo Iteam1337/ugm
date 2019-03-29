@@ -1,42 +1,48 @@
 <template>
   <main>
     <header>
-      <logo class="left" />
-      <typeform class="right" />
+      <logo class="left"/>
+      <typeform class="right"/>
     </header>
 
     <article class="container hero top-box">
-      <styling :background="background" />
+      <styling :background="background"/>
 
       <div class="hero-title">
         <div class="content">
-          <h1 class="title">{{ place.title }}</h1>
+          <h1 class="hero-title">{{ place.title }}</h1>
         </div>
       </div>
 
       <div class="content">
         <div class="w-100 flex">
           <div class="solutions-preview-wrap w-100">
-            <h2>Solutions</h2>
+            <h2 class="title">Solutions</h2>
             <ul class="flex solutions-preview-list">
-              <li
-                v-for="(solution, i) in place.solutions"
-                :key="'solution' + i"
-              >
-                <router-link :to="{
+              <li v-for="(solution, i) in place.solutions" :key="'solution' + i">
+                <router-link
+                  :to="{
                   name: 'solution',
                   params: {
                     placeId: place.name,
                     solutionId: solution.name
                   },
-                }" class="link">
-                  <div class="background" :style="{
+                }"
+                  class="link"
+                >
+                  <div
+                    class="background"
+                    :style="{
                   backgroundImage:
                     solution.sketchfab && solution.sketchfab.thumb
                       ? `url(${require(`@/assets/images/sketchfab-thumbnails/${solution.sketchfab.thumb}`)})`
                       : null
-                }"/>
-                  <span class="solution"><span class="text">{{solution.title}}</span><arrow /> </span>
+                }"
+                  />
+                  <span class="solution">
+                    <span class="text">{{solution.title}}</span>
+                    <arrow/>
+                  </span>
                 </router-link>
               </li>
             </ul>
@@ -54,16 +60,17 @@
               <li
                 v-for="(challenge, i) in place.challenges"
                 :key="'challenge' + i"
-              >
-                "{{ challenge }}"
-              </li>
+              >"{{ challenge }}"</li>
             </ul>
           </div>
 
           <div class="w-60 images">
             <ul>
               <li v-for="(image, i) in images" :key="'image' + i">
-                <a :href="image.startsWith('/') ? image : require(`@/assets/${image}`)" target="_blank">
+                <a
+                  :href="image.startsWith('/') ? image : require(`@/assets/${image}`)"
+                  target="_blank"
+                >
                   <img :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
                 </a>
               </li>
@@ -82,10 +89,7 @@ import Arrow from '@/components/Arrow.vue'
 import Styling from '@/components/Styling.vue'
 
 export default {
-  props: [
-    'place',
-    'images'
-  ],
+  props: ['place', 'images'],
   components: {
     logo: Logo,
     typeform: Typeform,
@@ -95,18 +99,18 @@ export default {
   data() {
     const {
       place: { background: url = '', challenges, solutions, name = '' } = {},
-      images
-    } = this;
+      images,
+    } = this
 
     const imageURL =
-      name && name.trim() ? `places/${name}/${url}` : "places-background.png";
+      name && name.trim() ? `places/${name}/${url}` : 'places-background.png'
 
     const background = `${
       url.startsWith('/') ? url : require(`@/assets/images/${imageURL}`)
     }`
 
     function show(array = []) {
-      return array && !!array.length;
+      return array && !!array.length
     }
 
     return {
@@ -115,8 +119,8 @@ export default {
       show: {
         challenges: show(challenges),
         solutions: show(solutions),
-        images: show(images)
-      }
+        images: show(images),
+      },
     }
   },
   methods: {
@@ -126,7 +130,7 @@ export default {
     navigate(name, options) {
       this.$router.push({ name })
     },
-  }
+  },
 }
 </script>
 
@@ -231,6 +235,7 @@ export default {
     display: flex
     align-items: flex-end
     justify-content: flex-end
+    font-size: 36px
     .title
       flex-shrink: 0
 

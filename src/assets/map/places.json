@@ -3,7 +3,7 @@
     "name": "mall",
     "title": "Mall",
     "background": "main.jpeg",
-    "position": { "lat": 59.248035, "lng": 17.860530 },
+    "position": { "lat": 59.248035, "lng": 17.86053 },
     "challenges": [
       "Bleak and stripped down",
       "Harsh lighting that does not create a welcoming environment",
@@ -30,7 +30,7 @@
         "title": "New entrances & graffiti wall",
         "text": "We do not like that the entrance to the mall is placed in the corner, so we have opened a new entrance closer to Lidl moving the entrance further into the mall. We have also removed the corridor to create a more natural meeting place inside. A graffiti wall and light from a ceiling window make the place more vibrant. We have opened up another entrance in the back so you can get out on the other side, towards the art centre and the library, to create a connection to that place.",
         "sketchfab": {
-          "thumb": "mall_new-entrances-1.png",
+          "thumb": "mall_open-space-graffiti-wall.png",
           "params": ""
         }
       },
@@ -39,7 +39,7 @@
         "title": "Medborgarcentrum",
         "text": "We have moved Medborgarcentrum to the heart of the mall. There are more seats, and we also added a Food Court!",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "mall_new-entrances-1.png",
           "params": ""
         }
       }
@@ -62,7 +62,7 @@
         "title": "Interactive signs",
         "text": "The Fittja sign changes colour depending on how many people passing by or you can change the colour with your phone. Outside the station there are interactive signs as a complement to the usual SL signs – with updates on what’s happening in Fittja today. Is there an art exhibition going on or what is the temperature in the Alby lake? There is a landmark in glass on the roof, a screen for art, some beehives and greenery, not where people can be but a place for small bugs and insects.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "station_interactive-signs.png",
           "params": ""
         }
       },
@@ -71,7 +71,7 @@
         "title": "Place for art",
         "text": "We have built a noise barrier that also has in built plants to reduce noise but which at the same time provide a space for graffiti.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "station_place-for-art.png",
           "params": ""
         }
       },
@@ -80,7 +80,7 @@
         "title": "Activity cubes",
         "text": "Where the bus stops are today, we have made glass cubes for various activities. The first glass cube - ”Botkyrka Arts”, will shpw art from Botkyrka that people can check out when they wait for the bus. The next one is the ”Reading Cube” where you can read, borrow or leave a book. There are reading lamps, carpets, bean bags where you can sit. Then we have ”Game Cube for All” where there are different games and activities for both young people, children and the elderly, the focus is on board games. Outside there are benches with lights so you can see at night, and even a fountain that is nice to look at and listen to.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "station_activity-cubes.png",
           "params": ""
         }
       },
@@ -89,7 +89,7 @@
         "title": "New entrance",
         "text": "At the back of the station we have also opened up for a new entrance and removed the barriers.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "station_new-entrance.png",
           "params": ""
         }
       },
@@ -98,7 +98,7 @@
         "title": "Play for the ticket",
         "text": "The ticket hall has become a kind of arcade. One idea is that you can play and collect points in order to get an SL ticket. Maybe one can do a service - recycle cans or similar.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "station_play-for-the-ticket.png",
           "params": ""
         }
       },
@@ -107,7 +107,7 @@
         "title": "Movement on the platform",
         "text": "On the platform we want cool interactive signs. Without barriers, we can use the space in other ways: the ticket booth can become a café. A citizen office could be connected to the station, so the arcade becomes a kind of hub where one can submit proposals for Fittja - a citizen dialogue hub. This makes for more movement on the platform, which makes it more secure.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "station_movement-on-the-platform.png",
           "params": ""
         }
       }
@@ -128,7 +128,7 @@
         "title": "Pink street",
         "text": "It is a coloured painted carpet that both cheers up the place and shows the way. It should also have arrows and street names so you know where to go. It is quite difficult to find your way around Fittja today if you have not been there, but ”Pink Street” would stretch all over the area.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "back-side_pink-street.png",
           "params": ""
         }
       },
@@ -137,7 +137,7 @@
         "title": "Barbecue & playground",
         "text": "There are seating areas where you can barbecue, take it easy, have a coffee break. Also a jungle gym and some swings for children, entertainment is also important in life and not just ”basic life”. There should also be bicycle stands so that you more easily can move in different ways in the area.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "back-side_barbecue-playground.png",
           "params": ""
         }
       },
@@ -146,8 +146,8 @@
         "title": "Lighting",
         "text": "We have added a lot of lights and colour throughout Fittja because we strongly believe that lighting and a little colour can make a place feel much safer. We thought of spotlights instead of expensive lamps. In the evenings when you are alone, you can’t see properly, and you don’t want to stumble or feel insecure. You feel safer with light. We have made quite simple lighting all over the back. The tunnel between the front and the back and towards the station has also got more lighting to increase security.",
         "sketchfab": {
-          "thumb": "",
-          "params": ""
+          "thumb": "back-side_lighting.png",
+          "params": "back-side_lighting.png"
         }
       },
       {
@@ -155,7 +155,7 @@
         "title": "Art & food trucks",
         "text": "We built a pedestrian street at the back of the mall. There could be food trucks and small market stalls there. To avoid cars passing through, there are trees planted and flowerbeds in the street. We also want an art wall, where people can stop and look.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "back-side_food-truck.png",
           "params": ""
         }
       }
@@ -177,7 +177,7 @@
         "title": "Greenhouse 145 - radio, cafe & greenhouse",
         "text": "A massive building with three floors. On the first floor there is a radio station where people and artists from Botkyrka can visit. You can sit outside and listen. The second floor is a café. Simple - very green! Floor three is the loft with more plants. A cool tourist attraction because the floor is made of glass. Outside there is lots of green and water. There could be places to sit outside and fairy lights in the trees to create security.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "square_greenhouse-145-radio-cafe-greenhouse.png",
           "params": ""
         }
       },
@@ -186,7 +186,7 @@
         "title": "New bus station",
         "text": "We removed the bus stops from in front of the station, as it is too crowded today. It is also dangerous as people run out in front of the busses when they are headed to the other stops. Instead we placed them where the parking lot is. A tree at each terminal pocket to reduce carbon dioxide emissions.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "square_new-bus-station.png",
           "params": ""
         }
       },
@@ -195,7 +195,7 @@
         "title": "Skatepark & cinema",
         "text": "This is the roof of the mall, where we have made a skate park and a cinema with a portable screen. It is also has an amphitheatre and a jungle gym for children that also work as a place where to hang out.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "square_skatepark-cinema.png",
           "params": ""
         }
       },
@@ -204,7 +204,7 @@
         "title": "Dance floor & hang out space",
         "text": "We built a fountain where you can sit and take it easy. The purple space is a dance floor, we thought that you could plug in your mobile in the speaker and play your own music. More seating for having a coffee. On the roof we also want a food court where the restaurants down in the mall can serve during summer, a nice outdoor dining area.",
         "sketchfab": {
-          "thumb": "",
+          "thumb": "square_dance-floor-hang-out-space.png",
           "params": ""
         }
       }

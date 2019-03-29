@@ -1,16 +1,20 @@
 <template>
   <main v-if="solution && solution.title">
     <header>
-      <logo class="left" />
-      <typeform class="right" />
+      <logo class="left"/>
+      <typeform class="right"/>
     </header>
 
     <article class="container hero top-box">
       <div class="hero-title">
-        <h1><strong>{{place.title}}:</strong> {{ solution.title }}</h1>
+        <h1>
+          <strong>{{place.title}}:</strong>
+          {{ solution.title }}
+        </h1>
       </div>
       <iframe
-        src="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d/embed?camera=0" frameborder="0"
+        src="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d/embed?camera=0"
+        frameborder="0"
         allow="autoplay; fullscreen; vr"
         mozallowfullscreen="true"
         webkitallowfullscreen="true"
@@ -35,19 +39,18 @@ import Logo from '@/components/Logo.vue'
 import Typeform from '@/components/Typeform.vue'
 
 export default {
-  props: [
-    'place',
-    'images',
-    'solution',
-  ],
+  props: ['place', 'images', 'solution'],
   components: {
     logo: Logo,
     typeform: Typeform,
   },
   methods: {
-    goBack () {
-      this.$router.push({ name: 'place', params: { placeId: this.place.name } })
-    }
+    goBack() {
+      this.$router.push({
+        name: 'place',
+        params: { placeId: this.place.name },
+      })
+    },
   },
 }
 </script>
@@ -61,11 +64,11 @@ export default {
     .hero-title
       margin-left: auto
       font-size: 48px
-      font-size: calc((2vw + 2vh + 1vmin) / 1.35)
+      font-size: calc((2vw + 2vh + 1vmin) / 2)
       @include narrow
         font-size: 22px
       @include wide
-        font-size: 40px
+        font-size: 36px
     .iframe
       height: 479px
 

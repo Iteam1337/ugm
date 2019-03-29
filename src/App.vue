@@ -1,44 +1,40 @@
 <template>
   <div id="app">
     <transition name="fade">
-      <loading
-        v-if="isLoading"
-        v-bind:is-loading="isLoading"
-        v-on:done="onDone"
-      />
-      <router-view v-if="!isLoading" />
+      <loading v-if="isLoading" v-bind:is-loading="isLoading" v-on:done="onDone"/>
+      <router-view v-if="!isLoading"/>
     </transition>
   </div>
 </template>
 
 <script>
-  import Vue from 'vue'
-  import Loading from '@/components/Loading.vue'
-  import * as VueGoogleMaps from 'vue2-google-maps'
+import Vue from 'vue'
+import Loading from '@/components/Loading.vue'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
-  Vue.use(VueGoogleMaps, {
-    load: {
-      key: 'AIzaSyCKC_OzJnT1jUluk0fsyS9RPl6JzIaOzYs',
-      libraries: ['places', 'visualization'],
-    },
-  })
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyCKC_OzJnT1jUluk0fsyS9RPl6JzIaOzYs',
+    libraries: ['places', 'visualization'],
+  },
+})
 
-  export default {
-    name: 'app',
-    components: {
-      loading: Loading,
+export default {
+  name: 'app',
+  components: {
+    loading: Loading,
+  },
+  data() {
+    return {
+      isLoading: true,
+    }
+  },
+  methods: {
+    onDone() {
+      this.isLoading = false
     },
-    data() {
-      return {
-        isLoading: true
-      }
-    },
-    methods: {
-      onDone() {
-        this.isLoading = false
-      },
-    },
-  }
+  },
+}
 </script>
 
 <style lang="sass">
@@ -164,10 +160,10 @@
     p
       padding: 0 20px
 
-  h1
+  h1, h2
     font-family: 'Libre Baskerville'
     font-weight: bold
-  h2, h3, h4, h5, h6
+  h3, h4, h5, h6
     font-family: 'Alegreya Sans', sans-serif
     font-weight: 100
 
