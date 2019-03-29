@@ -27,6 +27,13 @@
         <div class="flex">
           <div class="w-70 info">
             <p>{{ solution.text }}</p>
+            <div>
+              <p>
+                <strong>Impact on the space</strong>
+              </p>
+
+              <p>{{ solution.impact }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -94,13 +101,20 @@ export default {
       padding-bottom: 0
 
   .info
+    display: flex
     font-size: 22px
     font-size: calc((1.6vw + 2.2vh + 1vmin) / 2.8)
     @include narrow
       font-size: 18px
+      flex-flow: column
     @include wide
       font-size: 22px
     &,
-    p
+    p, div
+      flex: 1
       padding: 0
+    div
+      padding-left: 1rem
+      @include narrow
+        padding-left: 0
 </style>

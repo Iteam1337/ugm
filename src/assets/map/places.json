@@ -20,17 +20,19 @@
         "name": "pay-it-forward-beanbags",
         "title": "”Pay it forward” & beanbags",
         "text": "Inside the mall we want a seating area with a “pay it forward” system where you can treat a neighbour to a cup of coffee. We also want a place to hang out, so in front of Lidl we put bean bags and a TV where you can upload whatever you have on your phone like Netflix. We also put in more flowers and an aquarium.",
+        "impact": "Greater sense of community, opportunity for friendship and contacts.",
         "sketchfab": {
           "thumb": "mall_pay-it-forward-beanbags.png",
           "params": ""
         }
       },
       {
-        "name": "new-entrances-graffiti-wall",
-        "title": "New entrances & graffiti wall",
+        "name": "new-entrances",
+        "title": "New entrances",
         "text": "We do not like that the entrance to the mall is placed in the corner, so we have opened a new entrance closer to Lidl moving the entrance further into the mall. We have also removed the corridor to create a more natural meeting place inside. A graffiti wall and light from a ceiling window make the place more vibrant. We have opened up another entrance in the back so you can get out on the other side, towards the art centre and the library, to create a connection to that place.",
+        "impact": "Creates a sense of community and belonging. Makes Fittja Centrum more of a place to go to even for outsiders, changes its reputation.",
         "sketchfab": {
-          "thumb": "mall_open-space-graffiti-wall.png",
+          "thumb": "mall_new-entrances-1.png",
           "params": ""
         }
       },
@@ -38,8 +40,19 @@
         "name": "medborgarcentrum",
         "title": "Medborgarcentrum",
         "text": "We have moved Medborgarcentrum to the heart of the mall. There are more seats, and we also added a Food Court!",
+        "impact": "Create a socially and environmentally sustainable hub in the mall. It will make the space stand out and makes it more interesting, which may attract more people to visit.",
         "sketchfab": {
           "thumb": "mall_new-entrances-1.png",
+          "params": ""
+        }
+      },
+      {
+        "name": "graffiti-wall",
+        "title": "Graffiti wall",
+        "text": "The walls and ceilings of the centre can be painted by visitors on the spot. ”A live exhibition”: local residents paint walls and ceilings together as an event. The ceiling tiles can be taken down to become canvases that people can paint on.",
+        "impact": "Community and belonging. Makes Centrum more colourful. Ownership of the space contributes to a perception of safety.",
+        "sketchfab": {
+          "thumb": "mall_open-space-graffiti-wall.png",
           "params": ""
         }
       }
@@ -61,6 +74,7 @@
         "name": "interactive-signs",
         "title": "Interactive signs",
         "text": "The Fittja sign changes colour depending on how many people passing by or you can change the colour with your phone. Outside the station there are interactive signs as a complement to the usual SL signs – with updates on what’s happening in Fittja today. Is there an art exhibition going on or what is the temperature in the Alby lake? There is a landmark in glass on the roof, a screen for art, some beehives and greenery, not where people can be but a place for small bugs and insects.",
+        "impact": "Makes the place more unique.",
         "sketchfab": {
           "thumb": "station_interactive-signs.png",
           "params": ""
@@ -70,17 +84,9 @@
         "name": "place-for-art",
         "title": "Place for art",
         "text": "We have built a noise barrier that also has in built plants to reduce noise but which at the same time provide a space for graffiti.",
+        "impact": "Changes the soundscape of the space, minimises noise pollution. Provides decoration and greenery.",
         "sketchfab": {
           "thumb": "station_place-for-art.png",
-          "params": ""
-        }
-      },
-      {
-        "name": "activity-cubes",
-        "title": "Activity cubes",
-        "text": "Where the bus stops are today, we have made glass cubes for various activities. The first glass cube - ”Botkyrka Arts”, will shpw art from Botkyrka that people can check out when they wait for the bus. The next one is the ”Reading Cube” where you can read, borrow or leave a book. There are reading lamps, carpets, bean bags where you can sit. Then we have ”Game Cube for All” where there are different games and activities for both young people, children and the elderly, the focus is on board games. Outside there are benches with lights so you can see at night, and even a fountain that is nice to look at and listen to.",
-        "sketchfab": {
-          "thumb": "station_activity-cubes.png",
           "params": ""
         }
       },
@@ -88,6 +94,7 @@
         "name": "new-entrance",
         "title": "New entrance",
         "text": "At the back of the station we have also opened up for a new entrance and removed the barriers.",
+        "impact": "Makes the place more fun and creates a good atmosphere. People would be less likely to dodge fares.",
         "sketchfab": {
           "thumb": "station_new-entrance.png",
           "params": ""
@@ -97,17 +104,9 @@
         "name": "play-for-the-ticket",
         "title": "Play for the ticket",
         "text": "The ticket hall has become a kind of arcade. One idea is that you can play and collect points in order to get an SL ticket. Maybe one can do a service - recycle cans or similar.",
+        "impact": "Creates activity, makes public transportation accessible, make the space safer.",
         "sketchfab": {
           "thumb": "station_play-for-the-ticket.png",
-          "params": ""
-        }
-      },
-      {
-        "name": "movement-on-the-platform",
-        "title": "Movement on the platform",
-        "text": "On the platform we want cool interactive signs. Without barriers, we can use the space in other ways: the ticket booth can become a café. A citizen office could be connected to the station, so the arcade becomes a kind of hub where one can submit proposals for Fittja - a citizen dialogue hub. This makes for more movement on the platform, which makes it more secure.",
-        "sketchfab": {
-          "thumb": "station_movement-on-the-platform.png",
           "params": ""
         }
       }
@@ -127,6 +126,7 @@
         "name": "pink-street",
         "title": "Pink street",
         "text": "It is a coloured painted carpet that both cheers up the place and shows the way. It should also have arrows and street names so you know where to go. It is quite difficult to find your way around Fittja today if you have not been there, but ”Pink Street” would stretch all over the area.",
+        "impact": "Leads people away from Centrum, creates a lively space for more people, extends public mobility patterns.",
         "sketchfab": {
           "thumb": "back-side_pink-street.png",
           "params": ""
@@ -136,6 +136,7 @@
         "name": "barbecue-playground",
         "title": "Barbecue & playground",
         "text": "There are seating areas where you can barbecue, take it easy, have a coffee break. Also a jungle gym and some swings for children, entertainment is also important in life and not just ”basic life”. There should also be bicycle stands so that you more easily can move in different ways in the area.",
+        "impact": "Brings activity, light, and a circular economy model to unused premises. Meeting space that fosters local engagement.",
         "sketchfab": {
           "thumb": "back-side_barbecue-playground.png",
           "params": ""
@@ -145,6 +146,7 @@
         "name": "lighting",
         "title": "Lighting",
         "text": "We have added a lot of lights and colour throughout Fittja because we strongly believe that lighting and a little colour can make a place feel much safer. We thought of spotlights instead of expensive lamps. In the evenings when you are alone, you can’t see properly, and you don’t want to stumble or feel insecure. You feel safer with light. We have made quite simple lighting all over the back. The tunnel between the front and the back and towards the station has also got more lighting to increase security.",
+        "impact": "A different atmosphere. A modernised space. A safer place.",
         "sketchfab": {
           "thumb": "back-side_lighting.png",
           "params": "back-side_lighting.png"
@@ -154,6 +156,7 @@
         "name": "art-food-trucks",
         "title": "Art & food trucks",
         "text": "We built a pedestrian street at the back of the mall. There could be food trucks and small market stalls there. To avoid cars passing through, there are trees planted and flowerbeds in the street. We also want an art wall, where people can stop and look.",
+        "impact": "Attracts more people, welcomes everyone, lights up dark.",
         "sketchfab": {
           "thumb": "back-side_food-truck.png",
           "params": ""
@@ -176,8 +179,19 @@
         "name": "greenhouse-145-radio-cafe-greenhouse",
         "title": "Greenhouse 145 - radio, cafe & greenhouse",
         "text": "A massive building with three floors. On the first floor there is a radio station where people and artists from Botkyrka can visit. You can sit outside and listen. The second floor is a café. Simple - very green! Floor three is the loft with more plants. A cool tourist attraction because the floor is made of glass. Outside there is lots of green and water. There could be places to sit outside and fairy lights in the trees to create security.",
+        "impact": "More life, movement, and sounds. Provides a space and platform for new people. Community Feeling!",
         "sketchfab": {
           "thumb": "square_greenhouse-145-radio-cafe-greenhouse.png",
+          "params": ""
+        }
+      },
+      {
+        "name": "activity-cubes",
+        "title": "Activity cubes",
+        "text": "Where the bus stops are today, we have made glass cubes for various activities. The first glass cube - ”Botkyrka Arts”, will shpw art from Botkyrka that people can check out when they wait for the bus. The next one is the ”Reading Cube” where you can read, borrow or leave a book. There are reading lamps, carpets, bean bags where you can sit. Then we have ”Game Cube for All” where there are different games and activities for both young people, children and the elderly, the focus is on board games. Outside there are benches with lights so you can see at night, and even a fountain that is nice to look at and listen to.",
+        "impact": "Cozier, safer, environmentally friendly and sustainable.",
+        "sketchfab": {
+          "thumb": "station_activity-cubes.png",
           "params": ""
         }
       },
@@ -185,6 +199,7 @@
         "name": "new-bus-station",
         "title": "New bus station",
         "text": "We removed the bus stops from in front of the station, as it is too crowded today. It is also dangerous as people run out in front of the busses when they are headed to the other stops. Instead we placed them where the parking lot is. A tree at each terminal pocket to reduce carbon dioxide emissions.",
+        "impact": "Safer and easier movement, more meeting points allowing people to spend more time on the square.",
         "sketchfab": {
           "thumb": "square_new-bus-station.png",
           "params": ""
@@ -203,6 +218,7 @@
         "name": "dance-floor-hang-out-space",
         "title": "Dance floor & hang out space",
         "text": "We built a fountain where you can sit and take it easy. The purple space is a dance floor, we thought that you could plug in your mobile in the speaker and play your own music. More seating for having a coffee. On the roof we also want a food court where the restaurants down in the mall can serve during summer, a nice outdoor dining area.",
+        "impact": "Cozier, more unique, safer, more fun, more welcoming.",
         "sketchfab": {
           "thumb": "square_dance-floor-hang-out-space.png",
           "params": ""
