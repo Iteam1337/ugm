@@ -26,11 +26,14 @@
       <div class="content">
         <div class="flex">
           <div class="w-70 info">
-            <p>{{ solution.text }}</p>
             <div>
-              <p>
+              <h3 class="gist">"{{solution.gist}}"</h3>
+              <p>{{ solution.text }}</p>
+            </div>
+            <div>
+              <h3>
                 <strong>Impact on the space</strong>
-              </p>
+              </h3>
 
               <p>{{ solution.impact }}</p>
             </div>
@@ -110,9 +113,11 @@ export default {
     @include wide
       font-size: 22px
     &,
-    p, div
+    p, h3, div
       flex: 1
       padding: 0
+    .gist
+      font-style: italic
     div
       padding-left: 1rem
       @include narrow

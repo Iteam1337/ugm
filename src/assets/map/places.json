@@ -19,6 +19,7 @@
       {
         "name": "pay-it-forward-beanbags",
         "title": "”Pay it forward” & beanbags",
+        "gist": "A corner inside the shopping centre with bean bags where people can watch movies. Requires a smartboard with a projector, a number of bean bags and some free snacks.",
         "text": "Inside the mall we want a seating area with a “pay it forward” system where you can treat a neighbour to a cup of coffee. We also want a place to hang out, so in front of Lidl we put bean bags and a TV where you can upload whatever you have on your phone like Netflix. We also put in more flowers and an aquarium.",
         "impact": "Greater sense of community, opportunity for friendship and contacts.",
         "sketchfab": {
@@ -39,7 +40,8 @@
       {
         "name": "medborgarcentrum",
         "title": "Medborgarcentrum",
-        "text": "We have moved Medborgarcentrum to the heart of the mall. There are more seats, and we also added a Food Court!",
+        "gist": "We have moved Medborgarcentrum to the heart of the mall. There are more seats, and we also added a Food Court!",
+        "text": "It can also become a meeting and exchange hub for all where items and clothing can be turned in. There is also a remake-workshop and a bike rental to complement the bus and underground.",
         "impact": "Create a socially and environmentally sustainable hub in the mall. It will make the space stand out and makes it more interesting, which may attract more people to visit.",
         "sketchfab": {
           "thumb": "mall_new-entrances-1.png",
@@ -73,7 +75,8 @@
       {
         "name": "interactive-signs",
         "title": "Interactive signs",
-        "text": "The Fittja sign changes colour depending on how many people passing by or you can change the colour with your phone. Outside the station there are interactive signs as a complement to the usual SL signs – with updates on what’s happening in Fittja today. Is there an art exhibition going on or what is the temperature in the Alby lake? There is a landmark in glass on the roof, a screen for art, some beehives and greenery, not where people can be but a place for small bugs and insects.",
+        "gist": "The Fittja sign changes colour depending on how many people passing by or you can change the colour with your phone. Outside the station there are interactive signs as a complement to the usual SL signs – with updates on what’s happening in Fittja today. Is there an art exhibition going on or what is the temperature in the Alby lake? There is a landmark in glass on the roof, a screen for art, some beehives and greenery, not where people can be but a place for small bugs and insects.",
+        "text": "Cooler street signs that represent the suburbs/suburban culture in a more comical way, making the place more personal and unique.",
         "impact": "Makes the place more unique.",
         "sketchfab": {
           "thumb": "station_interactive-signs.png",
@@ -83,6 +86,7 @@
       {
         "name": "place-for-art",
         "title": "Place for art",
+        "gist": "Noise barrier that can also be used 50/50 as a vertical plant and graffiti wall.",
         "text": "We have built a noise barrier that also has in built plants to reduce noise but which at the same time provide a space for graffiti.",
         "impact": "Changes the soundscape of the space, minimises noise pollution. Provides decoration and greenery.",
         "sketchfab": {
@@ -93,7 +97,8 @@
       {
         "name": "new-entrance",
         "title": "New entrance",
-        "text": "At the back of the station we have also opened up for a new entrance and removed the barriers.",
+        "gist": "On the platform we want cool interactive signs. Without barriers, we can use the space in other ways: the ticket booth can become a café. A citizen office could be connected to the station, so the arcade becomes a kind of hub where one can submit proposals for Fittja - a citizen dialogue hub. This makes for more movement on the platform, which makes it more secure.",
+        "text": "Ticket-hall becomes an arcade. Winning a game gives you a free underground ticket. An arcade where people can play games and winning gives one a free single ride on the underground.",
         "impact": "Makes the place more fun and creates a good atmosphere. People would be less likely to dodge fares.",
         "sketchfab": {
           "thumb": "station_new-entrance.png",
@@ -103,7 +108,8 @@
       {
         "name": "play-for-the-ticket",
         "title": "Play for the ticket",
-        "text": "The ticket hall has become a kind of arcade. One idea is that you can play and collect points in order to get an SL ticket. Maybe one can do a service - recycle cans or similar.",
+        "text": "Alternative ways of purchasing underground and bus tickets. Underground and bus tickets are exchanged for socially beneficial tasks such as recycling, picking up cigarette butts, doing squats, doing night walks for public safety, etc.",
+        "gist": "The ticket hall has become a kind of arcade. One idea is that you can play and collect points in order to get an SL ticket. Maybe one can do a service - recycle cans or similar.",
         "impact": "Creates activity, makes public transportation accessible, make the space safer.",
         "sketchfab": {
           "thumb": "station_play-for-the-ticket.png",
@@ -125,7 +131,8 @@
       {
         "name": "pink-street",
         "title": "Pink street",
-        "text": "It is a coloured painted carpet that both cheers up the place and shows the way. It should also have arrows and street names so you know where to go. It is quite difficult to find your way around Fittja today if you have not been there, but ”Pink Street” would stretch all over the area.",
+        "gist": "It is a coloured painted carpet that both cheers up the place and shows the way. It should also have arrows and street names so you know where to go. It is quite difficult to find your way around Fittja today if you have not been there, but ”Pink Street” would stretch all over the area.",
+        "text": "Pink Street shows you the way, but is also a destination in itself. Pink Street encourages walking. Along the street are welcoming and innovative spaces for public use (e.g. arts stage, seating space, graffiti walls...).",
         "impact": "Leads people away from Centrum, creates a lively space for more people, extends public mobility patterns.",
         "sketchfab": {
           "thumb": "back-side_pink-street.png",
@@ -135,7 +142,7 @@
       {
         "name": "barbecue-playground",
         "title": "Barbecue & playground",
-        "text": "There are seating areas where you can barbecue, take it easy, have a coffee break. Also a jungle gym and some swings for children, entertainment is also important in life and not just ”basic life”. There should also be bicycle stands so that you more easily can move in different ways in the area.",
+        "gist": "There are seating areas where you can barbecue, take it easy, have a coffee break. Also a jungle gym and some swings for children, entertainment is also important in life and not just ”basic life”. There should also be bicycle stands so that you more easily can move in different ways in the area.",
         "impact": "Brings activity, light, and a circular economy model to unused premises. Meeting space that fosters local engagement.",
         "sketchfab": {
           "thumb": "back-side_barbecue-playground.png",
@@ -145,7 +152,8 @@
       {
         "name": "lighting",
         "title": "Lighting",
-        "text": "We have added a lot of lights and colour throughout Fittja because we strongly believe that lighting and a little colour can make a place feel much safer. We thought of spotlights instead of expensive lamps. In the evenings when you are alone, you can’t see properly, and you don’t want to stumble or feel insecure. You feel safer with light. We have made quite simple lighting all over the back. The tunnel between the front and the back and towards the station has also got more lighting to increase security.",
+        "gist": "We have added a lot of lights and colour throughout Fittja because we strongly believe that lighting and a little colour can make a place feel much safer. We thought of spotlights instead of expensive lamps. In the evenings when you are alone, you can’t see properly, and you don’t want to stumble or feel insecure. You feel safer with light. We have made quite simple lighting all over the back. The tunnel between the front and the back and towards the station has also got more lighting to increase security.",
+        "text": "More colourful lights underneath stairs, street lights, by entrances, for special occasions, etc. Lighting up Fittja to a safer and more welcoming space for all. Lighting attracts people and colour makes you happy.",
         "impact": "A different atmosphere. A modernised space. A safer place.",
         "sketchfab": {
           "thumb": "back-side_lighting.png",
@@ -155,7 +163,8 @@
       {
         "name": "art-food-trucks",
         "title": "Art & food trucks",
-        "text": "We built a pedestrian street at the back of the mall. There could be food trucks and small market stalls there. To avoid cars passing through, there are trees planted and flowerbeds in the street. We also want an art wall, where people can stop and look.",
+        "gist": "We built a pedestrian street at the back of the mall. There could be food trucks and small market stalls there. To avoid cars passing through, there are trees planted and flowerbeds in the street. We also want an art wall, where people can stop and look.",
+        "text": "Food truck with street food and a light show. Street food from every continent. With a light show.",
         "impact": "Attracts more people, welcomes everyone, lights up dark.",
         "sketchfab": {
           "thumb": "back-side_food-truck.png",
@@ -178,7 +187,8 @@
       {
         "name": "greenhouse-145-radio-cafe-greenhouse",
         "title": "Greenhouse 145 - radio, cafe & greenhouse",
-        "text": "A massive building with three floors. On the first floor there is a radio station where people and artists from Botkyrka can visit. You can sit outside and listen. The second floor is a café. Simple - very green! Floor three is the loft with more plants. A cool tourist attraction because the floor is made of glass. Outside there is lots of green and water. There could be places to sit outside and fairy lights in the trees to create security.",
+        "gist": "A massive building with three floors. On the first floor there is a radio station where people and artists from Botkyrka can visit. You can sit outside and listen. The second floor is a café. Simple - very green! Floor three is the loft with more plants. A cool tourist attraction because the floor is made of glass. Outside there is lots of green and water. There could be places to sit outside and fairy lights in the trees to create security.",
+        "text": "Sounds of Fittja. A transparent glassbox that works as a Radiobooth.",
         "impact": "More life, movement, and sounds. Provides a space and platform for new people. Community Feeling!",
         "sketchfab": {
           "thumb": "square_greenhouse-145-radio-cafe-greenhouse.png",
@@ -188,7 +198,8 @@
       {
         "name": "activity-cubes",
         "title": "Activity cubes",
-        "text": "Where the bus stops are today, we have made glass cubes for various activities. The first glass cube - ”Botkyrka Arts”, will shpw art from Botkyrka that people can check out when they wait for the bus. The next one is the ”Reading Cube” where you can read, borrow or leave a book. There are reading lamps, carpets, bean bags where you can sit. Then we have ”Game Cube for All” where there are different games and activities for both young people, children and the elderly, the focus is on board games. Outside there are benches with lights so you can see at night, and even a fountain that is nice to look at and listen to.",
+        "gist": "Where the bus stops are today, we have made glass cubes for various activities. The first glass cube - ”Botkyrka Arts”, will shpw art from Botkyrka that people can check out when they wait for the bus. The next one is the ”Reading Cube” where you can read, borrow or leave a book. There are reading lamps, carpets, bean bags where you can sit. Then we have ”Game Cube for All” where there are different games and activities for both young people, children and the elderly, the focus is on board games. Outside there are benches with lights so you can see at night, and even a fountain that is nice to look at and listen to.",
+        "text": "Three small greenhouses placed on the square, that work as phone charging stations powered by solar cells.",
         "impact": "Cozier, safer, environmentally friendly and sustainable.",
         "sketchfab": {
           "thumb": "station_activity-cubes.png",
@@ -198,7 +209,7 @@
       {
         "name": "new-bus-station",
         "title": "New bus station",
-        "text": "We removed the bus stops from in front of the station, as it is too crowded today. It is also dangerous as people run out in front of the busses when they are headed to the other stops. Instead we placed them where the parking lot is. A tree at each terminal pocket to reduce carbon dioxide emissions.",
+        "gist": "We removed the bus stops from in front of the station, as it is too crowded today. It is also dangerous as people run out in front of the busses when they are headed to the other stops. Instead we placed them where the parking lot is. A tree at each terminal pocket to reduce carbon dioxide emissions.",
         "impact": "Safer and easier movement, more meeting points allowing people to spend more time on the square.",
         "sketchfab": {
           "thumb": "square_new-bus-station.png",
@@ -208,7 +219,7 @@
       {
         "name": "skatepark-cinema",
         "title": "Skatepark & cinema",
-        "text": "This is the roof of the mall, where we have made a skate park and a cinema with a portable screen. It is also has an amphitheatre and a jungle gym for children that also work as a place where to hang out.",
+        "gist": "This is the roof of the mall, where we have made a skate park and a cinema with a portable screen. It is also has an amphitheatre and a jungle gym for children that also work as a place where to hang out.",
         "sketchfab": {
           "thumb": "square_skatepark-cinema.png",
           "params": ""
@@ -217,7 +228,8 @@
       {
         "name": "dance-floor-hang-out-space",
         "title": "Dance floor & hang out space",
-        "text": "We built a fountain where you can sit and take it easy. The purple space is a dance floor, we thought that you could plug in your mobile in the speaker and play your own music. More seating for having a coffee. On the roof we also want a food court where the restaurants down in the mall can serve during summer, a nice outdoor dining area.",
+        "gist": "This is the roof of the mall, where we have made a skate park and a cinema with a portable screen. It is also has an amphitheatre and a jungle gym for children that also work as a place where to hang out. We built a fountain where you can sit and take it easy. The purple space is a dance floor, we thought that you could plug in your mobile in the speaker and play your own music. More seating for having a coffee. On the roof we also want a food court where the restaurants down in the mall can serve during summer, a nice outdoor dining area.",
+        "text": "Temporary lights and decorations on facades, rooftops, and on the ground. Colourful fairy lights and hanging plants. Light installations projected onto facades and the ground.",
         "impact": "Cozier, more unique, safer, more fun, more welcoming.",
         "sketchfab": {
           "thumb": "square_dance-floor-hang-out-space.png",
