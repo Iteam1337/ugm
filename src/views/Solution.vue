@@ -13,7 +13,7 @@
         </h1>
       </div>
       <iframe
-        src="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d/embed?autostart=1&annotation={{ solution.annotation }}"
+        :src="`https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d/embed?autostart=1&annotation=${solution.annotation}`"
         frameborder="0"
         allow="autoplay; fullscreen; vr"
         mozallowfullscreen="true"
