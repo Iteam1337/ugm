@@ -48,7 +48,8 @@
         "sketchfab": {
           "thumb": "mall_new-entrances-1.png",
           "params": ""
-        }
+        },
+        "annotation": 18
       },
       {
         "name": "graffiti-wall",
@@ -58,7 +59,8 @@
         "sketchfab": {
           "thumb": "mall_open-space-graffiti-wall.png",
           "params": ""
-        }
+        },
+        "annotation": 17
       }
     ]
   },
