@@ -25,7 +25,8 @@
         "sketchfab": {
           "thumb": "mall_pay-it-forward-beanbags.png",
           "params": ""
-        }
+        },
+        "annotation": 16
       },
       {
         "name": "new-entrances",
@@ -35,7 +36,8 @@
         "sketchfab": {
           "thumb": "mall_new-entrances-1.png",
           "params": ""
-        }
+        },
+        "annotation": 17
       },
       {
         "name": "medborgarcentrum",
@@ -81,7 +83,8 @@
         "sketchfab": {
           "thumb": "station_interactive-signs.png",
           "params": ""
-        }
+        },
+        "annotation": 11
       },
       {
         "name": "place-for-art",
@@ -92,7 +95,8 @@
         "sketchfab": {
           "thumb": "station_place-for-art.png",
           "params": ""
-        }
+        },
+        "annotation": 10
       },
       {
         "name": "new-entrance",
@@ -103,7 +107,8 @@
         "sketchfab": {
           "thumb": "station_new-entrance.png",
           "params": ""
-        }
+        },
+        "annotation": 13
       },
       {
         "name": "play-for-the-ticket",
@@ -114,7 +119,8 @@
         "sketchfab": {
           "thumb": "station_play-for-the-ticket.png",
           "params": ""
-        }
+        },
+        "annotation": 14
       }
     ]
   },
@@ -137,7 +143,8 @@
         "sketchfab": {
           "thumb": "back-side_pink-street.png",
           "params": ""
-        }
+        },
+        "annotation": 6
       },
       {
         "name": "barbecue-playground",
@@ -147,7 +154,8 @@
         "sketchfab": {
           "thumb": "back-side_barbecue-playground.png",
           "params": ""
-        }
+        },
+        "annotation": 7
       },
       {
         "name": "lighting",
@@ -158,7 +166,8 @@
         "sketchfab": {
           "thumb": "back-side_lighting.png",
           "params": "back-side_lighting.png"
-        }
+        },
+        "annotation": 9
       },
       {
         "name": "art-food-trucks",
@@ -169,7 +178,8 @@
         "sketchfab": {
           "thumb": "back-side_food-truck.png",
           "params": ""
-        }
+        },
+        "annotation": 8
       }
     ]
   },
@@ -193,7 +203,8 @@
         "sketchfab": {
           "thumb": "square_greenhouse-145-radio-cafe-greenhouse.png",
           "params": ""
-        }
+        },
+        "annotation": 2
       },
       {
         "name": "activity-cubes",
@@ -204,7 +215,8 @@
         "sketchfab": {
           "thumb": "station_activity-cubes.png",
           "params": ""
-        }
+        },
+        "annotation": 12
       },
       {
         "name": "new-bus-station",
@@ -214,7 +226,8 @@
         "sketchfab": {
           "thumb": "square_new-bus-station.png",
           "params": ""
-        }
+        },
+        "annotation": 3
       },
       {
         "name": "skatepark-cinema",
@@ -223,7 +236,8 @@
         "sketchfab": {
           "thumb": "square_skatepark-cinema.png",
           "params": ""
-        }
+        },
+        "annotation": 4
       },
       {
         "name": "dance-floor-hang-out-space",
@@ -234,7 +248,8 @@
         "sketchfab": {
           "thumb": "square_dance-floor-hang-out-space.png",
           "params": ""
-        }
+        },
+        "annotation": 5
       }
     ]
   }
