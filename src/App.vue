@@ -112,6 +112,8 @@ export default {
 
   .content
     padding: 2em 2em 0 2em
+    p 
+      line-height: 1.6
 
 
   .container,

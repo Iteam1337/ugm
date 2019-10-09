@@ -1,8 +1,10 @@
 <template>
   <main v-if="solution && solution.title">
     <header>
-      <logo class="left"/>
-      <typeform class="right"/>
+      <logo class="left" />
+      <svgButton text="Comment" link="https://globalut.typeform.com/to/cz2raF" class="right">
+        <commentIcon />
+      </svgButton>
     </header>
 
     <article class="container hero top-box">
@@ -46,13 +48,15 @@
 
 <script>
 import Logo from '@/components/Logo.vue'
-import Typeform from '@/components/Typeform.vue'
+import SVGButton from '@/components/SVGButton.vue'
+import CommentIcon from '@/components/CommentIcon.vue'
 
 export default {
   props: ['place', 'images', 'solution'],
   components: {
     logo: Logo,
-    typeform: Typeform,
+    svgButton: SVGButton,
+    commentIcon: CommentIcon,
   },
   methods: {
     goBack() {

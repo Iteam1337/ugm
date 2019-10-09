@@ -1,12 +1,14 @@
 <template>
   <main>
     <header>
-      <logo class="left"/>
-      <typeform class="right"/>
+      <logo class="left" />
+      <svgButton text="Comment" link="https://globalut.typeform.com/to/cz2raF" class="right">
+        <commentIcon />
+      </svgButton>
     </header>
 
     <article class="container hero top-box">
-      <styling :background="background"/>
+      <styling :background="background" />
 
       <div class="hero-title">
         <div class="content">
@@ -41,7 +43,7 @@
                   />
                   <span class="solution">
                     <span class="text">{{solution.title}}</span>
-                    <arrow/>
+                    <arrow />
                   </span>
                 </router-link>
               </li>
@@ -71,7 +73,7 @@
                   :href="image.startsWith('/') ? image : require(`@/assets/${image}`)"
                   target="_blank"
                 >
-                  <img :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
+                  <img :src="image.startsWith('/') ? image : require(`@/assets/${image}`)" />
                 </a>
               </li>
             </ul>
@@ -84,17 +86,20 @@
 
 <script>
 import Logo from '@/components/Logo.vue'
-import Typeform from '@/components/Typeform.vue'
+import SVGButton from '@/components/SVGButton.vue'
 import Arrow from '@/components/Arrow.vue'
 import Styling from '@/components/Styling.vue'
+import CommentIcon from "@/components/CommentIcon.vue"
+
 
 export default {
   props: ['place', 'images'],
   components: {
     logo: Logo,
-    typeform: Typeform,
+    svgButton: SVGButton,
     arrow: Arrow,
     styling: Styling,
+    commentIcon: CommentIcon
   },
   data() {
     const {

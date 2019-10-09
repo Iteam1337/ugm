@@ -14,7 +14,7 @@
 
       <div class="hero-link w-50">
         <router-link to="/map" class="link" >
-          Results &amp; Insights <arrow />
+          Botkyrka<arrow />
         </router-link>
       </div>
     </article>
@@ -53,6 +53,7 @@ import Dash from '@/components/svg/Dash.vue'
 import Styling from '@/components/Styling.vue'
 
 export default {
+
   components: {
     logo: Logo,
     item: MenuItem,
@@ -169,3 +170,10 @@ export default {
       svg
         margin-left: .2rem
 </style>
+
+/* Vector 2 (Stroke) */
+
+
+
+
+
