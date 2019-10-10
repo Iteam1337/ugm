@@ -2,7 +2,7 @@ export default {
     data: {
         heading: {
             title: "Mall for all",
-            subtitle: "Proposal 1"
+            subtitle: "Proposal 2"
         },
         space: "Fittja Centrum",
         recipient: "Land owner Kungsvåningen (private actor)",
