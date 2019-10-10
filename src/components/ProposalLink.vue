@@ -1,5 +1,5 @@
 <template>
-  <a href="#" class="link">
+  <div class="link">
     <div class="top">
       <span class="text">{{title}}</span>
       <arrow class="arrow" />
@@ -7,7 +7,7 @@
     <div class="bottom">
       <span class="text">{{desc}}</span>
     </div>
-  </a>
+  </div>
 </template>
 
 <style lang="sass" scoped>

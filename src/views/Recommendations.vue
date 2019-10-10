@@ -14,13 +14,31 @@
       <h2>Proposals</h2>
       <div class="row">
         <div>
-          <proposal-link title="Fittja Centrum" desc="Center owner Kungsvåningen (private actor)" />
+          <router-link
+            class="rlink"
+            :to="{ name: 'proposal', params: { title: 'Fittja Square', proposalId: 'prop1' } }"
+          >
+            <proposal-link
+              title="Fittja Square"
+              desc="Botkyrka municipality (local actor)"
+            />
+          </router-link>
         </div>
         <div>
-          <proposal-link title="Fittja Station" desc="Region Stockholm/SL (regional government)" />
+          <router-link
+            class="rlink"
+            :to="{ name: 'proposal', params: { title: 'Fittja Centrum', proposalId: 'prop2' } }"
+          >
+            <proposal-link title="Fittja Centrum" desc="Land owner Kungsvåningen (private actor) " />
+          </router-link>
         </div>
         <div>
-          <proposal-link title="Fittja Square" desc="The municipality (local government)" />
+          <router-link
+            class="rlink"
+            :to="{ name: 'proposal', params: { title: 'FittjaStation / Fittja Square', proposalId: 'prop3' } }"
+          >
+            <proposal-link title="Fittja Station / Fittja Square" desc="Region Stockholm/SL (regional level)and Botkyrka municipality (local level)" />
+          </router-link>
         </div>
       </div>
     </article>
@@ -49,6 +67,14 @@ export default {
     logo: Logo,
     proposalLink: ProposalLink,
   },
+  methods: {
+    goTo(id) {
+      this.$router.push({
+        name: 'proposal',
+        params: { proposalId: id },
+      })
+    },
+  },
 }
 </script>
 
@@ -74,6 +100,9 @@ export default {
     display: flex; 
     > div
       width: 30%
+
+  .rlink
+    text-decoration: none
   
   article
     padding: 1em 4em
