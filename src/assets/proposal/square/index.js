@@ -62,5 +62,7 @@ export default {
         }
 
     },
-    images: []
+    solutions: [
+        { link: null, title: null, image: null }
+    ]
 }
