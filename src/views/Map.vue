@@ -46,7 +46,7 @@
               <img class="img-width" src="@/assets/images/sketchfab-thumbnails/mapviewpic.jpg" alt />
 
               <span class="solution">
-                <span class="text">Result &amp; recommendations</span>
+                <span class="text">Guidelines &amp; Recommendations</span>
                 <arrow />
               </span>
             </a>
