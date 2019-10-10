@@ -42,7 +42,7 @@
           </div>
 
           <div class="w-50 content">
-            <a href="#" class="link">
+            <a href="/recommendations" class="link">
               <img class="img-width" src="@/assets/images/sketchfab-thumbnails/mapviewpic.jpg" alt />
 
               <span class="solution">

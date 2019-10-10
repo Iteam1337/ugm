@@ -5,6 +5,7 @@ import Home from '@/views/Home.vue'
 import Map from '@/views/Map.vue'
 import Place from '@/views/Place.vue'
 import Solution from '@/views/Solution.vue'
+import Recommendations from '@/views/Recommendations.vue'
 
 import places from './assets/map/places'
 
@@ -60,6 +61,17 @@ export default new Router({
       name: 'solution',
       component: Solution,
       props: route => placeProps(route),
-    }
+    },
+    {
+      path: '/recommendations',
+      name: 'recommendations',
+      component: Recommendations
+    },
+    // {
+    //   path: '/recommendations/:proposalId',
+    //   name: 'propsal',
+    //   component: Proposal,
+    //   props: route => placeProps(route)
+    // }
   ]
 })
