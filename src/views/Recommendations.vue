@@ -4,15 +4,24 @@
       <logo class="left" />
     </header>
 
-    <article class="container hero top-box">
-      <div class="hero-title">
-        <h1>Policy Guidelines &amp; Recommendations</h1>
+    <article class="container top-box">
+      <div class="hero">
+        <div class="hero-title">
+          <h1 class="title">Policy Guidelines &amp; Recommendations</h1>
+        </div>
       </div>
+
       <h2>Proposals</h2>
-      <div class="w-30">
-        <proposal-link title="Fittja Centrum" desc="Center owner Kungsvåningen (Private Actor)" />
-        <proposal-link title="Fittja Station" desc="Region Stockholm/SL (Regional Government)" />
-        <proposal-link title="Fittja Square" desc="The Municipality (Local Government)" />
+      <div class="row">
+        <div>
+          <proposal-link title="Fittja Centrum" desc="Center owner Kungsvåningen (Private Actor)" />
+        </div>
+        <div>
+          <proposal-link title="Fittja Square" desc="The Municipality (Local Government)" />
+        </div>
+        <div>
+          <proposal-link title="Fittja Station" desc="Region Stockholm/SL (Regional Government)" />
+        </div>
       </div>
     </article>
 
@@ -47,12 +56,13 @@ export default {
   @import "@/globals.sass"
 
   .hero
-    display: flex
-    flex-direction: column
+    
     .hero-title
       margin-left: auto
       font-size: 48px
       font-size: calc((2vw + 2vh + 1vmin) / 2)
+      > h1
+        text-align: left
       @include narrow
         font-size: 22px
       @include wide
@@ -60,6 +70,11 @@ export default {
     .iframe
       height: 479px
 
+  .row 
+    display: flex; 
+    > div
+      width: 30%
+  
   article
     padding: 1em 4em
     @include narrow

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <transition name="fade">
-      <loading v-if="isLoading" v-bind:is-loading="isLoading" v-on:done="onDone"/>
-      <router-view v-if="!isLoading"/>
+      <loading v-if="isLoading" v-bind:is-loading="isLoading" v-on:done="onDone" />
+      <router-view v-if="!isLoading" />
     </transition>
   </div>
 </template>
@@ -124,7 +124,7 @@ export default {
   a
     color: white
     font-weight: 500
-    text-transform: uppercase
+    text-transform: lowercase
     font-variant: small-caps
 
   .button
