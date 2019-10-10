@@ -1,8 +1,13 @@
 $screen-min-width: 640px
+$screen-med-width: 960px
 $screen-max-width: 1600px
 
 @mixin narrow ($width: $screen-min-width)
   @media screen and (max-width: $screen-min-width)
+    @content
+
+@mixin tablet ($width: $screen-med-width)
+  @media screen and (max-width: $screen-med-width)
     @content
 
 @mixin wide ($width: $screen-max-width)

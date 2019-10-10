@@ -126,4 +126,5 @@ export default {
       padding-left: 1rem
       @include narrow
         padding-left: 0
+        
 </style>

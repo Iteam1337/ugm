@@ -1,7 +1,7 @@
 <template>
   <main>
     <header>
-      <logo class="left" />
+      <logoCity class="left" />
     </header>
 
     <article class="container top-box">
@@ -46,11 +46,11 @@
     <article class="container text flex bottom-box">
       <div class="content">
         <div class="flex">
-          <div class="w-70 info">
-            <span>In the sixth and final innovation lab of the Vinnova financed #UrbanGirlsMovement (UGM) initiative, the main objective was to of discuss what is required in order to realise the proposals developed throughout labs 1-5. Together, the girls and experts worked on policy recommendations to present to decision-makers at different levels and developed guidelines to support the implementing actors. This section provides an overview of the results from the sixth workshop</span>
+          <div class="w-60 info">
+            <p>In the sixth and final innovation lab of the Vinnova financed #UrbanGirlsMovement (UGM) initiative, the main objective was to of discuss what is required in order to realise the proposals developed throughout labs 1-5. Together, the girls and experts worked on policy recommendations to present to decision-makers at different levels and developed guidelines to support the implementing actors. This section provides an overview of the results from the sixth workshop</p>
           </div>
-          <div class="w-70 info">
-            <img src="@/assets/images/recommendationsview.jpg" />
+          <div class="w-40 info">
+            <img class="imgShrink" src="@/assets/images/recommendationsview.jpg" />
           </div>
         </div>
       </div>
@@ -59,12 +59,12 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo.vue'
+import LogoCity from '@/components/LogoCity.vue'
 import ProposalLink from '@/components/ProposalLink.vue'
 
 export default {
   components: {
-    logo: Logo,
+    logoCity: LogoCity,
     proposalLink: ProposalLink,
   },
   methods: {
@@ -82,7 +82,8 @@ export default {
   @import "@/globals.sass"
 
   .hero
-    
+    margin-bottom: 4rem
+    margin-top: 4rem
     .hero-title
       margin-left: auto
       font-size: 48px
@@ -98,11 +99,21 @@ export default {
 
   .row 
     display: flex; 
+    justify-content: space-between
+    padding-bottom: 2rem
+    @include tablet
+      flex-direction: column
     > div
       width: 30%
+      @include tablet 
+        width: 100%
+        margin-bottom: 2rem
 
   .rlink
     text-decoration: none
+  
+  .imgShrink
+    max-width: 100%
   
   article
     padding: 1em 4em
@@ -126,17 +137,19 @@ export default {
       padding-bottom: 0
 
   .info
-    display: flex
+    display: block
     font-size: 22px
-    font-size: calc((1.6vw + 2.2vh + 1vmin) / 2.8)
+    font-size: 16px
     @include narrow
       font-size: 18px
       flex-flow: column
     @include wide
       font-size: 22px
+    > p:first-of-type 
+      margin-top: 0
+      padding-right: 3rem
     &,
     p, h3, div
-      flex: 1
       padding: 0
     .gist
       font-style: italic
@@ -144,4 +157,8 @@ export default {
       padding-left: 1rem
       @include narrow
         padding-left: 0
+
+
+
+  
 </style>
