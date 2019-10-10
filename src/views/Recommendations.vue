@@ -7,20 +7,20 @@
     <article class="container top-box">
       <div class="hero">
         <div class="hero-title">
-          <h1 class="title">Policy Guidelines &amp; Recommendations</h1>
+          <h1 class="title">Guidelines &amp; Recommendations</h1>
         </div>
       </div>
 
       <h2>Proposals</h2>
       <div class="row">
         <div>
-          <proposal-link title="Fittja Centrum" desc="Center owner Kungsvåningen (Private Actor)" />
+          <proposal-link title="Fittja Centrum" desc="Center owner Kungsvåningen (private actor)" />
         </div>
         <div>
-          <proposal-link title="Fittja Square" desc="The Municipality (Local Government)" />
+          <proposal-link title="Fittja Station" desc="Region Stockholm/SL (regional government)" />
         </div>
         <div>
-          <proposal-link title="Fittja Station" desc="Region Stockholm/SL (Regional Government)" />
+          <proposal-link title="Fittja Square" desc="The municipality (local government)" />
         </div>
       </div>
     </article>
