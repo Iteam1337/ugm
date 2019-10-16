@@ -135,6 +135,9 @@
 import LogoCity from '@/components/LogoCity.vue'
 import ProposalLink from '@/components/ProposalLink.vue'
 import Arrow from '@/components/Arrow.vue'
+import places from '@/assets/map/places.json'
+
+
 
 export default {
   components: {
@@ -142,7 +145,28 @@ export default {
     proposalLink: ProposalLink,
     arrow: Arrow,
   },
-  props: ['proposal', 'images'],
+  created() {
+    
+    this.extractSolutions(places, this.solutionKeys);
+  },
+  props: ['proposal', 'images', "solutionKeys"],
+  methods: {
+    extractSolutions: function (places, solutions) {
+      let matching = [];
+      solutions.forEach((solutionString) => {
+        places.forEach(place => {
+          place.solutions.forEach(solution => {
+            if (solution.name === solutionString) {
+              matching.push(solution)        
+            }    
+          })
+        })
+      })
+
+      console.log(matching)
+      return matching    
+    }
+  }
 }
 </script>
 

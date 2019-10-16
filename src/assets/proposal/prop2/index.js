@@ -63,6 +63,8 @@ export default {
 
     },
     solutions: [
-        { link: null, title: null, image: null }
+      'place-for-art',
+      'new-entrance',
+      'lighting'
     ]
 }

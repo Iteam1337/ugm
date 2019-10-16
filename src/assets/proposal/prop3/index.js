@@ -63,6 +63,11 @@ export default {
 
     },
     images: [
-        { link: null, title: null, image: null }
+      'new-bus-station',
+      'pink-street',
+      'lighting',
+      'interactive-signs',
+      'new-entrance',
+      'play-for-the-ticket'
     ]
 }

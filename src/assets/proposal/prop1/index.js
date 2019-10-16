@@ -66,6 +66,11 @@ export default {
 
     },
     solutions: [
-        { link: null, title: null, image: null }
+      'dance-floor-hang-out-space',
+      'greenhouse-145-radio-cafe-greenhouse',
+      'lighting',
+      'art-food-trucks',
+      'pink-street',
+      'activity-cubes'
     ]
 }

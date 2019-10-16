@@ -45,7 +45,6 @@ function proposalProps({ params: { proposalId } }) {
 
   const proposal = require(`@/assets/proposal/${proposalId}`).default
 
-  console.log(proposal)
   let images = require(`@/assets/proposal/${proposalId}`)
   if (!images) {
     images = []
@@ -54,6 +53,7 @@ function proposalProps({ params: { proposalId } }) {
   return {
     images: images,
     proposal: proposal.data,
+    solutionKeys: proposal.solutions
   }
 }
 

@@ -118,6 +118,8 @@ export default {
       return array && !!array.length
     }
 
+    console.log(solutions)
+
     return {
       page: 0,
       background,
