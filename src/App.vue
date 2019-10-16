@@ -192,6 +192,12 @@ export default {
     border-top-style: none
     margin-bottom: 3em
 
+  .middle-box
+    border: 1px solid white
+    border-top-style: none
+    border-bottom-style: none
+    
+
   $spacing-base: 8px
   @for $size from -20 through 20
     @each $type, $short-type in (margin: m, padding: p)
