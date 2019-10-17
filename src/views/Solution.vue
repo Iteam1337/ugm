@@ -1,10 +1,7 @@
 <template>
   <main v-if="solution && solution.title">
     <header>
-      <logo class="left" />
-      <svgButton text="Comment" link="https://globalut.typeform.com/to/cz2raF" class="right">
-        <commentIcon />
-      </svgButton>
+      <logoCity class="left" />
     </header>
 
     <article class="container hero top-box">
@@ -13,7 +10,13 @@
           <strong>{{place.title}}:</strong>
           {{ solution.title }}
         </h1>
+        <svgButton text="Comment" link="https://globalut.typeform.com/to/cz2raF" class="right">
+          <commentIcon />
+        </svgButton>
+
+        <div></div>
       </div>
+
       <iframe
         :src="`https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d/embed?autostart=1&annotation=${solution.annotation}`"
         frameborder="0"
@@ -47,14 +50,14 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo.vue'
+import LogoCity from '@/components/LogoCity.vue'
 import SVGButton from '@/components/SVGButton.vue'
 import CommentIcon from '@/components/CommentIcon.vue'
 
 export default {
   props: ['place', 'images', 'solution'],
   components: {
-    logo: Logo,
+    logoCity: LogoCity,
     svgButton: SVGButton,
     commentIcon: CommentIcon,
   },
@@ -75,14 +78,22 @@ export default {
   .hero
     display: flex
     flex-direction: column
+    justify-content: space-between
     .hero-title
-      margin-left: auto
+      display: flex
+      flex-direction: row
       font-size: 48px
       font-size: calc((2vw + 2vh + 1vmin) / 2)
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      align-items: center
       @include narrow
         font-size: 22px
       @include wide
         font-size: 36px
+    .right 
+      font-size: 24px
+      margin-left: auto
     .iframe
       height: 479px
 

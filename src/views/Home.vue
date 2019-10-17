@@ -97,10 +97,10 @@ export default {
       align-items: flex-end
       flex-shrink: 0
       justify-content: flex-end
-      padding: 0 4rem 10rem 0
+      padding: 0 4rem 9rem 0
       margin-left: auto
     a
-      font-size: 80%
+      font-size: 120%
 
     &-link,
     &-title

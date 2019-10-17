@@ -106,6 +106,12 @@ export default {
   #app
     height: 100%
 
+  .truncate
+    // THIS OPTION REQUIRES A WIDTH ON THE ELEMENT
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
   .container
     width: 80%
     margin: 0 auto

@@ -45,6 +45,20 @@ function proposalProps({ params: { proposalId } }) {
 
   const proposal = require(`@/assets/proposal/${proposalId}`).default
 
+  const solutions = function(places, solutions) {
+    let matching = []
+    solutions.forEach(solutionString => {
+      places.forEach(place => {
+        place.solutions.forEach(solution => {
+          if (solution.name === solutionString) {
+            matching.push({...solution, placeId: place.name})
+          }
+        })
+      })
+    })
+    return matching
+  }
+
   let images = require(`@/assets/proposal/${proposalId}`)
   if (!images) {
     images = []
@@ -53,7 +67,7 @@ function proposalProps({ params: { proposalId } }) {
   return {
     images: images,
     proposal: proposal.data,
-    solutionKeys: proposal.solutions
+    solutions: solutions(places, proposal.solutions)
   }
 }
 

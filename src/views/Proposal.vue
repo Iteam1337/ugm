@@ -48,38 +48,26 @@
     </article>
     <article class="container middle-box hero-title">
       <h2 class="mid-title">Design Solutions</h2>
-
-      <div class="row">
-        <div class="w-30 content">
-          <a href="/recommendations" class="link">
-            <img class="img-width" src="@/assets/images/sketchfab-thumbnails/mapviewpic.jpg" alt />
-            <span class="solution">
-              <span class="text">TEXT HÄR</span>
+      <ul class="flex solutions-preview-list">
+        <li class="solutions" v-for="solution in solutions" v-bind:key="solution.name">
+          <router-link
+            :to="{
+                  name: 'solution',
+                  params: {
+                    placeId: solution.placeId,
+                    solutionId: solution.name
+                  },
+                }"
+            class="link"
+          >
+            <div class="background" :style="{'background-image': 'url(' + require(`@/assets/images/sketchfab-thumbnails/${solution.sketchfab.thumb}`) + ')' }"></div>
+            <div class="solution-text-box">
+              <span class="text">{{solution.title}}</span>
               <arrow />
-            </span>
-          </a>
-        </div>
-
-        <div class="w-30 content">
-          <a href="/recommendations" class="link">
-            <img class="img-width" src="@/assets/images/sketchfab-thumbnails/mapviewpic.jpg" alt />
-            <span class="solution">
-              <span class="text">TEXT HÄR</span>
-              <arrow />
-            </span>
-          </a>
-        </div>
-
-        <div class="w-30 content">
-          <a href="/recommendations" class="link">
-            <img class="img-width" src="@/assets/images/sketchfab-thumbnails/mapviewpic.jpg" alt />
-            <span class="solution">
-              <span class="text">TEXT HÄR</span>
-              <arrow />
-            </span>
-          </a>
-        </div>
-      </div>
+            </div>
+          </router-link>
+        </li>
+      </ul>
     </article>
 
     <article class="container row bottom-box">
@@ -126,7 +114,7 @@
           <h3>Impact</h3>
           <p>{{proposal.impact.text}}</p>
         </div>
-        </div>
+      </div>
     </article>
   </main>
 </template>
@@ -137,36 +125,14 @@ import ProposalLink from '@/components/ProposalLink.vue'
 import Arrow from '@/components/Arrow.vue'
 import places from '@/assets/map/places.json'
 
-
-
 export default {
   components: {
     logoCity: LogoCity,
     proposalLink: ProposalLink,
     arrow: Arrow,
   },
-  created() {
-    
-    this.extractSolutions(places, this.solutionKeys);
-  },
-  props: ['proposal', 'images', "solutionKeys"],
-  methods: {
-    extractSolutions: function (places, solutions) {
-      let matching = [];
-      solutions.forEach((solutionString) => {
-        places.forEach(place => {
-          place.solutions.forEach(solution => {
-            if (solution.name === solutionString) {
-              matching.push(solution)        
-            }    
-          })
-        })
-      })
 
-      console.log(matching)
-      return matching    
-    }
-  }
+  props: ['proposal', 'images', 'solutions'],
 }
 </script>
 
@@ -193,6 +159,45 @@ export default {
         font-size: 36px
     .iframe
       height: 479px
+
+  .solutionsContainer
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    margin: 0
+    padding: 0
+
+  .solutions-preview-list
+    $height: 200px
+    list-style: none
+    padding: 0
+    flex-flow: row wrap
+    justify-content: flex-start
+
+  .solutions
+    flex: 1 0 33.3%
+    padding: 1rem
+    max-width: 300px
+    max-width: calc(100% - 40px)
+    overflow: hidden
+    .background 
+      height: 160px
+      width: 100%
+      background-size: cover
+      background-position: center center
+    .text
+      max-width: 200px
+      max-width: calc(100% - 40px - 0.5rem)
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
+      display: inline-block
+  .solution-text-box
+    padding: 1rem 1.5rem
+    .text 
+      vertical-align: bottom
+    svg 
+      margin-left: 0.5rem
 
   .columnOne
     display: flex
