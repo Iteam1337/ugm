@@ -7,8 +7,8 @@
     <article class="container hero top-box">
       <styling :background="background" />
 
-        <div class="content">
-      <div class="hero-title">
+      <div class="content">
+        <div class="hero-title">
           <h1 class="left">{{ place.title }}</h1>
           <svgButton text="Comment" link="https://globalut.typeform.com/to/cz2raF" class="right">
             <commentIcon />

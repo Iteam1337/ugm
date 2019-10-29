@@ -127,7 +127,6 @@ export default {
       padding: 0 0 1em
 
   h1
-    text-align: right
     @include narrow
       text-align: left
 
