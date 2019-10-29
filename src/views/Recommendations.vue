@@ -18,10 +18,7 @@
             class="rlink"
             :to="{ name: 'proposal', params: { title: 'Fittja Square', proposalId: 'prop1' } }"
           >
-            <proposal-link
-              title="Fittja Square"
-              desc="Botkyrka municipality (local actor)"
-            />
+            <proposal-link title="Fittja Square" desc="Botkyrka municipality (local actor)" />
           </router-link>
         </div>
         <div>
@@ -37,7 +34,10 @@
             class="rlink"
             :to="{ name: 'proposal', params: { title: 'FittjaStation / Fittja Square', proposalId: 'prop3' } }"
           >
-            <proposal-link title="Fittja Station / Fittja Square" desc="Region Stockholm/SL (regional level)and Botkyrka municipality (local level)" />
+            <proposal-link
+              title="Fittja Station / Fittja Square"
+              desc="Region Stockholm/SL (regional level)and Botkyrka municipality (local level)"
+            />
           </router-link>
         </div>
       </div>
@@ -114,6 +114,7 @@ export default {
   
   .imgShrink
     max-width: 100%
+    padding-bottom: 2rem
   
   article
     padding: 1em 4em

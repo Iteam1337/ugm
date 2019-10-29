@@ -23,8 +23,10 @@
     white-space: nowrap
 
   a 
-    text-decoration: none
+    text-decoration: underline
     color: rgba(255,255,255,0.9)
+    &hover
+      text-decoration: none
 
 
   .container svg 

@@ -60,7 +60,10 @@
                 }"
             class="link"
           >
-            <div class="background" :style="{'background-image': 'url(' + require(`@/assets/images/sketchfab-thumbnails/${solution.sketchfab.thumb}`) + ')' }"></div>
+            <div
+              class="background"
+              :style="{'background-image': 'url(' + require(`@/assets/images/sketchfab-thumbnails/${solution.sketchfab.thumb}`) + ')' }"
+            ></div>
             <div class="solution-text-box">
               <span class="text">{{solution.title}}</span>
               <arrow />
@@ -236,7 +239,6 @@ export default {
       font-weight: bold
       text-transform: uppercase
       margin-bottom: 0.5rem
-    
   
   article
     padding: 3em 4em 1em
@@ -305,4 +307,54 @@ export default {
       padding-left: 1rem
       @include narrow
         padding-left: 0
+
+  @include tablet
+    .hero.row
+      display: block
+    .letterHead
+        width: 100%
+        text-align: left
+        margin-top: 1rem
+    .container.row.middle-box,
+    .container.row.bottom-box
+      display: block
+    .columnOne
+      display: block
+      padding-right: 0
+      width: 100%
+    .columnTwo
+      display: block
+      padding-left: 0
+      width: 100%
+    .solutions
+      flex: 1 0 50%
+      padding: 1rem
+      max-width: initial
+      overflow: hidden
+    
+
+  @include narrow
+    .hero.row
+      padding: 2rem 2rem 0
+
+
+    .solutionsContainer
+      display: flex
+      flex-wrap: wrap
+      list-style: none
+      margin: 0
+      padding: 0
+
+    .solutions-preview-list
+      $height: 200px
+      list-style: none
+      padding: 0
+      flex-flow: row wrap
+      justify-content: flex-start
+
+    .solutions
+      flex: 1 0 100%
+      padding: 1rem 0
+      max-width: initial
+      overflow: hidden
 </style>

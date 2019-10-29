@@ -1,11 +1,9 @@
 <template>
   <div class="full-page">
-    <div>
-      <div class="h-container">
-        <logoCity class="logo" />
-        <div class="top-frame"></div>
-      </div>
-      <GmapMap ref="map" class="full-page" :center="center" :zoom="zoom" :options="options">
+    <logoCity class="logo" />
+    <div class="top-frame"></div>
+    <div class="map-container">
+      <GmapMap ref="map" class="map" :center="center" :zoom="zoom" :options="options">
         <GmapMarker
           v-for="(m, index) in markers"
           :key="index"
@@ -19,18 +17,22 @@
           @click="clickMarker(m.name)"
         />
       </GmapMap>
-
-      <footer class="map-footer">
+      <div class="content map-footer">
         <svgButton
+          class="map-footer-icon"
           text="View 3D Model"
           link="https://sketchfab.com/models/0f0a3c2db9614e09ab157f8310e9b92d"
         >
           <viewModelIcon />
         </svgButton>
-        <svgButton text="Comment" link="https://globalut.typeform.com/to/cz2raF">
+        <svgButton
+          class="map-footer-icon"
+          text="Comment"
+          link="https://globalut.typeform.com/to/cz2raF"
+        >
           <commentIcon />
         </svgButton>
-      </footer>
+      </div>
     </div>
 
     <article class="container bottom-box">
@@ -46,8 +48,10 @@
               <img class="img-width" src="@/assets/images/sketchfab-thumbnails/mapviewpic.jpg" alt />
 
               <span class="solution">
-                <span class="text">Guidelines &amp; Recommendations</span>
-                <arrow />
+                <span class="text">
+                  Guidelines &amp; Recommendations
+                  <arrow />
+                </span>
               </span>
             </a>
           </div>
@@ -84,12 +88,12 @@ export default {
     svgButton: SVGButton,
     arrow: Arrow,
     commentIcon: CommentIcon,
-    viewModelIcon: ViewModelIcon
+    viewModelIcon: ViewModelIcon,
   },
   data() {
     return {
       center: {
-        lat: 59.24771,
+        lat: 59.24785,
         lng: 17.860612,
       },
       userPosition: null,
@@ -145,48 +149,24 @@ export default {
 .link
   display: block
   border: 1px solid white
+  margin: 0 2rem
   .img-width
     max-width: 100%
   .solution .text
     display: inline-block
-    padding: 1.5rem 0.75rem 1.5rem 2rem
+    padding: 1rem 0.75rem 1.5rem 2rem
     font-family: 'Alegreya Sans', sans-serif
-    font-size: 18px
+    font-size: 100%;
+    text-decoration: underline
+    &:hover 
+      text-decoration: none
 
 
 .full-page
   position: relative
   display: flex
-  height: 100vh
   flex-direction: column
 
-.top-frame 
-  position: relative
-  width: 80%
-  height: 100%
-  z-index: 100
-  margin: 0 auto
-  pointer-events: none
-  border: 1px solid white
-  border-bottom: none
-
-.bottom-frame 
-  position: relative
-  width: 80%
-  height: 100%
-  z-index: 100
-  margin: 0 auto
-  pointer-events: none
-  border: 1px solid white
-  border-top: none
-
-.h-container
-  position: absolute
-  width: 100%
-  height: 100%
-  top: 0
-  left: 0
-  overflow: hidden
 
 .logo
   position: relative
@@ -194,65 +174,56 @@ export default {
   left: 10%
   top: 0
 
-  // &:after
-  //   display: block
-  //   width: 100%
-  //   width: 80vw
-  //   content: ""
-  //   height: 1px
-  //   background: white
-  //   left: 0
-  //   position: absolute
-  //   bottom: 0
-  //   pointer-events: none
-  // &:before
-  //   display: block
-  //   width: 1px
-  //   height: 100vh
-  //   content: ""
-  //   background: white
-  //   left: 0
-  //   top: 100%
-  //   position: absolute
-  //   pointer-events: none
 
-
-footer
+.map-container
   position: absolute
-  z-index: 10
-  left: 10%
-  bottom: 7em
-  a
-    margin: 0 2em
+  display: flex
+  height: 90vh
+  width: 100vw
+  flex-direction: column
 
+.content
+  padding: 0
+  line-height: 1.4
   @include narrow
-    display: flex
-    flex-direction: column
-    bottom: 2em
-    a
-      margin: .5em 0
+    padding: 0
+  &.text
+    padding: 2rem 0
+  
+.map
+  flex: 100% 1 1
 
+.map-footer 
+  position: absolute
+  right: 10%
+  bottom: 5em
+  left: auto
+  width: auto
+  @include narrow
+    right: 0
+    left: 10%
+    bottom: 3rem
+
+.top-frame 
+  position: relative
+  width: 80%
+  z-index: 100
+  margin: 0 auto
+  pointer-events: none
+  border-top: 1px solid white
+  
 
 .bottom-box 
   margin: 0 auto
   margin-bottom: 8rem
-
+  margin-top: 80vh
+  border-top: 1px solid white
 
 .map-marker
   width: 10px
   height: 10px
   background-clip: pink
 
-.map
-  flex: 100% 1 1
-
-.map-footer 
-  position: absolute;
-  right: 15%;
-  bottom: 5em;
-  left: auto;
-  width: auto;
-  
 .content p:first-of-type
   margin-top: 0
 
@@ -273,15 +244,13 @@ article
     font-size: 120%
     svg
       margin: 0 0 0 .5em
-    &, &:visited, &:hover
+    &:visited, &:hover
       text-decoration: none
 
     @include narrow
       font-size: 18px
       svg
         margin-left: .2rem
-</style>
-<style lang="sass">
 .map > div
   height: 100%
 

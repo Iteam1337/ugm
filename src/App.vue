@@ -132,6 +132,9 @@ export default {
     font-weight: 500
     text-transform: lowercase
     font-variant: small-caps
+    text-decoration: underline
+    &:hover
+      text-decoration: none
 
   .button
     min-width: 200px
