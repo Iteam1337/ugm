@@ -1,16 +1,18 @@
 <template>
   <main>
     <header>
-      <logo class="left"/>
-      <typeform class="right"/>
+      <logoCity class="left" />
     </header>
 
     <article class="container hero top-box">
-      <styling :background="background"/>
+      <styling :background="background" />
 
-      <div class="hero-title">
-        <div class="content">
-          <h1 class="hero-title">{{ place.title }}</h1>
+      <div class="content">
+        <div class="hero-title">
+          <h1 class="left">{{ place.title }}</h1>
+          <svgButton text="Comment" link="https://globalut.typeform.com/to/cz2raF" class="right">
+            <commentIcon />
+          </svgButton>
         </div>
       </div>
 
@@ -41,7 +43,7 @@
                   />
                   <span class="solution">
                     <span class="text">{{solution.title}}</span>
-                    <arrow/>
+                    <arrow />
                   </span>
                 </router-link>
               </li>
@@ -71,7 +73,7 @@
                   :href="image.startsWith('/') ? image : require(`@/assets/${image}`)"
                   target="_blank"
                 >
-                  <img :src="image.startsWith('/') ? image : require(`@/assets/${image}`)">
+                  <img :src="image.startsWith('/') ? image : require(`@/assets/${image}`)" />
                 </a>
               </li>
             </ul>
@@ -83,18 +85,20 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo.vue'
-import Typeform from '@/components/Typeform.vue'
+import LogoCity from '@/components/LogoCity.vue'
+import SVGButton from '@/components/SVGButton.vue'
 import Arrow from '@/components/Arrow.vue'
 import Styling from '@/components/Styling.vue'
+import CommentIcon from '@/components/CommentIcon.vue'
 
 export default {
   props: ['place', 'images'],
   components: {
-    logo: Logo,
-    typeform: Typeform,
+    logoCity: LogoCity,
+    svgButton: SVGButton,
     arrow: Arrow,
     styling: Styling,
+    commentIcon: CommentIcon,
   },
   data() {
     const {
@@ -208,6 +212,11 @@ export default {
       bottom: 0
       z-index: 0
 
+  .content
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
   .solution
     max-width: 300px
     max-width: calc(100% - 40px)
@@ -233,9 +242,21 @@ export default {
 
   .hero-title
     display: flex
-    align-items: flex-end
-    justify-content: flex-end
-    font-size: 36px
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    font-size: 24px
+    margin-top: 2rem
+
+    h1 
+      margin-top: 0
+      font-size: 48px
+      font-size: calc((2vw + 2vh + 1vmin) / 2)
+      @include narrow
+        font-size: 22px
+      @include wide
+        font-size: 36px
     .title
       flex-shrink: 0
 

@@ -1,6 +1,6 @@
 <template>
   <router-link to="/" class="logo">
-    <span>Urban girls <br/> movement</span>
+    <span>Urban girls <br/> movement <br/> Botkyrka</span>
   </router-link>
 </template>
 

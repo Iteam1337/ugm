@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <transition name="fade">
-      <loading v-if="isLoading" v-bind:is-loading="isLoading" v-on:done="onDone"/>
-      <router-view v-if="!isLoading"/>
+      <loading v-if="isLoading" v-bind:is-loading="isLoading" v-on:done="onDone" />
+      <router-view v-if="!isLoading" />
     </transition>
   </div>
 </template>
@@ -106,12 +106,20 @@ export default {
   #app
     height: 100%
 
+  .truncate
+    // THIS OPTION REQUIRES A WIDTH ON THE ELEMENT
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
   .container
     width: 80%
     margin: 0 auto
 
   .content
     padding: 2em 2em 0 2em
+    p 
+      line-height: 1.6
 
 
   .container,
@@ -122,8 +130,11 @@ export default {
   a
     color: white
     font-weight: 500
-    text-transform: uppercase
+    text-transform: lowercase
     font-variant: small-caps
+    text-decoration: underline
+    &:hover
+      text-decoration: none
 
   .button
     min-width: 200px
@@ -189,6 +200,12 @@ export default {
     border: 1px solid white
     border-top-style: none
     margin-bottom: 3em
+
+  .middle-box
+    border: 1px solid white
+    border-top-style: none
+    border-bottom-style: none
+    
 
   $spacing-base: 8px
   @for $size from -20 through 20

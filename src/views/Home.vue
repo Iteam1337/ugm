@@ -8,13 +8,16 @@
       <styling />
       <div class="hero-title">
         <h1 class="title">
-          Plan a city for girls,<br />and it will work<br />for everyone.
+          Plan a city for girls,
+          <br />and it will work
+          <br />for everyone.
         </h1>
       </div>
 
       <div class="hero-link w-50">
-        <router-link to="/map" class="link" >
-          Results &amp; Insights <arrow />
+        <router-link to="/map" class="link">
+          Botkyrka
+          <arrow />
         </router-link>
       </div>
     </article>
@@ -23,17 +26,18 @@
       <div class="content">
         <div class="flex">
           <div class="w-50 content">
-            <p>
-              With the fast pace of urbanization also comes widespread segregation and increasing social gaps. At the same time, world leaders have since 2015 agreed on several global agendas for sustainable development, such as the Paris Agreement, Agenda 2030 and New Urban Agenda. If we are to live up to these ambitious goals depends to a large extent on our societies becoming more inclusive and equal, and fulfilling the socioeconomic needs of the youth of the future. How cities and areas are developed is crucial to people’s quality of life, and can increase the opportunities to education, work and social security for young women and girls in particular.
-            </p>
+            <p>With the fast pace of urbanization also comes widespread segregation and increasing social gaps. At the same time, world leaders have since 2015 agreed on several global agendas for sustainable development, such as the Paris Agreement, Agenda 2030 and New Urban Agenda. If we are to live up to these ambitious goals depends to a large extent on our societies becoming more inclusive and equal, and fulfilling the socioeconomic needs of the youth of the future. How cities and areas are developed is crucial to people’s quality of life, and can increase the opportunities to education, work and social security for young women and girls in particular.</p>
           </div>
           <div class="w-50 content">
+            <p>So, how do we work with global goals and tools such as feminist urban development on a practical, local level? The ambitions are there, but the practical know-how is limited. Urban Girls Movement Botkyrka wants to increase knowledge in this area, with six so called innovation labs where young girls from the Stockholm suburb Botkyrka together with other stakeholders produce innovative solutions to commonly identified problems in the area.</p>
             <p>
-              So, how do we work with global goals and tools such as feminist urban development on a practical, local level? The ambitions are there, but the practical know-how is limited. Urban Girls Movement Botkyrka wants to increase knowledge in this area, with six so called innovation labs where young girls from the Stockholm suburb Botkyrka together with other stakeholders produce innovative solutions to commonly identified problems in the area.
-            </p>
-            <p>
-              <a class="link" target="_blank" href="https://www.globalutmaning.se/urbangirlsmovement/innovationslabb-botkyrka/">
-                Project Background <arrow />
+              <a
+                class="link"
+                target="_blank"
+                href="https://www.globalutmaning.se/urbangirlsmovement/innovationslabb-botkyrka/"
+              >
+                Project Background
+                <arrow />
               </a>
             </p>
           </div>
@@ -44,7 +48,6 @@
 </template>
 
 <script>
-
 import Logo from '@/components/Logo.vue'
 import MenuItem from '@/components/MenuItem.vue'
 import Arrow from '@/components/Arrow.vue'
@@ -161,7 +164,7 @@ export default {
     font-size: 120%
     svg
       margin: 0 0 0 .5em
-    &, &:visited, &:hover
+    &:visited, &:hover
       text-decoration: none
 
     @include narrow
@@ -169,3 +172,10 @@ export default {
       svg
         margin-left: .2rem
 </style>
+
+/* Vector 2 (Stroke) */
+
+
+
+
+
